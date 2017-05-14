@@ -1,9 +1,9 @@
 /* TODO
- Add support for Markdown notation inside doc comments
- Add support for nested block comments...
- Match closure params even when not followed by dash or brace
- Add better support for macro definition
- */
+	Add support for Markdown notation inside doc comments
+	Add support for nested block comments...
+	Match closure params even when not followed by dash or brace
+	Add better support for macro definition
+*/
 
 Prism.languages.rust = {
 	'comment': [

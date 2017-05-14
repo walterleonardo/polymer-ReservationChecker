@@ -1,938 +1,102 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb48b8ba-d8a1-44fc-af12-a96b38f7b9ac" name="Default" comment="">
+    <list default="true" id="fb48b8ba-d8a1-44fc-af12-a96b38f7b9ac" name="Default" comment="Commit new version">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower.json" afterPath="$PROJECT_DIR$/bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/accessibility-developer-tools/dist/js/axs_testing.js" afterPath="$PROJECT_DIR$/bower_components/accessibility-developer-tools/dist/js/axs_testing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/deps/nodeunit.css" afterPath="$PROJECT_DIR$/bower_components/async/deps/nodeunit.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/deps/nodeunit.js" afterPath="$PROJECT_DIR$/bower_components/async/deps/nodeunit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/dist/async.js" afterPath="$PROJECT_DIR$/bower_components/async/dist/async.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/dist/async.min.js" afterPath="$PROJECT_DIR$/bower_components/async/dist/async.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/dist/async.min.map" afterPath="$PROJECT_DIR$/bower_components/async/dist/async.min.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/karma.conf.js" afterPath="$PROJECT_DIR$/bower_components/async/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/lib/async.js" afterPath="$PROJECT_DIR$/bower_components/async/lib/async.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/mocha_test/compose.js" afterPath="$PROJECT_DIR$/bower_components/async/mocha_test/compose.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/mocha_test/forever.js" afterPath="$PROJECT_DIR$/bower_components/async/mocha_test/forever.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/mocha_test/support/is_browser.js" afterPath="$PROJECT_DIR$/bower_components/async/mocha_test/support/is_browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/perf/benchmark.js" afterPath="$PROJECT_DIR$/bower_components/async/perf/benchmark.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/perf/memory.js" afterPath="$PROJECT_DIR$/bower_components/async/perf/memory.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/perf/suites.js" afterPath="$PROJECT_DIR$/bower_components/async/perf/suites.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/async/support/sync-package-managers.js" afterPath="$PROJECT_DIR$/bower_components/async/support/sync-package-managers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chai/chai.js" afterPath="$PROJECT_DIR$/bower_components/chai/chai.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chai/karma.conf.js" afterPath="$PROJECT_DIR$/bower_components/chai/karma.conf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chai/karma.sauce.js" afterPath="$PROJECT_DIR$/bower_components/chai/karma.sauce.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/chai/sauce.browsers.js" afterPath="$PROJECT_DIR$/bower_components/chai/sauce.browsers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/font-roboto/roboto.html" afterPath="$PROJECT_DIR$/bower_components/font-roboto/roboto.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/doctrine.d.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/doctrine.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/dom5.d.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/dom5.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/escodegen.d.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/escodegen.d.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/espree.d.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/espree.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/estraverse.d.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/estraverse.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/estree.d.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/custom_typings/estree.d.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/hydrolysis-analyzer.html" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/hydrolysis-analyzer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/hydrolysis.js" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/hydrolysis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/index.js" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/analyzer.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/analyzer.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/analyze-properties.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/analyze-properties.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/ast-value.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/ast-value.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/behavior-finder.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/behavior-finder.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/declaration-property-handlers.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/declaration-property-handlers.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/docs.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/docs.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/element-finder.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/element-finder.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/esutil.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/esutil.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/feature-finder.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/feature-finder.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/fluent-traverse.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/fluent-traverse.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/import-parse.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/import-parse.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/js-parse.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/js-parse.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/jsdoc.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/ast-utils/jsdoc.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/error-swallowing-fs-resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/error-swallowing-fs-resolver.ts" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/file-loader.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/file-loader.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/fs-resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/fs-resolver.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/noop-resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/noop-resolver.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/redirect-resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/redirect-resolver.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/resolver.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/string-resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/string-resolver.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/xhr-resolver.ts" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/src/loader/xhr-resolver.ts" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/hydrolysis/tsconfig.json" afterPath="$PROJECT_DIR$/bower_components/hydrolysis/tsconfig.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/demo/x-announces.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/demo/x-announces.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/iron-a11y-announcer.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/iron-a11y-announcer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/test/iron-a11y-announcer.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-announcer/test/iron-a11y-announcer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/demo/x-key-aware.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/demo/x-key-aware.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/iron-a11y-keys-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/test/basic-test.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/test/basic-test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-a11y-keys-behavior/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/iron-ajax.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/iron-ajax.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/iron-request.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/iron-request.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/test/iron-ajax.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/test/iron-ajax.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-ajax/test/iron-request.html" afterPath="$PROJECT_DIR$/bower_components/iron-ajax/test/iron-request.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/iron-autogrow-textarea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-autogrow-textarea/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/demo/simple-button.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/demo/simple-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/iron-button-state.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/iron-button-state.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/iron-control-state.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/iron-control-state.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/test/active-state.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/test/active-state.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/test/disabled-state.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/test/disabled-state.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/test/focused-state.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/test/focused-state.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-behaviors/test/test-elements.html" afterPath="$PROJECT_DIR$/bower_components/iron-behaviors/test/test-elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/demo/simple-checkbox.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/demo/simple-checkbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/iron-checked-element-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/test/simple-checkbox.html" afterPath="$PROJECT_DIR$/bower_components/iron-checked-element-behavior/test/simple-checkbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/iron-collapse.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/iron-collapse.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/test/a11y.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/test/a11y.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/test/flex.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/test/flex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/test/horizontal.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/test/horizontal.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-collapse/test/nested.html" afterPath="$PROJECT_DIR$/bower_components/iron-collapse/test/nested.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/demo/json-descriptor.json" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/demo/json-descriptor.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/iron-component-page.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/iron-component-page.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/test/iron-component-page.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/test/iron-component-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-component-page/test/test-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-component-page/test/test-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo-pages-shared-styles.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo-pages-shared-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo-snippet.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo-snippet.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo/url-bar.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/demo/url-bar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/test/basic.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-demo-helpers/url-bar.html" afterPath="$PROJECT_DIR$/bower_components/iron-demo-helpers/url-bar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/demo/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-property-styles.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-property-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-property.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-property.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer-styles.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/iron-doc-viewer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-doc-viewer/test/iron-doc-viewer.html" afterPath="$PROJECT_DIR$/bower_components/iron-doc-viewer/test/iron-doc-viewer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/demo/grow-height-animation.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/demo/grow-height-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/demo/x-select.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/demo/x-select.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/iron-dropdown-scroll-manager.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/iron-dropdown-scroll-manager.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/iron-dropdown.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/iron-dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/test/iron-dropdown-scroll-manager.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/test/iron-dropdown-scroll-manager.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/test/iron-dropdown.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/test/iron-dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-dropdown/test/x-scrollable-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-dropdown/test/x-scrollable-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/demo/simple-fit.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/demo/simple-fit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/iron-fit-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/iron-fit-behavior.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/test/iron-fit-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/test/iron-fit-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-fit-behavior/test/test-fit.html" afterPath="$PROJECT_DIR$/bower_components/iron-fit-behavior/test/test-fit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/classes/iron-flex-layout.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/classes/iron-flex-layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/classes/iron-shadow-flex-layout.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/classes/iron-shadow-flex-layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout-classes.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout-classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/iron-flex-layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/test/iron-flex-layout-classes.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/test/iron-flex-layout-classes.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-flex-layout/test/iron-flex-layout.html" afterPath="$PROJECT_DIR$/bower_components/iron-flex-layout/test/iron-flex-layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/demo/simple-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/demo/simple-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/demo/simple-form.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/demo/simple-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/iron-form-element-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/iron-form-element-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/simple-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/simple-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/simple-form.html" afterPath="$PROJECT_DIR$/bower_components/iron-form-element-behavior/test/simple-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-form/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/demo/simple-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/demo/simple-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/iron-form.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/iron-form.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/test/element-with-nested-form-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/test/element-with-nested-form-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/test/element-with-nested-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/test/element-with-nested-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/test/simple-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/test/simple-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-form/test/validatable-element-with-nested-elements.html" afterPath="$PROJECT_DIR$/bower_components/iron-form/test/validatable-element-with-nested-elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-icon/.bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/demo/async.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/demo/async.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/iron-icon.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/iron-icon.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icon/test/iron-icon.html" afterPath="$PROJECT_DIR$/bower_components/iron-icon/test/iron-icon.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/av-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/av-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/communication-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/communication-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/device-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/device-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/editor-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/editor-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/hardware-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/hardware-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/image-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/image-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/iron-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/maps-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/maps-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/notification-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/notification-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/places-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/places-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/social-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/social-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-icons/test/iron-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-icons/test/iron-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/svg-sample-icons.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/demo/svg-sample-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/iron-iconset-svg.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/iron-iconset-svg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/iron-iconset-svg.html" afterPath="$PROJECT_DIR$/bower_components/iron-iconset-svg/test/iron-iconset-svg.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/iron-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/iron-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/test/disabled-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/test/disabled-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/test/iron-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/test/iron-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-input/test/letters-only.html" afterPath="$PROJECT_DIR$/bower_components/iron-input/test/letters-only.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/demo/iron-query-params.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/demo/iron-query-params.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/iron-location.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/iron-location.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/iron-query-params.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/iron-query-params.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-cases.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-cases.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-iframe.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-iframe.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-tests.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/initialization-tests.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/integration.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/integration.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/iron-location.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/iron-location.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/iron-query-params.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/iron-query-params.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-location/test/redirection.html" afterPath="$PROJECT_DIR$/bower_components/iron-location/test/redirection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/demo/simple-menu.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/demo/simple-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/demo/simple-menubar.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/demo/simple-menubar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menu-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menu-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menubar-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/iron-menubar-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/iron-menu-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/iron-menu-behavior.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/iron-menubar-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/iron-menubar-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/test-menu.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/test-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/test-menubar.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/test-menubar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/test-nested-menu.html" afterPath="$PROJECT_DIR$/bower_components/iron-menu-behavior/test/test-nested-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/iron-meta.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/iron-meta.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-meta/test/iron-meta.html" afterPath="$PROJECT_DIR$/bower_components/iron-meta/test/iron-meta.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/.bower.json" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/demo/simple-overlay.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/demo/simple-overlay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-focusables-helper.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-focusables-helper.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-backdrop.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-backdrop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-manager.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/iron-overlay-manager.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/iron-focusables-helper.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/iron-focusables-helper.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/iron-overlay-backdrop.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/iron-overlay-backdrop.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/iron-overlay-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/iron-overlay-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-buttons-wrapper.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-buttons-wrapper.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-buttons.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-buttons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-menu-button.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-menu-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-overlay.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-overlay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-overlay2.html" afterPath="$PROJECT_DIR$/bower_components/iron-overlay-behavior/test/test-overlay2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/src/x-app.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/demo/src/x-app.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/iron-resizable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/iron-resizable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/iron-resizable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/iron-resizable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/test-elements.html" afterPath="$PROJECT_DIR$/bower_components/iron-resizable-behavior/test/test-elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-multi-selectable.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-multi-selectable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-selectable.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-selectable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-selection.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-selection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/iron-selector.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/iron-selector.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/activate-event.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/activate-event.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/attr-for-selected-elements.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/attr-for-selected-elements.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/attr-for-selected.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/attr-for-selected.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/content-element.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/content-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/content.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/content.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/excluded-local-names.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/excluded-local-names.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/multi.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/multi.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/next-previous.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/next-previous.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/numeric-ids.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/numeric-ids.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/selected-attribute.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/selected-attribute.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-selector/test/template-repeat.html" afterPath="$PROJECT_DIR$/bower_components/iron-selector/test/template-repeat.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/cats-only.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/cats-only.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/validatable-input.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/demo/validatable-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/iron-validatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/iron-validatable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/cats-only.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/cats-only.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/dogs-only.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/dogs-only.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/index.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/iron-validatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/iron-validatable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/test-validatable.html" afterPath="$PROJECT_DIR$/bower_components/iron-validatable-behavior/test/test-validatable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/lodash/lodash.js" afterPath="$PROJECT_DIR$/bower_components/lodash/lodash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/lodash/lodash.min.js" afterPath="$PROJECT_DIR$/bower_components/lodash/lodash.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/marked-element/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/index.html" afterPath="$PROJECT_DIR$/bower_components/marked-element/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/marked-element.html" afterPath="$PROJECT_DIR$/bower_components/marked-element/marked-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/test/index.html" afterPath="$PROJECT_DIR$/bower_components/marked-element/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked-element/test/marked-element.html" afterPath="$PROJECT_DIR$/bower_components/marked-element/test/marked-element.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked/Gulpfile.js" afterPath="$PROJECT_DIR$/bower_components/marked/Gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked/bin/marked" afterPath="$PROJECT_DIR$/bower_components/marked/bin/marked" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked/component.json" afterPath="$PROJECT_DIR$/bower_components/marked/component.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked/lib/marked.js" afterPath="$PROJECT_DIR$/bower_components/marked/lib/marked.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked/marked.min.js" afterPath="$PROJECT_DIR$/bower_components/marked/marked.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/marked/package.json" afterPath="$PROJECT_DIR$/bower_components/marked/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/mocha/mocha.css" afterPath="$PROJECT_DIR$/bower_components/mocha/mocha.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/mocha/mocha.js" afterPath="$PROJECT_DIR$/bower_components/mocha/mocha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/cascaded-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/cascaded-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/fade-in-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/fade-in-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/fade-out-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/fade-out-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/hero-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/hero-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/opaque-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/opaque-animation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/reverse-ripple-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/reverse-ripple-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/ripple-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/ripple-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/scale-down-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/scale-down-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/scale-up-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/scale-up-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-down-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-down-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-bottom-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-bottom-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-left-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-left-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-right-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-right-animation.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-top-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-from-top-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-left-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-left-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-right-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-right-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-up-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/slide-up-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/animations/transform-animation.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/animations/transform-animation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/card/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/card/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/card/x-card.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/card/x-card.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/card/x-cards-list.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/card/x-cards-list.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/declarative/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/declarative/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/doc/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/doc/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/doc/my-animatable.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/doc/my-animatable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/doc/my-dialog.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/doc/my-dialog.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/dropdown/animated-dropdown.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/dropdown/animated-dropdown.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/dropdown/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/dropdown/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/grid/animated-grid.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/grid/animated-grid.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/grid/fullsize-page-with-card.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/grid/fullsize-page-with-card.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/grid/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/grid/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/full-view.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/full-view.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/list-demo.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/list-demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/list-view.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/list/list-view.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/load/animated-grid.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/load/animated-grid.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/load/full-page.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/load/full-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/load/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/load/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/animated-grid.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/animated-grid.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/fullsize-page-with-card.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/fullsize-page-with-card.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/reprojected-pages.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/reprojection/reprojected-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/shared-styles.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/shared-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/tiles/circles-page.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/tiles/circles-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/tiles/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/tiles/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/demo/tiles/squares-page.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/demo/tiles/squares-page.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-animatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-animatable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-animatable.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-animatable.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-animated-pages.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-animated-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-animation-behavior.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-animation-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-animation-runner-behavior.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-animation-runner-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-shared-element-animatable-behavior.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-shared-element-animatable-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/neon-shared-element-animation-behavior.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/neon-shared-element-animation-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/test/index.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/test/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/test/neon-animated-pages-descendant-selection.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/test/neon-animated-pages-descendant-selection.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/test/neon-animated-pages-lazy.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/test/neon-animated-pages-lazy.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/test/neon-animated-pages.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/test/neon-animated-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/neon-animation/test/test-resizable-pages.html" afterPath="$PROJECT_DIR$/bower_components/neon-animation/test/test-resizable-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/paper-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/paper-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/paper-radio-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/demo/paper-radio-button.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-button-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-button-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-checked-element-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-checked-element-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-inky-focus-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-inky-focus-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-ripple-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/paper-ripple-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-button-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-button-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-checked-element-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-checked-element-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-radio-button-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-radio-button-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-ripple-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/paper-ripple-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/shadowed-ripple.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/shadowed-ripple.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/test-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/test-button.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-behaviors/test/test-radio-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-behaviors/test/test-radio-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/demo/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/paper-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/paper-button.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-button/test/paper-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-button/test/paper-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu-icons.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu-icons.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu-light.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu-light.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu-shared-styles.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu-shared-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/paper-dropdown-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/test/paper-dropdown-menu-light.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/test/paper-dropdown-menu-light.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/test/paper-dropdown-menu.html" afterPath="$PROJECT_DIR$/bower_components/paper-dropdown-menu/test/paper-dropdown-menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/paper-header-panel.html" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/paper-header-panel.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-header-panel/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-header-panel/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/demo/paper-icon-button-light.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/demo/paper-icon-button-light.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button-light.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button-light.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/paper-icon-button.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/test/a11y.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/test/a11y.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-icon-button/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-icon-button/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-input/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/demo/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/demo/ssn-input.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/demo/ssn-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/demo/ssn-validator.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/demo/ssn-validator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-addon-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-addon-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-char-counter.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-char-counter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-container.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-container.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input-error.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input-error.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-input.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-input.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/paper-textarea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/letters-only.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/letters-only.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-char-counter.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-char-counter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-container.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-container.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-error.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input-error.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-input.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-input/test/paper-textarea.html" afterPath="$PROJECT_DIR$/bower_components/paper-input/test/paper-textarea.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-item/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/demo/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/paper-icon-item.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/paper-icon-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/paper-item-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/paper-item-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/paper-item-body.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/paper-item-body.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/paper-item-shared-styles.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/paper-item-shared-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/paper-item.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/paper-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-item/test/paper-item.html" afterPath="$PROJECT_DIR$/bower_components/paper-item/test/paper-item.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-listbox/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-listbox/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-listbox/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-listbox/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-listbox/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-listbox/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-listbox/paper-listbox.html" afterPath="$PROJECT_DIR$/bower_components/paper-listbox/paper-listbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-listbox/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-listbox/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-listbox/test/paper-listbox.html" afterPath="$PROJECT_DIR$/bower_components/paper-listbox/test/paper-listbox.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/paper-material-shared-styles.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/paper-material-shared-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/paper-material.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/paper-material.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-material/test/paper-material.html" afterPath="$PROJECT_DIR$/bower_components/paper-material/test/paper-material.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu-button/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu-button/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu-button/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu-button/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu-button/paper-menu-button-animations.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu-button/paper-menu-button-animations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu-button/paper-menu-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu-button/paper-menu-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu-button/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu-button/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-menu-button/test/paper-menu-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-menu-button/test/paper-menu-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-button/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-button/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-button/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-button/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-button/paper-radio-button.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-button/paper-radio-button.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-button/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-button/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-button/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-button/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-group/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-radio-group/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-group/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-group/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-group/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-group/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-group/paper-radio-group.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-group/paper-radio-group.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-group/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-group/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-radio-group/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-radio-group/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/paper-ripple.html" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/paper-ripple.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-ripple/test/paper-ripple.html" afterPath="$PROJECT_DIR$/bower_components/paper-ripple/test/paper-ripple.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner-behavior.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner-behavior.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner-lite.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner-lite.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner-styles.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/paper-spinner.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-spinner/test/paper-spinner.html" afterPath="$PROJECT_DIR$/bower_components/paper-spinner/test/paper-spinner.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/classes/global.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/classes/global.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/classes/shadow-layout.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/classes/shadow-layout.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/classes/shadow.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/classes/shadow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/classes/typography.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/classes/typography.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/color.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/color.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/default-theme.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/default-theme.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/demo-pages.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/demo-pages.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/demo.css" afterPath="$PROJECT_DIR$/bower_components/paper-styles/demo.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/element-styles/paper-item-styles.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/element-styles/paper-item-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/element-styles/paper-material-styles.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/element-styles/paper-material-styles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/shadow.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/shadow.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-styles/typography.html" afterPath="$PROJECT_DIR$/bower_components/paper-styles/typography.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toast/.bower.json" afterPath="$PROJECT_DIR$/bower_components/paper-toast/.bower.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toast/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-toast/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toast/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-toast/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toast/paper-toast.html" afterPath="$PROJECT_DIR$/bower_components/paper-toast/paper-toast.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toast/test/basic.html" afterPath="$PROJECT_DIR$/bower_components/paper-toast/test/basic.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toast/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-toast/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/paper-toolbar.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/paper-toolbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/test/index.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/paper-toolbar/test/paper-toolbar.html" afterPath="$PROJECT_DIR$/bower_components/paper-toolbar/test/paper-toolbar.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/polymer-micro.html" afterPath="$PROJECT_DIR$/bower_components/polymer/polymer-micro.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/polymer-mini.html" afterPath="$PROJECT_DIR$/bower_components/polymer/polymer-mini.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/polymer/polymer.html" afterPath="$PROJECT_DIR$/bower_components/polymer/polymer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/demo/index.html" afterPath="$PROJECT_DIR$/bower_components/prism-element/demo/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/demo/prism-demo.html" afterPath="$PROJECT_DIR$/bower_components/prism-element/demo/prism-demo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/index.html" afterPath="$PROJECT_DIR$/bower_components/prism-element/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/prism-highlighter.html" afterPath="$PROJECT_DIR$/bower_components/prism-element/prism-highlighter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism-element/prism-theme-default.html" afterPath="$PROJECT_DIR$/bower_components/prism-element/prism-theme-default.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/bower.json" afterPath="$PROJECT_DIR$/bower_components/prism/bower.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components.js" afterPath="$PROJECT_DIR$/bower_components/prism/components.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-abap.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-abap.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-abap.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-abap.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-actionscript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-actionscript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-actionscript.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-actionscript.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ada.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ada.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ada.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ada.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-apacheconf.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-apacheconf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-apacheconf.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-apacheconf.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-apl.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-apl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-apl.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-apl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-applescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-applescript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-applescript.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-applescript.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-asciidoc.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-asciidoc.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-asciidoc.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-asciidoc.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-aspnet.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-aspnet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-aspnet.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-aspnet.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-autohotkey.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-autohotkey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-autohotkey.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-autohotkey.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-autoit.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-autoit.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-autoit.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-autoit.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bash.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bash.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bash.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bash.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-basic.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-basic.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-basic.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-basic.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-batch.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-batch.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-batch.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-batch.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bison.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bison.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bison.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bison.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-brainfuck.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-brainfuck.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-brainfuck.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-brainfuck.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bro.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bro.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-bro.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-bro.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-c.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-c.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-c.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-c.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-clike.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-coffeescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-coffeescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-coffeescript.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-coffeescript.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-core.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-core.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-core.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-core.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-cpp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-cpp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-cpp.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-cpp.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-crystal.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-crystal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-crystal.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-crystal.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-csharp.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-css-extras.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-css-extras.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-css-extras.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-css-extras.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-css.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-css.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-css.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-css.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-d.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-d.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-d.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-d.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-dart.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-dart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-dart.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-dart.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-diff.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-diff.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-diff.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-diff.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-docker.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-docker.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-docker.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-docker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-eiffel.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-eiffel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-eiffel.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-eiffel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-elixir.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-elixir.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-elixir.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-elixir.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-erlang.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-erlang.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-erlang.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-erlang.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-fortran.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-fortran.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-fortran.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-fortran.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-fsharp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-fsharp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-fsharp.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-fsharp.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-gherkin.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-gherkin.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-gherkin.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-gherkin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-git.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-git.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-git.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-git.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-glsl.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-glsl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-glsl.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-glsl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-go.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-go.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-go.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-go.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-graphql.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-graphql.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-graphql.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-graphql.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-groovy.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-groovy.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-groovy.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-groovy.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haml.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haml.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haml.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-handlebars.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-handlebars.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-handlebars.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-handlebars.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haskell.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haskell.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haskell.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haskell.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haxe.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haxe.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-haxe.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-haxe.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-http.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-http.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-http.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-http.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-icon.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-icon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-icon.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-icon.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-inform7.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-inform7.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-inform7.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-inform7.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ini.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ini.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ini.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ini.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-j.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-j.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-j.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-j.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jade.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jade.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jade.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jade.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-java.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-java.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-java.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-java.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-javascript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-javascript.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-javascript.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-javascript.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jolie.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jolie.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jolie.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jolie.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-json.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-json.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jsx.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jsx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-jsx.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-jsx.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-julia.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-julia.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-julia.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-julia.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-keyman.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-keyman.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-keyman.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-keyman.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-kotlin.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-kotlin.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-kotlin.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-kotlin.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-latex.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-latex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-latex.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-latex.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-less.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-less.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-less.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-less.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-livescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-livescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-livescript.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-livescript.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-lolcode.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-lolcode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-lolcode.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-lolcode.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-lua.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-lua.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-lua.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-lua.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-makefile.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-makefile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-makefile.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-makefile.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-markdown.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-markdown.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-markdown.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-markdown.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-markup.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-markup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-markup.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-markup.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-matlab.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-matlab.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-matlab.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-matlab.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-mel.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-mel.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-mel.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-mel.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-mizar.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-mizar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-mizar.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-mizar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-monkey.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-monkey.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-monkey.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-monkey.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nasm.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nasm.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nasm.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nasm.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nginx.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nginx.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nginx.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nginx.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nim.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nim.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nim.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nix.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nix.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nix.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nix.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nsis.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nsis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-nsis.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-nsis.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-objectivec.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-objectivec.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-objectivec.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-objectivec.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ocaml.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ocaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ocaml.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ocaml.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-oz.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-oz.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-oz.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-oz.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-parigp.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-parigp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-parigp.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-parigp.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-parser.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-parser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-parser.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-parser.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-pascal.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-pascal.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-pascal.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-pascal.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-perl.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-perl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-perl.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-perl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-php-extras.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-php-extras.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-php-extras.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-php-extras.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-php.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-php.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-php.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-php.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-powershell.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-powershell.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-powershell.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-powershell.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-processing.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-processing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-processing.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-processing.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-prolog.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-prolog.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-prolog.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-prolog.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-properties.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-properties.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-properties.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-properties.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-protobuf.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-protobuf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-protobuf.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-protobuf.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-puppet.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-puppet.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-puppet.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-puppet.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-pure.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-pure.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-pure.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-pure.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-python.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-python.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-python.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-python.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-q.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-q.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-q.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-q.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-qore.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-qore.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-qore.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-qore.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-r.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-r.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-r.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-r.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-reason.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-reason.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-reason.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-reason.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rest.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rest.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rest.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rest.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rip.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rip.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rip.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rip.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-roboconf.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-roboconf.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-roboconf.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-roboconf.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ruby.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ruby.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-ruby.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-ruby.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rust.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rust.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-rust.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-rust.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sas.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sas.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sas.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sas.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sass.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sass.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sass.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scala.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scala.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scala.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scala.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scheme.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scheme.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scheme.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scheme.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scss.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scss.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-scss.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-scss.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-smalltalk.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-smalltalk.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-smalltalk.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-smalltalk.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-smarty.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-smarty.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-smarty.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-smarty.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sql.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sql.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-sql.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-sql.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-stylus.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-stylus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-stylus.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-stylus.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-swift.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-swift.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-swift.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-swift.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-tcl.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-tcl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-tcl.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-tcl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-textile.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-textile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-textile.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-textile.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-twig.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-twig.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-twig.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-twig.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-typescript.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-typescript.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-typescript.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-typescript.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-verilog.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-verilog.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-verilog.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-verilog.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-vhdl.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-vhdl.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-vhdl.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-vhdl.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-vim.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-vim.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-vim.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-vim.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-wiki.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-wiki.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-wiki.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-wiki.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-xojo.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-xojo.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-xojo.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-xojo.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-yaml.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-yaml.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/components/prism-yaml.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/components/prism-yaml.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/examples.js" afterPath="$PROJECT_DIR$/bower_components/prism/examples.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/gulpfile.js" afterPath="$PROJECT_DIR$/bower_components/prism/gulpfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autolinker/prism-autolinker.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autoloader/prism-autoloader.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autoloader/prism-autoloader.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/autoloader/prism-autoloader.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/autoloader/prism-autoloader.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/command-line/prism-command-line.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/command-line/prism-command-line.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/command-line/prism-command-line.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/command-line/prism-command-line.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/command-line/prism-command-line.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/command-line/prism-command-line.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/custom-class/prism-custom-class.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/custom-class/prism-custom-class.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/custom-class/prism-custom-class.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/custom-class/prism-custom-class.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/data-uri-highlight/prism-data-uri-highlight.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/data-uri-highlight/prism-data-uri-highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/data-uri-highlight/prism-data-uri-highlight.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/data-uri-highlight/prism-data-uri-highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/file-highlight/prism-file-highlight.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/file-highlight/prism-file-highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/file-highlight/prism-file-highlight.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/file-highlight/prism-file-highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/highlight-keywords/prism-highlight-keywords.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/ie8/prism-ie8.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/jsonp-highlight/prism-jsonp-highlight.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/jsonp-highlight/prism-jsonp-highlight.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/jsonp-highlight/prism-jsonp-highlight.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/jsonp-highlight/prism-jsonp-highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/keep-markup/prism-keep-markup.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/keep-markup/prism-keep-markup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/keep-markup/prism-keep-markup.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/keep-markup/prism-keep-markup.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-highlight/prism-line-highlight.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/line-numbers/prism-line-numbers.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/normalize-whitespace/prism-normalize-whitespace.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-angle/prism-previewer-angle.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-angle/prism-previewer-angle.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-angle/prism-previewer-angle.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-angle/prism-previewer-angle.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-angle/prism-previewer-angle.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-angle/prism-previewer-angle.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-base/prism-previewer-base.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-base/prism-previewer-base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-base/prism-previewer-base.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-base/prism-previewer-base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-base/prism-previewer-base.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-base/prism-previewer-base.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-color/prism-previewer-color.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-color/prism-previewer-color.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-color/prism-previewer-color.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-color/prism-previewer-color.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-color/prism-previewer-color.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-color/prism-previewer-color.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-easing/prism-previewer-easing.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-easing/prism-previewer-easing.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-easing/prism-previewer-easing.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-easing/prism-previewer-easing.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-easing/prism-previewer-easing.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-easing/prism-previewer-easing.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-gradient/prism-previewer-gradient.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-gradient/prism-previewer-gradient.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-gradient/prism-previewer-gradient.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-gradient/prism-previewer-gradient.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-gradient/prism-previewer-gradient.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-gradient/prism-previewer-gradient.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-time/prism-previewer-time.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-time/prism-previewer-time.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-time/prism-previewer-time.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-time/prism-previewer-time.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-time/prism-previewer-time.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/previewer-time/prism-previewer-time.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/remove-initial-line-feed/prism-remove-initial-line-feed.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/remove-initial-line-feed/prism-remove-initial-line-feed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/remove-initial-line-feed/prism-remove-initial-line-feed.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/remove-initial-line-feed/prism-remove-initial-line-feed.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-invisibles/prism-show-invisibles.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/show-language/prism-show-language.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/toolbar/prism-toolbar.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/toolbar/prism-toolbar.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/toolbar/prism-toolbar.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/toolbar/prism-toolbar.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/toolbar/prism-toolbar.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/toolbar/prism-toolbar.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/unescaped-markup/prism-unescaped-markup.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/unescaped-markup/prism-unescaped-markup.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/unescaped-markup/prism-unescaped-markup.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/unescaped-markup/prism-unescaped-markup.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/unescaped-markup/prism-unescaped-markup.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/unescaped-markup/prism-unescaped-markup.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.css" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/plugins/wpd/prism-wpd.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/prism.js" afterPath="$PROJECT_DIR$/bower_components/prism/prism.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-coy.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-coy.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-dark.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-dark.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-funky.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-funky.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-okaidia.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-okaidia.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-solarizedlight.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-solarizedlight.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-tomorrow.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-tomorrow.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism-twilight.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism-twilight.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/themes/prism.css" afterPath="$PROJECT_DIR$/bower_components/prism/themes/prism.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/vendor/FileSaver.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/vendor/FileSaver.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/vendor/jszip.min.js" afterPath="$PROJECT_DIR$/bower_components/prism/vendor/jszip.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/prism/vendor/promise.js" afterPath="$PROJECT_DIR$/bower_components/prism/vendor/promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/promise-polyfill/Gruntfile.js" afterPath="$PROJECT_DIR$/bower_components/promise-polyfill/Gruntfile.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/promise-polyfill/Promise-Statics.js" afterPath="$PROJECT_DIR$/bower_components/promise-polyfill/Promise-Statics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/promise-polyfill/Promise.js" afterPath="$PROJECT_DIR$/bower_components/promise-polyfill/Promise.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/promise-polyfill/Promise.min.js" afterPath="$PROJECT_DIR$/bower_components/promise-polyfill/Promise.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/promise-polyfill/promise-polyfill-lite.html" afterPath="$PROJECT_DIR$/bower_components/promise-polyfill/promise-polyfill-lite.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/.jshintrc" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/.jshintrc" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/lib/sinon-chai.js" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/lib/sinon-chai.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/callArguments.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/callArguments.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/callContext.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/callContext.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/callCount.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/callCount.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/callOrder.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/callOrder.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/callingWithNew.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/callingWithNew.coffee" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/common.js" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/common.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/messages.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/messages.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/regressions.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/regressions.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/returning.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/returning.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinon-chai/test/throwing.coffee" afterPath="$PROJECT_DIR$/bower_components/sinon-chai/test/throwing.coffee" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/sinonjs/sinon.js" afterPath="$PROJECT_DIR$/bower_components/sinonjs/sinon.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/stacky/browser.js" afterPath="$PROJECT_DIR$/bower_components/stacky/browser.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/stacky/lib/formatting.js" afterPath="$PROJECT_DIR$/bower_components/stacky/lib/formatting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/stacky/lib/index.js" afterPath="$PROJECT_DIR$/bower_components/stacky/lib/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/stacky/lib/normalization.js" afterPath="$PROJECT_DIR$/bower_components/stacky/lib/normalization.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/stacky/lib/parsing.js" afterPath="$PROJECT_DIR$/bower_components/stacky/lib/parsing.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/test-fixture/test-fixture-mocha.js" afterPath="$PROJECT_DIR$/bower_components/test-fixture/test-fixture-mocha.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/test-fixture/test-fixture.html" afterPath="$PROJECT_DIR$/bower_components/test-fixture/test-fixture.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/test-fixture/test/handle-multiple-registrations.html" afterPath="$PROJECT_DIR$/bower_components/test-fixture/test/handle-multiple-registrations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/test-fixture/test/index.html" afterPath="$PROJECT_DIR$/bower_components/test-fixture/test/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/test-fixture/test/test-fixture.html" afterPath="$PROJECT_DIR$/bower_components/test-fixture/test/test-fixture.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/externs/web-animations-next.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/externs/web-animations-next.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/externs/web-animations.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/externs/web-animations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/animation.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/animation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/apply-preserving-inline-style.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/apply-preserving-inline-style.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/apply.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/apply.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/box-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/box-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/color-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/color-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/deprecation.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/deprecation.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/dimension-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/dimension-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/effect-callback.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/effect-callback.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/element-animatable.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/element-animatable.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/font-weight-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/font-weight-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/group-constructors.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/group-constructors.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/handler-utils.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/handler-utils.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/interpolation.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/interpolation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-effect-constructor.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-effect-constructor.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-effect.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-effect.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-interpolations.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/keyframe-interpolations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/matrix-decomposition.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/matrix-decomposition.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/matrix-interpolation.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/matrix-interpolation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/normalize-keyframes.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/normalize-keyframes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/number-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/number-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/position-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/position-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/property-interpolation.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/property-interpolation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/property-names.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/property-names.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/scope.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/scope.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/shadow-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/shadow-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/shape-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/shape-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/tick.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/tick.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/timeline.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/timeline.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/timing-utilities.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/timing-utilities.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/transform-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/transform-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/visibility-handler.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/visibility-handler.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-bonus-cancel-events.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-bonus-cancel-events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-bonus-object-form-keyframes.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-bonus-object-form-keyframes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-next-animation.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/src/web-animations-next-animation.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.js.map" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next-lite.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.js.map" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations-next.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.js" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.js.map" afterPath="$PROJECT_DIR$/bower_components/web-animations-js/web-animations.min.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-component-tester/browser.js" afterPath="$PROJECT_DIR$/bower_components/web-component-tester/browser.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-component-tester/browser.js.map" afterPath="$PROJECT_DIR$/bower_components/web-component-tester/browser.js.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-component-tester/data/a11ySuite.js" afterPath="$PROJECT_DIR$/bower_components/web-component-tester/data/a11ySuite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/web-component-tester/data/index.html" afterPath="$PROJECT_DIR$/bower_components/web-component-tester/data/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/CustomElements.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/CustomElements.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/CustomElements.min.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/CustomElements.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/HTMLImports.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/HTMLImports.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/HTMLImports.min.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/HTMLImports.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/MutationObserver.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/MutationObserver.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/MutationObserver.min.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/MutationObserver.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/ShadowDOM.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/ShadowDOM.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/ShadowDOM.min.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/ShadowDOM.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents-lite.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents-lite.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents-lite.min.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents-lite.min.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents.min.js" afterPath="$PROJECT_DIR$/bower_components/webcomponentsjs/webcomponents.min.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polymer1-element-checkReservations.html" afterPath="$PROJECT_DIR$/polymer1-element-checkReservations.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/shared-styles.html" afterPath="$PROJECT_DIR$/shared-styles.html" />
     </list>
     <ignored path="polymer1-element-checkReservations.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -965,16 +129,36 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="polymer1-element-checkReservations.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="polymer1-element-checkReservations.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/polymer1-element-checkReservations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.41860464">
-              <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#template#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#1;n#template#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.22727273">
+              <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demo/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -1004,6 +188,7 @@
       <list>
         <option value="$PROJECT_DIR$/bower.json" />
         <option value="$PROJECT_DIR$/polymer1-element-checkReservations.html" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -1719,12 +904,19 @@
       <updated>1494753777774</updated>
       <workItem from="1494753779017" duration="690000" />
       <workItem from="1494754540399" duration="471000" />
-      <workItem from="1494755106234" duration="198000" />
+      <workItem from="1494755106234" duration="502000" />
     </task>
+    <task id="LOCAL-00001" summary="Commit new version">
+      <created>1494755429761</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1494755429761</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1359000" />
+    <option name="totallyTimeSpent" value="1663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1680" height="1028" extended-state="6" />
@@ -1732,6 +924,7 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1755,8 +948,18 @@
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="UpdateCopyrightCheckinHandler">
+    <option name="UPDATE_COPYRIGHT" value="true" />
+  </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
+    <MESSAGE value="Commit new version" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit new version" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1854,13 +1057,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polymer1-element-checkReservations.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.41860464">
-          <caret line="24" column="19" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="19" />
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#template#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#1;n#template#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/demo/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22727273">
+          <caret line="13" column="46" selection-start-line="13" selection-start-column="46" selection-end-line="13" selection-end-column="46" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -19,12 +19,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <link rel="import" href="../iron-request.html">
 </head>
 <body>
-<test-fixture id="TrivialRequest">
+  <test-fixture id="TrivialRequest">
     <template>
       <iron-request></iron-request>
     </template>
-</test-fixture>
-<script>
+  </test-fixture>
+  <script>
     suite('<iron-request>', function () {
       var jsonResponseHeaders;
       var successfulRequestOptions;
@@ -135,7 +135,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           request.send(successfulRequestOptions);
           server.respond();
 
-          return request.completes.then(function () {
+          return request.completes.then(function() {
             expect(request.response).to.be.an('string')
           });
         });
@@ -147,7 +147,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           request.send(options);
           server.respond();
 
-          return request.completes.then(function () {
+          return request.completes.then(function() {
             expect(request.xhr.responseType).to.be.empty;
           });
         });
@@ -159,10 +159,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           request.send(options);
           expect(server.requests.length).to.be.equal(1);
           expect(server.requests[0].requestHeaders['accept']).to.be.equal(
-                  'application/json');
+              'application/json');
           server.respond();
 
-          return request.completes.then(function () {
+          return request.completes.then(function() {
             expect(request.response).to.be.an('object');
           });
         });
@@ -177,10 +177,10 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           request.send(options);
           expect(server.requests.length).to.be.equal(1);
           expect(server.requests[0].requestHeaders['accept']).to.be.equal(
-                  'application/json');
+              'application/json');
           server.respond();
 
-          return request.completes.then(function () {
+          return request.completes.then(function() {
             expect(request.response).to.deep.eq({success: true});
           });
         });
@@ -193,15 +193,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           request.send(options);
           expect(server.requests.length).to.be.equal(1);
           expect(server.requests[0].requestHeaders['accept']).to.be.equal(
-                  'application/json');
+              'application/json');
           server.respond();
 
-          return request.completes.then(function () {
+          return request.completes.then(function() {
             expect(request.response).to.be.a('string');
           });
         });
 
-        test('headers are sent up', function () {
+        test('headers are sent up', function() {
           var options = Object.create(successfulRequestOptions);
           options.headers = {
             'foo': 'bar',
@@ -211,12 +211,12 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           expect(server.requests.length).to.be.equal(1);
           var fakeXhr = server.requests[0]
           expect(fakeXhr.requestHeaders['foo']).to.be.equal(
-                  'bar');
+              'bar');
           expect(fakeXhr.requestHeaders['accept']).to.be.equal(
-                  'this should override the default');
+              'this should override the default');
         });
 
-        test('headers are deduped by lowercasing', function () {
+        test('headers are deduped by lowercasing', function() {
           var options = Object.create(successfulRequestOptions);
           options.headers = {
             'foo': 'bar',
@@ -229,14 +229,14 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           var fakeXhr = server.requests[0]
           expect(Object.keys(fakeXhr.requestHeaders).length).to.be.equal(2);
           expect(fakeXhr.requestHeaders['foo']).to.be.equal(
-                  'bar');
+              'bar');
           expect(fakeXhr.requestHeaders['accept']).to.be.equal(
-                  'this should also override the default');
+              'this should also override the default');
         });
       });
 
-      suite('special cases', function () {
-        test('treats status code 0 as success, though the outcome is ambiguous', function () {
+      suite('special cases', function() {
+        test('treats status code 0 as success, though the outcome is ambiguous', function() {
           // Note: file:// status code will probably be 0 no matter what happened.
           request.send({
             url: '/responds_to_get_with_0'
@@ -248,8 +248,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       });
 
-      suite('errors', function () {
-        test('treats status codes between 1 and 199 as errors', function () {
+      suite('errors', function() {
+        test('treats status codes between 1 and 199 as errors', function() {
           request.send({
             url: '/responds_to_get_with_100'
           });
@@ -259,7 +259,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           expect(request.succeeded).to.be.equal(false);
         });
 
-        test('treats status codes between 300 and ∞ as errors', function () {
+        test('treats status codes between 300 and ∞ as errors', function() {
           request.send({
             url: '/responds_to_get_with_500'
           });
@@ -270,8 +270,8 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       });
 
-      suite('status codes', function () {
-        test('status and statusText is set after a ambiguous request', function () {
+      suite('status codes', function() {
+        test('status and statusText is set after a ambiguous request', function() {
           request.send({
             url: '/responds_to_get_with_0'
           });
@@ -282,7 +282,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           expect(request.statusText).to.be.equal('');
         });
 
-        test('status and statusText is set after a request that succeeded', function () {
+        test('status and statusText is set after a request that succeeded', function() {
           request.send({
             url: '/responds_to_get_with_json'
           });
@@ -293,7 +293,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           expect(request.statusText).to.be.equal('OK');
         });
 
-        test('status and statusText is set after a request that failed', function () {
+        test('status and statusText is set after a request that failed', function() {
           request.send({
             url: '/responds_to_get_with_500'
           });
@@ -305,7 +305,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         });
       });
     });
-</script>
+  </script>
 
 </body>
 </html>

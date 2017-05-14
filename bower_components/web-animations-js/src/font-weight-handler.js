@@ -12,7 +12,7 @@
 //   See the License for the specific language governing permissions and
 // limitations under the License.
 
-(function (scope) {
+(function(scope) {
   function parse(string) {
     var out = Number(string);
     if (isNaN(out) || out < 100 || out > 900 || out % 100 !== 0) {

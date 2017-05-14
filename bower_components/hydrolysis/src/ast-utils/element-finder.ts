@@ -24,15 +24,15 @@ export function elementFinder() {
   /**
    * The list of elements exported by each traversed script.
    */
-  var elements:ElementDescriptor[] = [];
+  var elements: ElementDescriptor[] = [];
 
   /**
    * The element being built during a traversal;
    */
-  var element:ElementDescriptor = null;
-  var propertyHandlers:PropertyHandlers = null;
+  var element: ElementDescriptor = null;
+  var propertyHandlers: PropertyHandlers = null;
 
-  var visitors:Visitor = {
+  var visitors: Visitor = {
 
     classDetected: false,
 
@@ -41,8 +41,8 @@ export function elementFinder() {
       element = {
         type: 'element',
         desc: esutil.getAttachedComment(node),
-        events: esutil.getEventComments(node).map(function (event) {
-          return {desc: event};
+        events: esutil.getEventComments(node).map(function(event) {
+          return { desc: event };
         }),
         properties: [],
         behaviors: [],
@@ -97,12 +97,12 @@ export function elementFinder() {
         var returnStatement = <estree.ReturnStatement>node.value.body.body[0];
         var argument = <estree.ArrayExpression>returnStatement.argument;
         if (propDesc.name === 'behaviors') {
-          argument.elements.forEach((elementObject:estree.Identifier) => {
+          argument.elements.forEach((elementObject: estree.Identifier) => {
             element.behaviors.push(elementObject.name);
           });
         } else {
-          argument.elements.forEach((elementObject:estree.Literal) => {
-            element.observers.push({javascriptNode: elementObject, expression: elementObject.raw});
+          argument.elements.forEach((elementObject: estree.Literal) => {
+            element.observers.push({ javascriptNode: elementObject, expression: elementObject.raw });
           });
         }
       } else {
@@ -123,7 +123,7 @@ export function elementFinder() {
           element = {
             type: 'element',
             desc: esutil.getAttachedComment(parent),
-            events: esutil.getEventComments(parent).map(function (event) {
+            events: esutil.getEventComments(parent).map( function(event) {
               return {desc: event};
             })
           };
@@ -157,9 +157,9 @@ export function elementFinder() {
         element.properties = [];
         element.behaviors = [];
         element.observers = [];
-        var getters:{[name: string]: PropertyDescriptor} = {};
-        var setters:{[name: string]: PropertyDescriptor} = {};
-        var definedProperties:{[name: string]: PropertyDescriptor} = {};
+        var getters: {[name: string]: PropertyDescriptor} = {};
+        var setters: {[name: string]: PropertyDescriptor} = {};
+        var definedProperties: {[name: string]: PropertyDescriptor} = {};
         for (var i = 0; i < node.properties.length; i++) {
           var prop = node.properties[i];
           var name = esutil.objectKeyToString(prop.key);
@@ -183,11 +183,11 @@ export function elementFinder() {
             element.properties.push(esutil.toPropertyDescriptor(prop));
           }
         }
-        Object.keys(getters).forEach(function (getter) {
+        Object.keys(getters).forEach(function(getter) {
           var get = getters[getter];
           definedProperties[get.name] = get;
         });
-        Object.keys(setters).forEach(function (setter) {
+        Object.keys(setters).forEach(function(setter) {
           var set = setters[setter];
           if (!(set.name in definedProperties)) {
             definedProperties[set.name] = set;
@@ -195,7 +195,7 @@ export function elementFinder() {
             definedProperties[set.name].setter = true;
           }
         });
-        Object.keys(definedProperties).forEach(function (p) {
+        Object.keys(definedProperties).forEach(function(p){
           var prop = definedProperties[p];
           element.properties.push(prop);
         });

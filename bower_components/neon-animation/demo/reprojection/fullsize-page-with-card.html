@@ -60,7 +60,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       sharedElements: {
         type: Object,
-        value: function () {
+        value: function() {
           return {
             'hero': this.$.card,
             'ripple': this.$.fixed
@@ -70,7 +70,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       animationConfig: {
         type: Object,
-        value: function () {
+        value: function() {
           return {
             'entry': [{
               name: 'ripple-animation',
@@ -99,7 +99,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     },
 
-    _computeCardClass: function (color) {
+    _computeCardClass: function(color) {
       var cls = 'card';
       if (color) {
         cls += ' ' + color + '-300';
@@ -107,7 +107,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       return cls;
     },
 
-    _computeFixedBackgroundClass: function (color) {
+    _computeFixedBackgroundClass: function(color) {
       var cls = 'fixed';
       if (color) {
         cls += ' ' + color + '-100';

@@ -12,7 +12,7 @@
 //   See the License for the specific language governing permissions and
 // limitations under the License.
 
-(function (scope, testing) {
+(function(scope, testing) {
 
   function parseDimension(unitRegExp, string) {
     string = string.trim().toLowerCase();
@@ -29,7 +29,7 @@
     // lowercase) to prevent problems with types which are substrings of
     // each other (although prefixes may be problematic!)
     var matchedUnits = {};
-    string = string.replace(unitRegExp, function (match) {
+    string = string.replace(unitRegExp, function(match) {
       matchedUnits[match] = null;
       return 'U' + match;
     });
@@ -75,14 +75,10 @@
         units.push(unit);
     }
 
-    left = units.map(function (unit) {
-      return left[unit] || 0;
-    });
-    right = units.map(function (unit) {
-      return right[unit] || 0;
-    });
-    return [left, right, function (values) {
-      var result = values.map(function (value, i) {
+    left = units.map(function(unit) { return left[unit] || 0; });
+    right = units.map(function(unit) { return right[unit] || 0; });
+    return [left, right, function(values) {
+      var result = values.map(function(value, i) {
         if (values.length == 1 && nonNegative) {
           value = Math.max(value, 0);
         }
@@ -109,7 +105,7 @@
   var consumeSizePairList = scope.consumeRepeated.bind(undefined, consumeSizePair, /^,/);
   scope.consumeSizePairList = consumeSizePairList;
 
-  var parseSizePairList = function (input) {
+  var parseSizePairList = function(input) {
     var result = consumeSizePairList(input);
     if (result && result[1] == '') {
       return result[0];

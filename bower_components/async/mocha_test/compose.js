@@ -1,9 +1,9 @@
 var async = require('../lib/async');
 var expect = require('chai').expect;
 
-describe('compose', function () {
-    context('all functions succeed', function () {
-        it('yields the result of the composition of the functions', function (done) {
+describe('compose', function(){
+    context('all functions succeed', function(){
+        it('yields the result of the composition of the functions', function(done){
             var add2 = function (n, cb) {
                 setTimeout(function () {
                     cb(null, n + 2);
@@ -28,8 +28,8 @@ describe('compose', function () {
         });
     });
 
-    context('a function errors', function () {
-        it('yields the error and does not call later functions', function (done) {
+    context('a function errors', function(){
+        it('yields the error and does not call later functions', function(done){
             var add1called = false;
             var mul3error = new Error('mul3 error');
             var add2 = function (n, cb) {
@@ -58,7 +58,7 @@ describe('compose', function () {
         });
     });
 
-    it('calls each function with the binding of the composed function', function (done) {
+    it('calls each function with the binding of the composed function', function(done){
         var context = {};
         var add2Context = null;
         var mul3Context = null;

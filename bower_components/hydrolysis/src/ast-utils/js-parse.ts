@@ -8,8 +8,8 @@
  * subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
  */
 /**
- * Finds and annotates the Polymer() and modulate() calls in javascript.
- */
+* Finds and annotates the Polymer() and modulate() calls in javascript.
+*/
 
 'use strict';
 import * as espree from 'espree';
@@ -32,10 +32,10 @@ function traverse(visitorRegistries:Visitor[]):estraverse.Callbacks {
     }
   }
   return {
-    enter: function (node, parent) {
+    enter: function(node, parent) {
       return applyVisitors('enter' + node.type, node, parent);
     },
-    leave: function (node, parent) {
+    leave: function(node, parent) {
       return applyVisitors('leave' + node.type, node, parent);
     },
     fallback: 'iteration',
@@ -54,15 +54,15 @@ export function jsParse(jsString:string) {
   var behaviorInfo = behaviorFinder();
   var elementInfo = elementFinder();
 
-  var visitors = [featureInfo, behaviorInfo, elementInfo].map(function (info) {
+  var visitors = [featureInfo, behaviorInfo, elementInfo].map(function(info) {
     return info.visitors;
   });
   estraverse.traverse(script, traverse(visitors));
 
   return {
     behaviors: behaviorInfo.behaviors,
-    elements: elementInfo.elements,
-    features: featureInfo.features,
+    elements:  elementInfo.elements,
+    features:  featureInfo.features,
     parsedScript: script
   };
 };

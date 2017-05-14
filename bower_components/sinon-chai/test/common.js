@@ -8,8 +8,7 @@ global.AssertionError = require("chai").AssertionError;
 global.swallow = function (thrower) {
     try {
         thrower();
-    } catch (e) {
-    }
+    } catch (e) { }
 };
 
 var sinonChai = require("../lib/sinon-chai");

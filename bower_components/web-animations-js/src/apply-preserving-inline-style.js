@@ -12,7 +12,7 @@
 //     See the License for the specific language governing permissions and
 // limitations under the License.
 
-(function (scope, testing) {
+(function(scope, testing) {
 
   var styleAttributes = {
     cssText: 1,
@@ -87,15 +87,13 @@
       return this._style.parentRule;
     },
     // Mirror the indexed getters and setters of the surrogate style.
-    _updateIndices: function () {
+    _updateIndices: function() {
       while (this._length < this._surrogateStyle.length) {
         Object.defineProperty(this, this._length, {
           configurable: true,
           enumerable: false,
-          get: (function (index) {
-            return function () {
-              return this._surrogateStyle[index];
-            };
+          get: (function(index) {
+            return function() { return this._surrogateStyle[index]; };
           })(this._length)
         });
         this._length++;
@@ -109,11 +107,11 @@
         });
       }
     },
-    _set: function (property, value) {
+    _set: function(property, value) {
       this._style[property] = value;
       this._isAnimatedProperty[property] = true;
     },
-    _clear: function (property) {
+    _clear: function(property) {
       this._style[property] = this._surrogateStyle[property];
       delete this._isAnimatedProperty[property];
     },
@@ -121,8 +119,8 @@
 
   // Wrap the style methods.
   for (var method in styleMethods) {
-    AnimatedCSSStyleDeclaration.prototype[method] = (function (method, modifiesStyle) {
-      return function () {
+    AnimatedCSSStyleDeclaration.prototype[method] = (function(method, modifiesStyle) {
+      return function() {
         var result = this._surrogateStyle[method].apply(this._surrogateStyle, arguments);
         if (modifiesStyle) {
           if (!this._isAnimatedProperty[arguments[0]])
@@ -139,12 +137,12 @@
     if (property in styleAttributes || property in styleMethods) {
       continue;
     }
-    (function (property) {
+    (function(property) {
       configureProperty(AnimatedCSSStyleDeclaration.prototype, property, {
-        get: function () {
+        get: function() {
           return this._surrogateStyle[property];
         },
-        set: function (value) {
+        set: function(value) {
           this._surrogateStyle[property] = value;
           this._updateIndices();
           if (!this._isAnimatedProperty[property])
@@ -160,18 +158,14 @@
 
     var animatedStyle = new AnimatedCSSStyleDeclaration(element);
     try {
-      configureProperty(element, 'style', {
-        get: function () {
-          return animatedStyle;
-        }
-      });
+      configureProperty(element, 'style', { get: function() { return animatedStyle; } });
     } catch (_) {
       // iOS and older versions of Safari (pre v7) do not support overriding an element's
       // style object. Animations will clobber any inline styles as a result.
-      element.style._set = function (property, value) {
+      element.style._set = function(property, value) {
         element.style[property] = value;
       };
-      element.style._clear = function (property) {
+      element.style._clear = function(property) {
         element.style[property] = '';
       };
     }
@@ -180,12 +174,12 @@
     element._webAnimationsPatchedStyle = element.style;
   }
 
-  scope.apply = function (element, property, value) {
+  scope.apply = function(element, property, value) {
     ensureStyleIsPatched(element);
     element.style._set(scope.propertyName(property), value);
   };
 
-  scope.clear = function (element, property) {
+  scope.clear = function(element, property) {
     if (element._webAnimationsPatchedStyle) {
       element.style._clear(scope.propertyName(property));
     }

@@ -1,12 +1,11 @@
-(function () {
+(function(){
 	if (typeof self === 'undefined' || !self.Prism || !self.document) {
 		return;
 	}
 
 	var callbacks = [];
 	var map = {};
-	var noop = function () {
-	};
+	var noop = function() {};
 
 	Prism.plugins.toolbar = {};
 
@@ -71,12 +70,12 @@
 		toolbar.classList.add('toolbar');
 
 		if (document.body.hasAttribute('data-toolbar-order')) {
-			callbacks = document.body.getAttribute('data-toolbar-order').split(',').map(function (key) {
+			callbacks = document.body.getAttribute('data-toolbar-order').split(',').map(function(key) {
 				return map[key] || noop;
 			});
 		}
 
-		callbacks.forEach(function (callback) {
+		callbacks.forEach(function(callback) {
 			var element = callback(env);
 
 			if (!element) {
@@ -94,7 +93,7 @@
 		pre.appendChild(toolbar);
 	};
 
-	registerButton('label', function (env) {
+	registerButton('label', function(env) {
 		var pre = env.element.parentNode;
 		if (!pre || !/pre/i.test(pre.nodeName)) {
 			return;
@@ -109,8 +108,7 @@
 		try {
 			// Any normal text will blow up this selector.
 			template = document.querySelector('template#' + text);
-		} catch (e) {
-		}
+		} catch (e) {}
 
 		if (template) {
 			element = template.content;

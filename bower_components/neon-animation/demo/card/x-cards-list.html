@@ -26,7 +26,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         @apply(--layout-fit);
       }
     </style>
-
+    
     <div id="placeholder"></div>
     <div id="container">
       <content select="div"></content>
@@ -36,40 +36,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </dom-module>
 
 <script>
-  (function () {
-    Polymer({
-      is: 'x-cards-list',
+(function() {
+  Polymer({
+    is: 'x-cards-list',
 
-      behaviors: [
-        Polymer.NeonSharedElementAnimatableBehavior
-      ],
+    behaviors: [
+      Polymer.NeonSharedElementAnimatableBehavior
+    ],
 
-      properties: {
-        animationConfig: {
-          value: function () {
-            return {
-              'entry': [{
-                name: 'reverse-ripple-animation',
-                id: 'reverse-ripple',
-                toPage: this
-              }],
+    properties: {
+      animationConfig: {
+        value: function() {
+          return {
+            'entry': [{
+              name: 'reverse-ripple-animation',
+              id: 'reverse-ripple',
+              toPage: this
+            }],
 
-              'exit': [{
-                name: 'fade-out-animation',
-                node: this.$.container,
-                timing: {
-                  delay: 150,
-                  duration: 0
-                }
-              }, {
-                name: 'ripple-animation',
-                id: 'ripple',
-                fromPage: this
-              }]
-            };
-          }
+            'exit': [{
+              name: 'fade-out-animation',
+              node: this.$.container,
+              timing: {
+                delay: 150,
+                duration: 0
+              }
+            }, {
+              name: 'ripple-animation',
+              id: 'ripple',
+              fromPage: this
+            }]
+          };
         }
       }
-    });
-  })();
+    }
+  });
+})();
 </script>

@@ -49,30 +49,28 @@ style this element.
       }
     </style>
 
-    <paper-input-container no-label-float$="[[noLabelFloat]]"
-                           always-float-label="[[_computeAlwaysFloatLabel(alwaysFloatLabel,placeholder)]]"
-                           auto-validate$="[[autoValidate]]" disabled$="[[disabled]]" invalid="[[invalid]]">
+    <paper-input-container no-label-float$="[[noLabelFloat]]" always-float-label="[[_computeAlwaysFloatLabel(alwaysFloatLabel,placeholder)]]" auto-validate$="[[autoValidate]]" disabled$="[[disabled]]" invalid="[[invalid]]">
 
       <label hidden$="[[!label]]" aria-hidden="true">[[label]]</label>
 
       <iron-autogrow-textarea id="input" class="paper-input-input"
-                              bind-value="{{value}}"
-                              invalid="{{invalid}}"
-                              validator$="[[validator]]"
-                              disabled$="[[disabled]]"
-                              autocomplete$="[[autocomplete]]"
-                              autofocus$="[[autofocus]]"
-                              inputmode$="[[inputmode]]"
-                              name$="[[name]]"
-                              placeholder$="[[placeholder]]"
-                              readonly$="[[readonly]]"
-                              required$="[[required]]"
-                              minlength$="[[minlength]]"
-                              maxlength$="[[maxlength]]"
-                              autocapitalize$="[[autocapitalize]]"
-                              rows$="[[rows]]"
-                              max-rows$="[[maxRows]]"
-                              on-change="_onChange"></iron-autogrow-textarea>
+        bind-value="{{value}}"
+        invalid="{{invalid}}"
+        validator$="[[validator]]"
+        disabled$="[[disabled]]"
+        autocomplete$="[[autocomplete]]"
+        autofocus$="[[autofocus]]"
+        inputmode$="[[inputmode]]"
+        name$="[[name]]"
+        placeholder$="[[placeholder]]"
+        readonly$="[[readonly]]"
+        required$="[[required]]"
+        minlength$="[[minlength]]"
+        maxlength$="[[maxlength]]"
+        autocapitalize$="[[autocapitalize]]"
+        rows$="[[rows]]"
+        max-rows$="[[maxRows]]"
+        on-change="_onChange"></iron-autogrow-textarea>
 
       <template is="dom-if" if="[[errorMessage]]">
         <paper-input-error>[[errorMessage]]</paper-input-error>
@@ -127,16 +125,16 @@ style this element.
        * @default 0
        */
       maxRows: {
-        type: Number,
-        value: 0
+       type: Number,
+       value: 0
       }
     },
 
-    _ariaLabelledByChanged: function (ariaLabelledBy) {
+    _ariaLabelledByChanged: function(ariaLabelledBy) {
       this.$.input.textarea.setAttribute('aria-labelledby', ariaLabelledBy);
     },
 
-    _ariaDescribedByChanged: function (ariaDescribedBy) {
+    _ariaDescribedByChanged: function(ariaDescribedBy) {
       this.$.input.textarea.setAttribute('aria-describedby', ariaDescribedBy);
     },
 

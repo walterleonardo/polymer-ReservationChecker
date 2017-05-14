@@ -42,14 +42,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     <div class="container">
 
-      <input is="iron-input" maxlength="3" bind-value="{{_ssn1}}" size="3"
-             aria-label="First 3 digits of social security number">
+      <input is="iron-input" maxlength="3" bind-value="{{_ssn1}}" size="3" aria-label="First 3 digits of social security number">
       -
-      <input is="iron-input" maxlength="2" bind-value="{{_ssn2}}" size="2"
-             aria-label="Middle 2 digits of social security number">
+      <input is="iron-input" maxlength="2" bind-value="{{_ssn2}}" size="2" aria-label="Middle 2 digits of social security number">
       -
-      <input is="iron-input" maxlength="4" bind-value="{{_ssn3}}" size="4"
-             aria-label="Last 4 digits of social security number">
+      <input is="iron-input" maxlength="4" bind-value="{{_ssn3}}" size="4" aria-label="Last 4 digits of social security number">
 
     </div>
 
@@ -92,7 +89,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       '_computeValue(_ssn1,_ssn2,_ssn3)'
     ],
 
-    _computeValue: function (ssn1, ssn2, ssn3) {
+    _computeValue: function(ssn1, ssn2, ssn3) {
       this.value = ssn1.trim() + '-' + ssn2.trim() + '-' + ssn3.trim();
     }
   });

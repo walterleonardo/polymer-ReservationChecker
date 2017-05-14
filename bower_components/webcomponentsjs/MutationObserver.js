@@ -9,32 +9,32 @@
  */
 // @version 0.7.24
 if (typeof WeakMap === "undefined") {
-  (function () {
+  (function() {
     var defineProperty = Object.defineProperty;
     var counter = Date.now() % 1e9;
-    var WeakMap = function () {
+    var WeakMap = function() {
       this.name = "__st" + (Math.random() * 1e9 >>> 0) + (counter++ + "__");
     };
     WeakMap.prototype = {
-      set: function (key, value) {
+      set: function(key, value) {
         var entry = key[this.name];
         if (entry && entry[0] === key) entry[1] = value; else defineProperty(key, this.name, {
-          value: [key, value],
+          value: [ key, value ],
           writable: true
         });
         return this;
       },
-      get: function (key) {
+      get: function(key) {
         var entry;
         return (entry = key[this.name]) && entry[0] === key ? entry[1] : undefined;
       },
-      "delete": function (key) {
+      "delete": function(key) {
         var entry = key[this.name];
         if (!entry || entry[0] !== key) return false;
         entry[0] = entry[1] = undefined;
         return true;
       },
-      has: function (key) {
+      has: function(key) {
         var entry = key[this.name];
         if (!entry) return false;
         return entry[0] === key;
@@ -44,7 +44,7 @@ if (typeof WeakMap === "undefined") {
   })();
 }
 
-(function (global) {
+(function(global) {
   if (global.JsMutationObserver) {
     return;
   }
@@ -57,23 +57,22 @@ if (typeof WeakMap === "undefined") {
   } else {
     var setImmediateQueue = [];
     var sentinel = String(Math.random());
-    window.addEventListener("message", function (e) {
+    window.addEventListener("message", function(e) {
       if (e.data === sentinel) {
         var queue = setImmediateQueue;
         setImmediateQueue = [];
-        queue.forEach(function (func) {
+        queue.forEach(function(func) {
           func();
         });
       }
     });
-    setImmediate = function (func) {
+    setImmediate = function(func) {
       setImmediateQueue.push(func);
       window.postMessage(sentinel, "*");
     };
   }
   var isScheduled = false;
   var scheduledObservers = [];
-
   function scheduleCallback(observer) {
     scheduledObservers.push(observer);
     if (!isScheduled) {
@@ -81,20 +80,18 @@ if (typeof WeakMap === "undefined") {
       setImmediate(dispatchCallbacks);
     }
   }
-
   function wrapIfNeeded(node) {
     return window.ShadowDOMPolyfill && window.ShadowDOMPolyfill.wrapIfNeeded(node) || node;
   }
-
   function dispatchCallbacks() {
     isScheduled = false;
     var observers = scheduledObservers;
     scheduledObservers = [];
-    observers.sort(function (o1, o2) {
+    observers.sort(function(o1, o2) {
       return o1.uid_ - o2.uid_;
     });
     var anyNonEmpty = false;
-    observers.forEach(function (observer) {
+    observers.forEach(function(observer) {
       var queue = observer.takeRecords();
       removeTransientObserversFor(observer);
       if (queue.length) {
@@ -104,17 +101,15 @@ if (typeof WeakMap === "undefined") {
     });
     if (anyNonEmpty) dispatchCallbacks();
   }
-
   function removeTransientObserversFor(observer) {
-    observer.nodes_.forEach(function (node) {
+    observer.nodes_.forEach(function(node) {
       var registrations = registrationsTable.get(node);
       if (!registrations) return;
-      registrations.forEach(function (registration) {
+      registrations.forEach(function(registration) {
         if (registration.observer === observer) registration.removeTransientObservers();
       });
     });
   }
-
   function forEachAncestorAndObserverEnqueueRecord(target, callback) {
     for (var node = target; node; node = node.parentNode) {
       var registrations = registrationsTable.get(node);
@@ -129,18 +124,15 @@ if (typeof WeakMap === "undefined") {
       }
     }
   }
-
   var uidCounter = 0;
-
   function JsMutationObserver(callback) {
     this.callback_ = callback;
     this.nodes_ = [];
     this.records_ = [];
     this.uid_ = ++uidCounter;
   }
-
   JsMutationObserver.prototype = {
-    observe: function (target, options) {
+    observe: function(target, options) {
       target = wrapIfNeeded(target);
       if (!options.childList && !options.attributes && !options.characterData || options.attributeOldValue && !options.attributes || options.attributeFilter && options.attributeFilter.length && !options.attributes || options.characterDataOldValue && !options.characterData) {
         throw new SyntaxError();
@@ -163,8 +155,8 @@ if (typeof WeakMap === "undefined") {
       }
       registration.addListeners();
     },
-    disconnect: function () {
-      this.nodes_.forEach(function (node) {
+    disconnect: function() {
+      this.nodes_.forEach(function(node) {
         var registrations = registrationsTable.get(node);
         for (var i = 0; i < registrations.length; i++) {
           var registration = registrations[i];
@@ -177,7 +169,7 @@ if (typeof WeakMap === "undefined") {
       }, this);
       this.records_ = [];
     },
-    takeRecords: function () {
+    takeRecords: function() {
       var copyOfRecords = this.records_;
       this.records_ = [];
       return copyOfRecords;
@@ -194,7 +186,6 @@ if (typeof WeakMap === "undefined") {
     this.attributeNamespace = null;
     this.oldValue = null;
   }
-
   function copyMutationRecord(original) {
     var record = new MutationRecord(original.type, original.target);
     record.addedNodes = original.addedNodes.slice();
@@ -206,43 +197,35 @@ if (typeof WeakMap === "undefined") {
     record.oldValue = original.oldValue;
     return record;
   }
-
   var currentRecord, recordWithOldValue;
-
   function getRecord(type, target) {
     return currentRecord = new MutationRecord(type, target);
   }
-
   function getRecordWithOldValue(oldValue) {
     if (recordWithOldValue) return recordWithOldValue;
     recordWithOldValue = copyMutationRecord(currentRecord);
     recordWithOldValue.oldValue = oldValue;
     return recordWithOldValue;
   }
-
   function clearRecords() {
     currentRecord = recordWithOldValue = undefined;
   }
-
   function recordRepresentsCurrentMutation(record) {
     return record === recordWithOldValue || record === currentRecord;
   }
-
   function selectRecord(lastRecord, newRecord) {
     if (lastRecord === newRecord) return lastRecord;
     if (recordWithOldValue && recordRepresentsCurrentMutation(lastRecord)) return recordWithOldValue;
     return null;
   }
-
   function Registration(observer, target, options) {
     this.observer = observer;
     this.target = target;
     this.options = options;
     this.transientObservedNodes = [];
   }
-
   Registration.prototype = {
-    enqueue: function (record) {
+    enqueue: function(record) {
       var records = this.observer.records_;
       var length = records.length;
       if (records.length > 0) {
@@ -257,27 +240,27 @@ if (typeof WeakMap === "undefined") {
       }
       records[length] = record;
     },
-    addListeners: function () {
+    addListeners: function() {
       this.addListeners_(this.target);
     },
-    addListeners_: function (node) {
+    addListeners_: function(node) {
       var options = this.options;
       if (options.attributes) node.addEventListener("DOMAttrModified", this, true);
       if (options.characterData) node.addEventListener("DOMCharacterDataModified", this, true);
       if (options.childList) node.addEventListener("DOMNodeInserted", this, true);
       if (options.childList || options.subtree) node.addEventListener("DOMNodeRemoved", this, true);
     },
-    removeListeners: function () {
+    removeListeners: function() {
       this.removeListeners_(this.target);
     },
-    removeListeners_: function (node) {
+    removeListeners_: function(node) {
       var options = this.options;
       if (options.attributes) node.removeEventListener("DOMAttrModified", this, true);
       if (options.characterData) node.removeEventListener("DOMCharacterDataModified", this, true);
       if (options.childList) node.removeEventListener("DOMNodeInserted", this, true);
       if (options.childList || options.subtree) node.removeEventListener("DOMNodeRemoved", this, true);
     },
-    addTransientObserver: function (node) {
+    addTransientObserver: function(node) {
       if (node === this.target) return;
       this.addListeners_(node);
       this.transientObservedNodes.push(node);
@@ -285,10 +268,10 @@ if (typeof WeakMap === "undefined") {
       if (!registrations) registrationsTable.set(node, registrations = []);
       registrations.push(this);
     },
-    removeTransientObservers: function () {
+    removeTransientObservers: function() {
       var transientObservedNodes = this.transientObservedNodes;
       this.transientObservedNodes = [];
-      transientObservedNodes.forEach(function (node) {
+      transientObservedNodes.forEach(function(node) {
         this.removeListeners_(node);
         var registrations = registrationsTable.get(node);
         for (var i = 0; i < registrations.length; i++) {
@@ -299,62 +282,62 @@ if (typeof WeakMap === "undefined") {
         }
       }, this);
     },
-    handleEvent: function (e) {
+    handleEvent: function(e) {
       e.stopImmediatePropagation();
       switch (e.type) {
-        case "DOMAttrModified":
-          var name = e.attrName;
-          var namespace = e.relatedNode.namespaceURI;
-          var target = e.target;
-          var record = new getRecord("attributes", target);
-          record.attributeName = name;
-          record.attributeNamespace = namespace;
-          var oldValue = e.attrChange === MutationEvent.ADDITION ? null : e.prevValue;
-          forEachAncestorAndObserverEnqueueRecord(target, function (options) {
-            if (!options.attributes) return;
-            if (options.attributeFilter && options.attributeFilter.length && options.attributeFilter.indexOf(name) === -1 && options.attributeFilter.indexOf(namespace) === -1) {
-              return;
-            }
-            if (options.attributeOldValue) return getRecordWithOldValue(oldValue);
-            return record;
+       case "DOMAttrModified":
+        var name = e.attrName;
+        var namespace = e.relatedNode.namespaceURI;
+        var target = e.target;
+        var record = new getRecord("attributes", target);
+        record.attributeName = name;
+        record.attributeNamespace = namespace;
+        var oldValue = e.attrChange === MutationEvent.ADDITION ? null : e.prevValue;
+        forEachAncestorAndObserverEnqueueRecord(target, function(options) {
+          if (!options.attributes) return;
+          if (options.attributeFilter && options.attributeFilter.length && options.attributeFilter.indexOf(name) === -1 && options.attributeFilter.indexOf(namespace) === -1) {
+            return;
+          }
+          if (options.attributeOldValue) return getRecordWithOldValue(oldValue);
+          return record;
         });
-          break;
+        break;
 
-        case "DOMCharacterDataModified":
-          var target = e.target;
-          var record = getRecord("characterData", target);
-          var oldValue = e.prevValue;
-          forEachAncestorAndObserverEnqueueRecord(target, function (options) {
-            if (!options.characterData) return;
-            if (options.characterDataOldValue) return getRecordWithOldValue(oldValue);
-            return record;
+       case "DOMCharacterDataModified":
+        var target = e.target;
+        var record = getRecord("characterData", target);
+        var oldValue = e.prevValue;
+        forEachAncestorAndObserverEnqueueRecord(target, function(options) {
+          if (!options.characterData) return;
+          if (options.characterDataOldValue) return getRecordWithOldValue(oldValue);
+          return record;
         });
-          break;
+        break;
 
-        case "DOMNodeRemoved":
-          this.addTransientObserver(e.target);
+       case "DOMNodeRemoved":
+        this.addTransientObserver(e.target);
 
-        case "DOMNodeInserted":
-          var changedNode = e.target;
-          var addedNodes, removedNodes;
-          if (e.type === "DOMNodeInserted") {
-            addedNodes = [changedNode];
-            removedNodes = [];
-          } else {
-            addedNodes = [];
-            removedNodes = [changedNode];
+       case "DOMNodeInserted":
+        var changedNode = e.target;
+        var addedNodes, removedNodes;
+        if (e.type === "DOMNodeInserted") {
+          addedNodes = [ changedNode ];
+          removedNodes = [];
+        } else {
+          addedNodes = [];
+          removedNodes = [ changedNode ];
         }
-          var previousSibling = changedNode.previousSibling;
-          var nextSibling = changedNode.nextSibling;
-          var record = getRecord("childList", e.target.parentNode);
-          record.addedNodes = addedNodes;
-          record.removedNodes = removedNodes;
-          record.previousSibling = previousSibling;
-          record.nextSibling = nextSibling;
-          forEachAncestorAndObserverEnqueueRecord(e.relatedNode, function (options) {
-            if (!options.childList) return;
-            return record;
-          });
+        var previousSibling = changedNode.previousSibling;
+        var nextSibling = changedNode.nextSibling;
+        var record = getRecord("childList", e.target.parentNode);
+        record.addedNodes = addedNodes;
+        record.removedNodes = removedNodes;
+        record.previousSibling = previousSibling;
+        record.nextSibling = nextSibling;
+        forEachAncestorAndObserverEnqueueRecord(e.relatedNode, function(options) {
+          if (!options.childList) return;
+          return record;
+        });
       }
       clearRecords();
     }

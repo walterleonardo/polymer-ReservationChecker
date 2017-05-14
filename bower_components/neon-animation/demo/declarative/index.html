@@ -9,7 +9,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
-<head>
+  <head>
     <title>neon-animated-pages demo: declarative</title>
 
     <meta charset="utf-8">
@@ -75,59 +75,58 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
     </style>
 
-</head>
-<body>
+  </head>
+  <body>
 
-<template is="dom-bind">
+    <template is="dom-bind">
 
-  <div class="toolbar">
+      <div class="toolbar">
         <button on-click="_onPrevClick">&#8678;</button>
         <button on-click="_onNextClick">&#8680;</button>
         <button on-click="_onUpClick">&#8679;</button>
         <button on-click="_onDownClick">&#8681;</button>
-  </div>
+      </div>
 
-  <neon-animated-pages id="pages" selected="[[selected]]" entry-animation="[[entryAnimation]]"
-                       exit-animation="[[exitAnimation]]">
+      <neon-animated-pages id="pages" selected="[[selected]]" entry-animation="[[entryAnimation]]" exit-animation="[[exitAnimation]]">
         <neon-animatable>1</neon-animatable>
         <neon-animatable>2</neon-animatable>
         <neon-animatable>3</neon-animatable>
         <neon-animatable>4</neon-animatable>
         <neon-animatable>5</neon-animatable>
-  </neon-animated-pages>
+      </neon-animated-pages>
 
-</template>
+    </template>
 
-<script>
+    <script>
 
-  var scope = document.querySelector('template[is="dom-bind"]');
-  scope.selected = 0;
+      var scope = document.querySelector('template[is="dom-bind"]');
+      scope.selected = 0;
 
-  scope._onPrevClick = function () {
+      scope._onPrevClick = function() {
         this.entryAnimation = 'slide-from-left-animation';
         this.exitAnimation = 'slide-right-animation';
         this.selected = this.selected === 0 ? 4 : (this.selected - 1);
-  }
+      }
 
-  scope._onNextClick = function () {
+      scope._onNextClick = function() {
         this.entryAnimation = 'slide-from-right-animation';
         this.exitAnimation = 'slide-left-animation';
         this.selected = this.selected === 4 ? 0 : (this.selected + 1);
-  }
+      }
 
-  scope._onUpClick = function () {
+      scope._onUpClick = function() {
         this.entryAnimation = 'slide-from-top-animation';
         this.exitAnimation = 'slide-down-animation';
         this.selected = this.selected === 4 ? 0 : (this.selected + 1);
-  }
+      }
 
-  scope._onDownClick = function () {
+      scope._onDownClick = function() {
         this.entryAnimation = 'slide-from-bottom-animation';
         this.exitAnimation = 'slide-up-animation';
         this.selected = this.selected === 0 ? 4 : (this.selected - 1);
-  }
+      }
 
-</script>
+    </script>
 
-</body>
+  </body>
 </html>

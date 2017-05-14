@@ -94,7 +94,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       config: {
         type: Array,
-        value: function () {
+        value: function() {
           return [
             {value: 1, color: 'blue'},
             {value: 2, color: 'red'},
@@ -112,7 +112,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
       animationConfig: {
         type: Object,
-        value: function () {
+        value: function() {
           return {
             'exit': [{
               name: 'ripple-animation',
@@ -133,11 +133,11 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       click: '_onClick'
     },
 
-    _computeTileClass: function (color) {
+    _computeTileClass: function(color) {
       return 'tile ' + color + '-300';
     },
 
-    _onClick: function (event) {
+    _onClick: function(event) {
       var target = event.target;
       while (target !== this && !target._templateInstance) {
         target = target.parentNode;

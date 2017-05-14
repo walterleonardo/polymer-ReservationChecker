@@ -42,7 +42,7 @@ Configuration:
       Polymer.NeonSharedElementAnimationBehavior
     ],
 
-    configure: function (config) {
+    configure: function(config) {
       var shared = this.findSharedElements(config);
       if (!shared) {
         return null;
@@ -77,7 +77,7 @@ Configuration:
       return this._effect;
     },
 
-    complete: function () {
+    complete: function() {
       if (this.sharedElements) {
         this.setPrefixedProperty(this.sharedElements.from, 'transformOrigin', '');
         this.sharedElements.from.style.borderRadius = '';

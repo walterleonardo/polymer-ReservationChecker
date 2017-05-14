@@ -17,10 +17,10 @@ import {Resolver, Deferred} from './resolver';
  * A FileLoader lets you resolve URLs with a set of potential resolvers.
  */
 export class FileLoader {
-  resolvers:Resolver[] = [];
+  resolvers: Resolver[] = [];
 
   // map url -> Deferred
-  requests:{[url:string]: Deferred<string>} = {};
+  requests: {[url:string]: Deferred<string>} = {};
 
   /**
    * Add an instance of a Resolver class to the list of url resolvers
@@ -43,7 +43,7 @@ export class FileLoader {
    * @return {Promise.<string>} A promise that resolves to the contents of the URL.
    */
   request(uri:string) {
-    var promise:Promise<string>;
+    var promise: Promise<string>;
 
     if (!(uri in this.requests)) {
       var handled = false;
@@ -70,5 +70,4 @@ export class FileLoader {
 
     return promise;
   }
-}
-;
+};

@@ -3,12 +3,12 @@
  * Modified by Miles Johnson: http://milesj.me
  *
  * Supports the following:
- *        - Extends clike syntax
- *        - Support for PHP 5.3+ (namespaces, traits, generators, etc)
- *        - Smarter constant and function matching
+ * 		- Extends clike syntax
+ * 		- Support for PHP 5.3+ (namespaces, traits, generators, etc)
+ * 		- Smarter constant and function matching
  *
  * Adds the following new token classes:
- *        constant, delimiter, variable, function, package
+ * 		constant, delimiter, variable, function, package
  */
 
 Prism.languages.php = Prism.languages.extend('clike', {
@@ -56,7 +56,7 @@ if (Prism.languages.markup) {
 
 	// Tokenize all inline PHP blocks that are wrapped in <?php ?>
 	// This allows for easy PHP + markup highlighting
-	Prism.hooks.add('before-highlight', function (env) {
+	Prism.hooks.add('before-highlight', function(env) {
 		if (env.language !== 'php') {
 			return;
 		}
@@ -64,7 +64,7 @@ if (Prism.languages.markup) {
 		env.tokenStack = [];
 
 		env.backupCode = env.code;
-		env.code = env.code.replace(/(?:<\?php|<\?)[\w\W]*?(?:\?>)/ig, function (match) {
+		env.code = env.code.replace(/(?:<\?php|<\?)[\w\W]*?(?:\?>)/ig, function(match) {
 			env.tokenStack.push(match);
 
 			return '{{{PHP' + env.tokenStack.length + '}}}';
@@ -72,7 +72,7 @@ if (Prism.languages.markup) {
 	});
 
 	// Restore env.code for other plugins (e.g. line-numbers)
-	Prism.hooks.add('before-insert', function (env) {
+	Prism.hooks.add('before-insert', function(env) {
 		if (env.language === 'php') {
 			env.code = env.backupCode;
 			delete env.backupCode;
@@ -80,7 +80,7 @@ if (Prism.languages.markup) {
 	});
 
 	// Re-insert the tokens after highlighting
-	Prism.hooks.add('after-highlight', function (env) {
+	Prism.hooks.add('after-highlight', function(env) {
 		if (env.language !== 'php') {
 			return;
 		}
@@ -94,7 +94,7 @@ if (Prism.languages.markup) {
 	});
 
 	// Wrap tokens in classes that are missing them
-	Prism.hooks.add('wrap', function (env) {
+	Prism.hooks.add('wrap', function(env) {
 		if (env.language === 'php' && env.type === 'markup') {
 			env.content = env.content.replace(/(\{\{\{PHP[0-9]+\}\}\})/g, "<span class=\"token php\">$1</span>");
 		}

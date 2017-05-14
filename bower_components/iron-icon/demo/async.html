@@ -13,14 +13,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <title>iron-icon demo</title>
   <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
   <link rel="import" href="../iron-icon.html">
-  <link rel="import" href="../../paper-styles/demo-pages.html">
+  <link rel="import" href="../../paper-styles/demo-pages.html" >
 
   <style is="custom-style">
     #loading_message {
       color: #444;
       margin-bottom: 16px;
     }
-
     .vertical-section h4 {
       border-left: 3px solid var(--paper-grey-300);
       padding-left: 10px;
@@ -32,7 +31,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   </style>
 </head>
 <body>
-<div class="vertical-section-container centered">
+  <div class="vertical-section-container centered">
     <h4>
       This demo is for an &lt;iron-icon&gt; with an asynchronously loaded
       iconset.
@@ -48,16 +47,16 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
       <iron-icon icon="example:location"></iron-icon>
 
     </div>
-</div>
-<script>
-  setTimeout(function () {
-    // Import the code that powers the iron-iconset asynchronously
-    var linkElem = document.createElement('link');
-    linkElem.setAttribute('rel', 'import');
-    linkElem.setAttribute('href', '../../iron-iconset/iron-iconset.html');
-    document.head.appendChild(linkElem);
-    document.querySelector('#loading_message').innerText = "Iconset Loaded.";
+  </div>
+  <script>
+    setTimeout(function() {
+      // Import the code that powers the iron-iconset asynchronously
+      var linkElem = document.createElement('link');
+      linkElem.setAttribute('rel', 'import');
+      linkElem.setAttribute('href', '../../iron-iconset/iron-iconset.html');
+      document.head.appendChild(linkElem);
+      document.querySelector('#loading_message').innerText = "Iconset Loaded.";
     }, 1000);
-</script>
+  </script>
 </body>
 </html>

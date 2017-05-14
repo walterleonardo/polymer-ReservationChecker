@@ -29,5 +29,5 @@ declare module 'espree' {
       globalReturn: boolean;
     }
   }
-  export function parse(text:string, opts?:ParseOpts):estree.Program;
+  export function parse(text: string, opts?: ParseOpts):estree.Program;
 }

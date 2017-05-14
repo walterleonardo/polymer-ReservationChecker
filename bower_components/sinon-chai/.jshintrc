@@ -17,6 +17,7 @@
     "undef": true,
     "unused": true,
     "white": true,
+
     "predef": [
         "define",
         "chai"
