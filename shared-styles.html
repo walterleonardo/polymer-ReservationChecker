@@ -1,0 +1,115 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<link rel="import" href="../polymer/polymer.html">
+
+<!-- shared styles for all views -->
+<dom-module id="shared-styles">
+    <template>
+        <style>
+
+            body {
+                background-color: white;
+            }
+
+            .card {
+                alignment: center;
+                margin: 10px;
+                padding: 10px;
+                /*padding: 10px 10px 10px 100px;*/
+                min-width: 280px;
+                width: 400px;
+                color: #757575;
+                border-radius: 0px;
+                background-color: #fff;
+                /*box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);*/
+
+            }
+
+            .circle {
+                display: inline-block;
+                width: 64px;
+                height: 64px;
+                text-align: center;
+                color: #555;
+                border-radius: 50%;
+                background: #ddd;
+                font-size: 30px;
+                line-height: 64px;
+            }
+
+            h1 {
+                margin: 16px 0;
+                color: #212121;
+                font-size: 18px;
+            }
+
+            h2 {
+                margin: 16px 0;
+                color: #212121;
+                font-size: 14px;
+            }
+
+            h3 {
+                margin: 16px 0;
+                color: #212121;
+                font-size: 12px;
+            }
+
+            form {
+                /*max-width: 400px;*/
+            }
+
+            :root {
+                /* Label and underline color when the input is not focused */
+                --paper-input-container-color: black;
+
+                /* Label and underline color when the input is focused */
+                --paper-input-container-focus-color: #71a83b;
+
+                /* Label and underline color when the input is invalid */
+                --paper-input-container-invalid-color: red;
+
+                /* Input foreground color */
+                --paper-input-container-input-color: black;
+                /* radio-button */
+                --paper-radio-button-checked-color: #71a83b;
+            }
+
+            .flex-center-justified {
+                padding-bottom: 100px;
+                @apply(--layout-horizontal);
+                @apply(--layout-center-justified);
+            }
+
+            boton {
+                @apply(--layout-fixed-bottom);
+                height: 64px;
+                z-index: 1;
+            }
+
+            boton > * {
+                background-color: var(--app-accent-color);
+                border: none;
+                color: white;
+                padding: 20px;
+                width: 100%;
+                height: 100%;
+                font-size: 15px;
+            }
+
+            boton > *:focus {
+                background-color: var(--app-accent-color);
+            }
+
+
+        </style>
+    </template>
+</dom-module>

@@ -1,0 +1,193 @@
+<link rel="import" href="../polymer/polymer.html">
+
+
+<link rel="import" href="../paper-input/paper-input.html">
+<link rel="import" href="../paper-dropdown-menu/paper-dropdown-menu.html">
+<link rel="import" href="../paper-listbox/paper-listbox.html">
+<link rel="import" href="../paper-item/paper-item.html">
+<link rel="import" href="../paper-radio-group/paper-radio-group.html">
+<link rel="import" href="../iron-form/iron-form.html">
+<link rel="import" href="../paper-button/paper-button.html">
+<link rel="import" href="../iron-icon/iron-icon.html">
+<link rel="import" href="../paper-toast/paper-toast.html">
+<link rel="import" href="../paper-spinner/paper-spinner.html">
+<link rel="import" href="shared-styles.html">
+
+<!--
+`polymer1-element-checkReservations`
+Reservation checker
+
+@demo demo/index.html
+-->
+
+<dom-module id="polymer1-element-checkReservations">
+    <template>
+        <style include="shared-styles">
+            :host {
+                display: block;
+                padding: 10px;
+            }
+
+            paper-dropdown-menu {
+                width: 98%;
+            }
+
+            table {
+                font-family: arial, sans-serif;
+                border-collapse: collapse;
+                width: 100%;
+            }
+
+            td, th {
+                border: 1px solid #dddddd;
+                text-align: left;
+            }
+
+            tr:nth-child(even) {
+                background-color: #dddddd;
+            }
+
+            .card {
+                box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+            }
+        </style>
+
+
+        <div class="container flex-center-justified">
+            <div class="card">
+                <h1>Booking search</h1>
+
+                <h3>Indicates the reservation code</h3>
+
+
+                <form is="iron-form" method="get" action="http://viajesibiza.mateu.io/resources/pickupconfirmation/q?"
+                      id="formLogin">
+                    <paper-input char-counter error-message="{{error}}" name="p" value="{{inputData}}"
+                                 label="Reservation Code" maxlength="25" required></paper-input>
+
+                    <br><br>
+                    <h2>Test information TO DELETE</h2>
+                    <p>Usuario OK TIH0000742T .</p>
+                    <p>Usuario no existe aun 1493730866128 .</p>
+                    <p>Usuario no lo encuentra estanolaencuentra .</p>
+                    <br><br>
+                    <paper-button raised onclick="_submit(event)"> Search</paper-button>
+                    <paper-spinner id="spinner" hidden></paper-spinner>
+
+
+                </form>
+                <div hidden="[[!debug]]">
+                    <h3>Output</h3>
+                    <div class="output"></div>
+                    <br>
+                    <h3>Answer from server</h3>
+                    <div class="outputServer"></div>
+                    <br>
+                </div>
+
+
+                <div id="respuesta" class="respuesta">
+                    <h2 style="color: red; font-style: oblique">{{errorMessage}} </h2>
+                    <template is="dom-repeat" items="[[_toArray(answer)]]">
+                        <span style="color:#71a83b">{{item.key}}</span>
+                        <br><span style="color:black">{{item.value}}</span>
+                        <br>
+                        <hr>
+                    </template>
+                    <br> <br> <br>
+                </div>
+            </div>
+
+        </div>
+
+    </template>
+
+    <script>
+        Polymer({
+
+            is: 'polymer1-element-checkReservations',
+
+            properties: {
+                debug: {
+                    tyoe: Boolean,
+                    value: false
+                },
+                username: {
+                    type: String,
+                    value: ""
+                },
+                user: {
+                    type: String,
+                    value: "{{inputData}}"
+                },
+                error: {
+                    type: String,
+                    value: "Reservation code is needed!"
+                },
+                answer: {
+                    type: Array,
+                    reflectToAttribute: true,
+                    notify: true
+                },
+                errorMessage: {
+                    type: String,
+                    notify: true,
+                },
+            },
+            listeners: {
+                'iron-form-response': 'formResponse',
+                'iron-form-submit': 'formSubmit',
+                'iron-form-error': 'formError'
+            },
+            _toArray: function (obj) {
+                return Object.keys(obj).map(function (key) {
+
+                    return {
+                        key: key,
+                        value: obj[key]
+                    };
+                });
+            },
+            formSubmit: function (event) {
+                this.$$('#spinner').active = 'true';
+                this.$$('#spinner').hidden = 'false';
+                this.$$('.output').innerHTML = JSON.stringify(event.detail);
+            },
+
+            formResponse: function (event, response) {
+                console.log("Event Detail");
+                console.log(response.xhr);
+                this.$$('#spinner').active = 'false';
+                this.$$('#spinner').hidden = 'true';
+                if (200 === response.xhr.status) {
+                    var datalogin = response.xhr;
+                    console.log("RESPONSE");
+                    console.log(datalogin.response);
+                    this.$$('.outputServer').innerHTML = datalogin.response.message;
+                    if (datalogin.response.result == "ok") {
+                        this.answer = datalogin.response.service;
+                        this.$$('#respuesta').style.display = 'block';
+                        this.errorMessage = [];
+                    } else {
+                        this.answer = [];
+                        this.errorMessage = datalogin.response.message;
+                        this.$$('#respuesta').style.display = 'block';
+                        this.$$('.outputServer').innerHTML = datalogin.response.message;
+                    }
+                } else {
+                    this.$$('.outputServer').innerHTML = "Mysql ERROR";
+                    app.session = false;
+                }
+
+            },
+            formError: function (event) {
+                this.$$('.outputServer').innerHTML = event.detail.error;
+            },
+
+        });
+
+        function _submit(event) {
+            Polymer.dom(event).localTarget.parentElement.submit();
+        }
+    </script>
+</dom-module>
