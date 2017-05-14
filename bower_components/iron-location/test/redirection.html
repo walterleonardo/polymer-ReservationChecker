@@ -8,61 +8,61 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <dom-module id='redirect-hash'>
-    <template>
-        <iron-location hash='{{hash}}'></iron-location>
-    </template>
-    <script>
-        Polymer({
-            is: 'redirect-hash',
-            properties: {
-                hash: {
-                    value: '',
-                    observer: 'hashChanged'
-                }
-            },
-            hashChanged: function (hash) {
-                this.hash = 'redirectedTo';
-            }
-        });
-    </script>
+  <template>
+    <iron-location hash='{{hash}}'></iron-location>
+  </template>
+  <script>
+    Polymer({
+      is: 'redirect-hash',
+      properties: {
+        hash: {
+          value: '',
+          observer: 'hashChanged'
+        }
+      },
+      hashChanged: function(hash) {
+        this.hash = 'redirectedTo';
+      }
+    });
+  </script>
 </dom-module>
 
 <dom-module id='redirect-path'>
-    <template>
-        <iron-location path='{{path}}'></iron-location>
-    </template>
-    <script>
-        Polymer({
-            is: 'redirect-path',
-            properties: {
-                path: {
-                    value: '',
-                    observer: 'pathChanged'
-                }
-            },
-            pathChanged: function (path) {
-                this.path = '/redirectedTo';
-            }
-        });
-    </script>
+  <template>
+    <iron-location path='{{path}}'></iron-location>
+  </template>
+  <script>
+    Polymer({
+      is: 'redirect-path',
+      properties: {
+        path: {
+          value: '',
+          observer: 'pathChanged'
+        }
+      },
+      pathChanged: function(path) {
+        this.path = '/redirectedTo';
+      }
+    });
+  </script>
 </dom-module>
 
 <dom-module id='redirect-query'>
-    <template>
-        <iron-location query='{{query}}'></iron-location>
-    </template>
-    <script>
-        Polymer({
-            is: 'redirect-query',
-            properties: {
-                query: {
-                    value: '',
-                    observer: 'queryChanged'
-                }
-            },
-            queryChanged: function (query) {
-                this.query = 'redirectedTo';
-            }
-        });
-    </script>
+  <template>
+    <iron-location query='{{query}}'></iron-location>
+  </template>
+  <script>
+    Polymer({
+      is: 'redirect-query',
+      properties: {
+        query: {
+          value: '',
+          observer: 'queryChanged'
+        }
+      },
+      queryChanged: function(query) {
+        this.query = 'redirectedTo';
+      }
+    });
+  </script>
 </dom-module>

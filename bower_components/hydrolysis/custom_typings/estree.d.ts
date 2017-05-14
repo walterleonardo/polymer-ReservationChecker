@@ -48,8 +48,7 @@ declare module 'estree' {
     body: BlockStatement;
     generator?: boolean;
   }
-  export interface Statement extends Node {
-  }
+  export interface Statement extends Node { }
   export interface ExpressionStatement extends Statement {
     // type: "ExpressionStatement";
     expression: Expression;
@@ -148,8 +147,7 @@ declare module 'estree' {
     // type: "ForOfStatement";
   }
 
-  export interface Declaration extends Statement {
-  }
+  export interface Declaration extends Statement { }
   export interface FunctionDeclaration extends Function, Declaration {
     // type: "FunctionDeclaration";
     id: Identifier;
@@ -166,8 +164,7 @@ declare module 'estree' {
     init?: Expression;
   }
 
-  export interface Expression extends Node {
-  }
+  export interface Expression extends Node { }
   export interface ThisExpression extends Expression {
     // type: "ThisExpression";
   }
@@ -304,8 +301,8 @@ declare module 'estree' {
     // type: "TemplateElement";
     tail: boolean;
     value: {
-      cooked: string;
-      raw: string;
+        cooked: string;
+        raw: string;
     };
   }
 
@@ -314,8 +311,7 @@ declare module 'estree' {
     argument: Expression;
   }
 
-  export interface Pattern extends Node {
-  }
+  export interface Pattern extends Node { }
   export interface AssignmentProperty extends Property {
     // type: "Property"; // inherited
     value: Pattern;
@@ -376,8 +372,7 @@ declare module 'estree' {
     property: Identifier;
   }
 
-  export interface ModuleDeclaration extends Node {
-  }
+  export interface ModuleDeclaration extends Node { }
   export interface ModuleSpecifier extends Node {
     local: Identifier;
   }

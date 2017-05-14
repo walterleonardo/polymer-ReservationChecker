@@ -15,13 +15,12 @@ export interface Resolver {
 
 
 export class Deferred<T> {
-  promise:Promise<T>;
-  resolve:(val:(T|PromiseLike<T>))=>void;
-  reject:(err:any)=>void;
-
+  promise: Promise<T>;
+  resolve: (val:(T|PromiseLike<T>))=>void;
+  reject: (err:any)=>void;
   constructor() {
     const self = this;
-    this.promise = new Promise<T>(function (resolve, reject) {
+    this.promise = new Promise<T>(function(resolve, reject) {
       self.resolve = resolve;
       self.reject = reject;
     });

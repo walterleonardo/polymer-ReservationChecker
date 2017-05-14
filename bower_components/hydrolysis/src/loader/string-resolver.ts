@@ -23,9 +23,8 @@ interface Config {
  * A resolver that resolves to `config.content` any uri matching config.
  */
 export class StringResolver implements Resolver {
-  url:string|RegExp;
-  content:string;
-
+  url: string|RegExp;
+  content: string;
   constructor(config:Config) {
     this.url = config.url;
     this.content = config.content;
@@ -40,7 +39,7 @@ export class StringResolver implements Resolver {
    *     this resolver handles the URI.
    * @return {boolean} Whether the URI is handled by this resolver.
    */
-  accept(uri:string, deferred:Deferred<string>) {
+  accept(uri: string, deferred: Deferred<string>) {
     const url = this.url;
     if (url instanceof RegExp) {
       if (!url.test(uri)) {
@@ -54,5 +53,4 @@ export class StringResolver implements Resolver {
     deferred.resolve(this.content);
     return true;
   }
-}
-;
+};

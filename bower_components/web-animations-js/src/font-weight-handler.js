@@ -13,30 +13,30 @@
 // limitations under the License.
 
 (function (scope) {
-    function parse(string) {
-        var out = Number(string);
-        if (isNaN(out) || out < 100 || out > 900 || out % 100 !== 0) {
-            return;
-        }
-        return out;
+  function parse(string) {
+    var out = Number(string);
+    if (isNaN(out) || out < 100 || out > 900 || out % 100 !== 0) {
+      return;
     }
+    return out;
+  }
 
-    function toCss(value) {
-        value = Math.round(value / 100) * 100;
-        value = scope.clamp(100, 900, value);
-        if (value === 400) {
-            return 'normal';
-        }
-        if (value === 700) {
-            return 'bold';
-        }
-        return String(value);
+  function toCss(value) {
+    value = Math.round(value / 100) * 100;
+    value = scope.clamp(100, 900, value);
+    if (value === 400) {
+      return 'normal';
     }
-
-    function merge(left, right) {
-        return [left, right, toCss];
+    if (value === 700) {
+      return 'bold';
     }
+    return String(value);
+  }
 
-    scope.addPropertiesHandler(parse, merge, ['font-weight']);
+  function merge(left, right) {
+    return [left, right, toCss];
+  }
+
+  scope.addPropertiesHandler(parse, merge, ['font-weight']);
 
 })(webAnimations1);

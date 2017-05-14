@@ -9,7 +9,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
-<head>
+  <head>
     <title>neon-animated-pages demo: tiles</title>
 
     <meta charset="utf-8">
@@ -26,46 +26,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="squares-page.html">
 
     <style is="custom-style">
-        body {
-            overflow: hidden;
-            @apply(--layout-fullbleed);
-        }
+      body {
+        overflow: hidden;
+        @apply(--layout-fullbleed);
+      }
+      neon-animated-pages {
+        height: 100%;
+      }
 
-        neon-animated-pages {
-            height: 100%;
-        }
-
-        :root {
-            --color-one: var(--paper-cyan-300);
-            --color-two: var(--paper-orange-500);
-        }
+      :root {
+        --color-one: var(--paper-cyan-300);
+        --color-two: var(--paper-orange-500);
+      }
     </style>
 
-</head>
-<body>
+  </head>
+  <body>
 
-<template is="dom-bind">
+    <template is="dom-bind">
 
-    <neon-animated-pages id="pages" selected="0">
+      <neon-animated-pages id="pages" selected="0">
         <circles-page on-circle-click="_onCircleClick"></circles-page>
         <squares-page on-click="_onSquaresClick"></squares-page>
-    </neon-animated-pages>
+      </neon-animated-pages>
 
-</template>
+    </template>
 
-<script>
+    <script>
 
-    var scope = document.querySelector('template[is="dom-bind"]');
+      var scope = document.querySelector('template[is="dom-bind"]');
 
-    scope._onCircleClick = function (event) {
+      scope._onCircleClick = function(event) {
         this.$.pages.selected = 1;
-    };
+      };
 
-    scope._onSquaresClick = function (event) {
+      scope._onSquaresClick = function(event) {
         this.$.pages.selected = 0;
-    };
+      };
 
-</script>
+    </script>
 
-</body>
+  </body>
 </html>

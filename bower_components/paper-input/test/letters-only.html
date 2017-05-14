@@ -13,18 +13,18 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <script>
 
-    Polymer({
+  Polymer({
 
-        is: 'letters-only',
+    is: 'letters-only',
 
-        behaviors: [
-            Polymer.IronValidatorBehavior
-        ],
+    behaviors: [
+      Polymer.IronValidatorBehavior
+    ],
 
-        validate: function (value) {
-            return !value || value.match(/^[a-zA-Z]*$/) !== null;
-        }
+    validate: function(value) {
+      return !value || value.match(/^[a-zA-Z]*$/) !== null;
+    }
 
-    });
+  });
 
 </script>

@@ -13,40 +13,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../../paper-styles/color.html">
 
 <dom-module id="simple-menubar">
-    <template>
-        <style>
-            .content ::content > .iron-selected {
-                color: white;
-                background-color: var(--google-red-500);
-            }
+  <template>
+    <style>
+      .content ::content > .iron-selected {
+        color: white;
+        background-color: var(--google-red-500);
+      }
 
-            .content ::content > * {
-                display: inline-block;
-            }
-        </style>
+      .content ::content > * {
+        display: inline-block;
+      }
+    </style>
 
-        <div class="content">
-            <content></content>
-        </div>
+    <div class="content">
+      <content></content>
+    </div>
 
-    </template>
+  </template>
 
 </dom-module>
 
 <script>
 
-    (function () {
+(function() {
 
-        Polymer({
+  Polymer({
 
-            is: 'simple-menubar',
+    is: 'simple-menubar',
 
-            behaviors: [
-                Polymer.IronMenubarBehavior
-            ]
+    behaviors: [
+      Polymer.IronMenubarBehavior
+    ]
 
-        });
+  });
 
-    })();
+})();
 
 </script>

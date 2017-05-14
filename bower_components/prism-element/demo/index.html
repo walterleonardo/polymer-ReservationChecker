@@ -9,7 +9,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html lang="en">
-<head>
+  <head>
     <title>prism-element demo</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -18,22 +18,22 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
     <link rel="import" href="../../paper-styles/demo-pages.html">
     <link rel="import" href="prism-demo.html">
-</head>
-<body>
-<div class="vertical-section-container centered">
-    <h4><code>p { color: blue; }</code> with lang="css"</h4>
-    <div class="vertical-section">
+  </head>
+  <body>
+    <div class="vertical-section-container centered">
+      <h4><code>p { color: blue; }</code> with lang="css"</h4>
+      <div class="vertical-section">
         <prism-demo code="p { color: blue; }" lang="css"></prism-demo>
-    </div>
-    <h4><code>&lt;style&gt;p { color: blue; }&lt;/style&gt;</code> with automatic language detection</h4>
-    <div class="vertical-section">
+      </div>
+      <h4><code>&lt;style&gt;p { color: blue; }&lt;/style&gt;</code> with automatic language detection</h4>
+      <div class="vertical-section">
         <prism-demo code="<style>p { color: blue; }</style>"></prism-demo>
-    </div>
+      </div>
 
-    <h4><code>&lt;p class="batman"&gt;&lt;/p&gt;</code> with automatic language detection</h4>
-    <div class="vertical-section">
+      <h4><code>&lt;p class="batman"&gt;&lt;/p&gt;</code> with automatic language detection</h4>
+      <div class="vertical-section">
         <prism-demo code="<p class=batman></p>" lang="html"></prism-demo>
-    </div>
-</div>
-</body>
+      </div>
+  </div>
+  </body>
 </html>

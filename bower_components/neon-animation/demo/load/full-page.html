@@ -15,68 +15,68 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="animated-grid.html">
 
 <dom-module id="full-page">
-    <template>
-        <style>
-            :host {
-                background: black;
-                visibility: hidden;
-                @apply(--layout-vertical);
-            }
+  <template>
+    <style>
+      :host {
+        background: black;
+        visibility: hidden;
+        @apply(--layout-vertical);
+      }
 
-            .toolbar {
-                background: #9c27b0;
-                height: 72px;
-                z-index: 1;
-                @apply(--shadow-elevation-2dp);
-            }
+      .toolbar {
+        background: #9c27b0;
+        height: 72px;
+        z-index: 1;
+        @apply(--shadow-elevation-2dp);
+      }
 
-            animated-grid {
-                height: calc(100% - 72px);
-                @apply(--layout-flex);
-            }
-        </style>
+      animated-grid {
+        height: calc(100% - 72px);
+        @apply(--layout-flex);
+      }
+    </style>
 
-        <div id="toolbar" class="toolbar"></div>
-        <animated-grid id="grid"></animated-grid>
+    <div id="toolbar" class="toolbar"></div>
+    <animated-grid id="grid"></animated-grid>
 
-    </template>
+  </template>
 </dom-module>
 
 <script>
 
-    Polymer({
+  Polymer({
 
-        is: 'full-page',
+    is: 'full-page',
 
-        behaviors: [
-            Polymer.NeonAnimatableBehavior,
-            Polymer.NeonAnimationRunnerBehavior
-        ],
+    behaviors: [
+      Polymer.NeonAnimatableBehavior,
+      Polymer.NeonAnimationRunnerBehavior
+    ],
 
-        properties: {
+    properties: {
 
-            animationConfig: {
-                type: Object,
-                value: function () {
-                    return {
-                        'entry': [{
-                            name: 'slide-from-top-animation',
-                            node: this.$.toolbar
-                        }, {
-                            animatable: this.$.grid,
-                            type: 'entry'
-                        }]
-                    };
-                }
-            }
-
-        },
-
-        show: function () {
-            this.style.visibility = 'visible';
-            this.playAnimation('entry');
+      animationConfig: {
+        type: Object,
+        value: function () {
+          return {
+            'entry': [{
+              name: 'slide-from-top-animation',
+              node: this.$.toolbar
+            }, {
+              animatable: this.$.grid,
+              type: 'entry'
+            }]
+          };
         }
+      }
 
-    });
+    },
+
+    show: function () {
+      this.style.visibility = 'visible';
+      this.playAnimation('entry');
+    }
+
+  });
 
 </script>

@@ -56,14 +56,12 @@ totalTime[version0] = wins[version0] = 0;
 totalTime[version1] = wins[version1] = 0;
 
 console.log("Comparing " + version0 + " with " + version1 +
-    " on Node " + process.version);
+  " on Node " + process.version);
 console.log("--------------------------------------");
 
 
 async.eachSeries(versionNames, cloneVersion, function (err) {
-    if (err) {
-        throw err;
-    }
+    if (err) { throw err; }
     versions = versionNames.map(requireVersion);
 
     var suites = suiteConfigs
@@ -81,27 +79,27 @@ async.eachSeries(versionNames, cloneVersion, function (err) {
         var wins0 = wins[version0];
         var wins1 = wins[version1];
 
-        if (Math.abs((totalTime0 / totalTime1) - 1) < 0.01) {
+        if ( Math.abs((totalTime0 / totalTime1) - 1) < 0.01) {
             // if < 1% difference, we're likely within the margins of error
             console.log("Both versions are about equal " +
-                "(" + totalTime0 + "ms total vs. " + totalTime1 + "ms total)");
+                "(" + totalTime0 + "ms total vs. " + totalTime1  + "ms total)");
         } else if (totalTime0 < totalTime1) {
             console.log(version0 + " faster overall " +
-                "(" + totalTime0 + "ms total vs. " + totalTime1 + "ms total)");
+                "(" + totalTime0 + "ms total vs. " + totalTime1  + "ms total)");
         } else if (totalTime1 < totalTime0) {
             console.log(version1 + " faster overall " +
-                "(" + totalTime1 + "ms total vs. " + totalTime0 + "ms total)");
+                "(" + totalTime1 + "ms total vs. " + totalTime0  + "ms total)");
         }
 
         if (wins0 > wins1) {
             console.log(version0 + " won more benchmarks " +
-                "(" + wins0 + " vs. " + wins1 + ")");
+                "(" + wins0 + " vs. " + wins1  + ")");
         } else if (wins1 > wins0) {
             console.log(version1 + " won more benchmarks " +
-                "(" + wins1 + " vs. " + wins0 + ")");
+                "(" + wins1 + " vs. " + wins0  + ")");
         } else {
             console.log("Both versions won the same number of benchmarks " +
-                "(" + wins0 + " vs. " + wins1 + ")");
+                "(" + wins0 + " vs. " + wins1  + ")");
         }
     });
 });
@@ -114,8 +112,7 @@ function runSuite(suite, callback) {
 
 function setDefaultOptions(suiteConfig) {
     suiteConfig.args = suiteConfig.args || [[]];
-    suiteConfig.setup = suiteConfig.setup || function () {
-        };
+    suiteConfig.setup = suiteConfig.setup || function () {};
     return suiteConfig;
 }
 
@@ -148,8 +145,7 @@ function createSuite(suiteConfig) {
 
         try {
             suiteConfig.setup(1);
-            suiteConfig.fn(version, function () {
-            });
+            suiteConfig.fn(version, function () {});
         } catch (e) {
             console.error(name + " Errored");
             errored = true;
@@ -173,29 +169,27 @@ function createSuite(suiteConfig) {
     addBench(versions[1], versionNames[1]);
 
 
-    return suite.on('cycle', function (event) {
-            var mean = event.target.stats.mean * 1000;
-            console.log(event.target + ", " + mean.toPrecision(3) + "ms per run");
-            var version = event.target.options.versionName;
-            if (errored) return;
-            totalTime[version] += mean;
-        })
-        .on('error', function (err) {
-            console.error(err);
-        })
-        .on('complete', function () {
-            if (!errored) {
-                var fastest = this.filter('fastest');
-                if (fastest.length === 2) {
-                    console.log("Tie");
-                } else {
-                    var winner = fastest[0].options.versionName;
-                    console.log(winner + ' is faster');
-                    wins[winner]++;
-                }
+    return suite.on('cycle', function(event) {
+        var mean = event.target.stats.mean * 1000;
+        console.log(event.target + ", " + mean.toPrecision(3) + "ms per run");
+        var version = event.target.options.versionName;
+        if (errored) return;
+        totalTime[version] += mean;
+    })
+    .on('error', function (err) { console.error(err); })
+    .on('complete', function() {
+        if (!errored) {
+            var fastest = this.filter('fastest');
+            if (fastest.length === 2) {
+                console.log("Tie");
+            } else {
+                var winner = fastest[0].options.versionName;
+                console.log(winner + ' is faster');
+                wins[winner]++;
             }
-            console.log("--------------------------------------");
-        });
+        }
+        console.log("--------------------------------------");
+    });
 
 }
 

@@ -5,10 +5,9 @@ declare module 'doctrine' {
     title: string;
     type: Type;
   }
-  class Type {
-  }
-  export var type:{
-    stringify(type:Type):string;
+  class Type {}
+  export var type: {
+    stringify(type: Type):string;
   }
   interface Options {
     unwrap: boolean;

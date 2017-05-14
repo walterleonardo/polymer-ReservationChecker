@@ -1,6 +1,6 @@
-# \<polymer1-element-checkReservations\>
+# \<polymer1-elem01\>
 
-Reservation checker
+
 
 ## Install the Polymer-CLI
 
@@ -19,4 +19,3 @@ $ polymer test
 ```
 
 Your application is already set up to be tested via [web-component-tester](https://github.com/Polymer/web-component-tester). Run `polymer test` to run your application's test suite locally.
-# polymer-ReservationChecker

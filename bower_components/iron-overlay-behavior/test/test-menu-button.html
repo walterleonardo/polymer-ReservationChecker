@@ -13,26 +13,26 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="test-menu-button">
 
-    <template>
-        <button id="trigger" on-click="toggle">Open</button>
-        <test-overlay id="overlay">
-            Composed overlay
-            <button>button 1</button>
-            <button>button 2</button>
-        </test-overlay>
-    </template>
+  <template>
+    <button id="trigger" on-click="toggle">Open</button>
+    <test-overlay id="overlay">
+      Composed overlay
+      <button>button 1</button>
+      <button>button 2</button>
+    </test-overlay>
+  </template>
 
 </dom-module>
 
 <script>
 
-    (function () {
-        Polymer({
-            is: 'test-menu-button',
-            toggle: function () {
-                this.$.overlay.toggle();
-            }
-        });
-    })();
+(function() {
+  Polymer({
+    is: 'test-menu-button',
+    toggle: function() {
+      this.$.overlay.toggle();
+    }
+  });
+})();
 
 </script>

@@ -9,7 +9,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html lang="en">
-<head>
+  <head>
     <title>paper-spinner demo</title>
 
     <meta charset="UTF-8">
@@ -26,77 +26,72 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="../paper-spinner.html">
 
     <style is="custom-style" include="demo-pages-shared-styles">
-        .vertical-section-container {
-            max-width: 550px;
-        }
+      .vertical-section-container {
+        max-width: 550px;
+      }
 
-        paper-spinner, paper-spinner-lite {
-            margin-right: 24px;
-        }
+      paper-spinner, paper-spinner-lite {
+        margin-right: 24px;
+      }
     </style>
-</head>
-<body unresolved>
-<div class="vertical-section-container centered">
-    <h3>Spinners can be deactivated or activated</h3>
-    <demo-snippet class="centered-demo">
+  </head>
+  <body unresolved>
+    <div class="vertical-section-container centered">
+      <h3>Spinners can be deactivated or activated</h3>
+      <demo-snippet class="centered-demo">
         <template>
-            <paper-spinner></paper-spinner>
-            <paper-spinner active></paper-spinner>
+          <paper-spinner></paper-spinner>
+          <paper-spinner active></paper-spinner>
 
-            <paper-spinner-lite></paper-spinner-lite>
-            <paper-spinner-lite active></paper-spinner-lite>
+          <paper-spinner-lite></paper-spinner-lite>
+          <paper-spinner-lite active></paper-spinner-lite>
 
-            <button onclick="toggle(event)">Toggle</button>
+          <button onclick="toggle(event)">Toggle</button>
         </template>
-    </demo-snippet>
+      </demo-snippet>
 
-    <h3>Spinners can be styled using custom properties</h3>
-    <demo-snippet class="centered-demo">
+      <h3>Spinners can be styled using custom properties</h3>
+      <demo-snippet class="centered-demo">
         <template>
-            <style is="custom-style">
-                paper-spinner.multi {
-                    --paper-spinner-layer-1-color: var(--paper-purple-500);
-                    --paper-spinner-layer-2-color: var(--paper-cyan-500);
-                    --paper-spinner-layer-3-color: var(--paper-blue-grey-500);
-                    --paper-spinner-layer-4-color: var(--paper-amber-500);
-                }
+          <style is="custom-style">
+            paper-spinner.multi {
+              --paper-spinner-layer-1-color: var(--paper-purple-500);
+              --paper-spinner-layer-2-color: var(--paper-cyan-500);
+              --paper-spinner-layer-3-color: var(--paper-blue-grey-500);
+              --paper-spinner-layer-4-color: var(--paper-amber-500);
+            }
+            paper-spinner-lite.orange {
+              --paper-spinner-color: var(--google-yellow-500);
+            }
+            paper-spinner-lite.green {
+              --paper-spinner-color: var(--google-green-500);
+            }
+            paper-spinner-lite.thin {
+              --paper-spinner-stroke-width: 1px;
+            }
+            paper-spinner-lite.thick {
+              --paper-spinner-stroke-width: 6px;
+            }
+          </style>
 
-                paper-spinner-lite.orange {
-                    --paper-spinner-color: var(--google-yellow-500);
-                }
+          <paper-spinner class="multi" active></paper-spinner>
 
-                paper-spinner-lite.green {
-                    --paper-spinner-color: var(--google-green-500);
-                }
+          <paper-spinner-lite class="orange" active></paper-spinner-lite>
+          <paper-spinner-lite class="green" active></paper-spinner-lite>
 
-                paper-spinner-lite.thin {
-                    --paper-spinner-stroke-width: 1px;
-                }
-
-                paper-spinner-lite.thick {
-                    --paper-spinner-stroke-width: 6px;
-                }
-            </style>
-
-            <paper-spinner class="multi" active></paper-spinner>
-
-            <paper-spinner-lite class="orange" active></paper-spinner-lite>
-            <paper-spinner-lite class="green" active></paper-spinner-lite>
-
-            <paper-spinner-lite class="thin" active></paper-spinner-lite>
-            <paper-spinner-lite class="thick" active></paper-spinner-lite>
+          <paper-spinner-lite class="thin" active></paper-spinner-lite>
+          <paper-spinner-lite class="thick" active></paper-spinner-lite>
         </template>
-    </demo-snippet>
-</div>
+      </demo-snippet>
+    </div>
 
-<script>
-    function toggle(event) {
+    <script>
+      function toggle(event) {
         var spinners = event.target.parentElement.querySelectorAll('paper-spinner, paper-spinner-lite');
-        Array.prototype.forEach.call(spinners, function (spinner) {
-            spinner.active = !spinner.active;
+        Array.prototype.forEach.call(spinners, function(spinner) {
+          spinner.active = !spinner.active;
         });
-    }
-    ;
-</script>
-</body>
+      };
+    </script>
+  </body>
 </html>

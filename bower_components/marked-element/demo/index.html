@@ -10,55 +10,55 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>marked-element demo</title>
+  <meta charset="UTF-8">
+  <title>marked-element demo</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
 
-    <link rel="import" href="../../paper-styles/demo-pages.html">
-    <link rel="import" href="../marked-element.html">
+  <link rel="import" href="../../paper-styles/demo-pages.html">
+  <link rel="import" href="../marked-element.html">
 
-    <style is="custom-style">
+  <style is="custom-style">
 
-        .centered {
-            max-width: 550px;
-            padding: 0;
-            overflow: auto;
-        }
+    .centered {
+      max-width: 550px;
+      padding: 0;
+      overflow: auto;
+    }
 
-        h1 {
-            margin-left: 30px;
-        }
+    h1 {
+      margin-left: 30px;
+    }
 
-        h3 {
-            color: var(--google-grey-700);
-            margin-left: 30px;
-        }
+    h3 {
+      color: var(--google-grey-700);
+      margin-left: 30px;
+    }
 
-        marked-element {
-            display: block;
-            background-color: var(--google-grey-100);
-            padding: 10px 30px;
-            margin-bottom: 10px;
-        }
+    marked-element {
+      display: block;
+      background-color: var(--google-grey-100);
+      padding: 10px 30px;
+      margin-bottom: 10px;
+    }
 
-        .markdown-html.custom p {
-            padding-left: 24px;
-        }
+    .markdown-html.custom p {
+      padding-left: 24px;
+    }
 
-    </style>
+  </style>
 </head>
 
 <body unresolved>
 
-<div class="vertical-section vertical-section-container centered">
+  <div class="vertical-section vertical-section-container centered">
     <h1>&lt;marked-element&gt;</h1>
 
     <section>
-        <h3>Inline Text</h3>
-        <marked-element>
-            <div class="markdown-html"></div>
-            <script type="text/markdown">
+      <h3>Inline Text</h3>
+      <marked-element>
+        <div class="markdown-html"></div>
+        <script type="text/markdown">
           ## Markdown Renderer
 
           Example:
@@ -72,30 +72,28 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           ```
 
           _Nifty_ features.
-
-            </script>
-        </marked-element>
+        </script>
+      </marked-element>
     </section>
 
     <section>
-        <h3>Text via Attribute, with custom styling</h3>
-        <marked-element markdown="***Bold and italic***">
-            <div class="markdown-html custom"></div>
-        </marked-element>
+      <h3>Text via Attribute, with custom styling</h3>
+      <marked-element markdown="***Bold and italic***">
+        <div class="markdown-html custom"></div>
+      </marked-element>
     </section>
 
     <section>
-        <h3>Remote content</h3>
-        <marked-element id="remoteContent">
-            <div class="markdown-html"></div>
-            <script type="text/markdown" src="./example2.md">
+      <h3>Remote content</h3>
+      <marked-element id="remoteContent">
+        <div class="markdown-html"></div>
+        <script type="text/markdown" src="./example2.md">
           Loading markdown...
-
-            </script>
-        </marked-element>
+        </script>
+      </marked-element>
     </section>
 
-</div>
+  </div>
 
 </body>
 </html>

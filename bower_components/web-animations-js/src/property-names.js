@@ -12,25 +12,24 @@
 //     See the License for the specific language governing permissions and
 // limitations under the License.
 
-(function (scope, testing) {
+(function(scope, testing) {
 
-    var aliased = {};
+  var aliased = {};
 
-    function alias(name, aliases) {
-        aliases.concat([name]).forEach(function (candidate) {
-            if (candidate in document.documentElement.style) {
-                aliased[name] = candidate;
-            }
-        });
-    }
+  function alias(name, aliases) {
+    aliases.concat([name]).forEach(function(candidate) {
+      if (candidate in document.documentElement.style) {
+        aliased[name] = candidate;
+      }
+    });
+  }
+  alias('transform', ['webkitTransform', 'msTransform']);
+  alias('transformOrigin', ['webkitTransformOrigin']);
+  alias('perspective', ['webkitPerspective']);
+  alias('perspectiveOrigin', ['webkitPerspectiveOrigin']);
 
-    alias('transform', ['webkitTransform', 'msTransform']);
-    alias('transformOrigin', ['webkitTransformOrigin']);
-    alias('perspective', ['webkitPerspective']);
-    alias('perspectiveOrigin', ['webkitPerspectiveOrigin']);
-
-    scope.propertyName = function (property) {
-        return aliased[property] || property;
-    };
+  scope.propertyName = function(property) {
+    return aliased[property] || property;
+  };
 
 })(webAnimations1, webAnimationsTesting);

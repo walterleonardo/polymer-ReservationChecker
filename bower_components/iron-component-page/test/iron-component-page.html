@@ -10,34 +10,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 -->
 <html>
 <head>
-    <title>iron-component-page</title>
+  <title>iron-component-page</title>
 
-    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
-    <script src="../../web-component-tester/browser.js"></script>
-    <script src="../../test-fixture/test-fixture-mocha.js"></script>
+  <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+  <script src="../../web-component-tester/browser.js"></script>
+  <script src="../../test-fixture/test-fixture-mocha.js"></script>
 
-    <link rel="import" href="../../polymer/polymer.html">
-    <link rel="import" href="../../test-fixture/test-fixture.html">
-    <link rel="import" href="../iron-component-page.html">
+  <link rel="import" href="../../polymer/polymer.html">
+  <link rel="import" href="../../test-fixture/test-fixture.html">
+  <link rel="import" href="../iron-component-page.html">
 </head>
 <body>
 
-<test-fixture id="basic">
+  <test-fixture id="basic">
     <template>
-        <iron-component-page src="test-element.html"></iron-component-page>
+      <iron-component-page src="test-element.html"></iron-component-page>
     </template>
-</test-fixture>
+  </test-fixture>
 
-<script>
-    suite('active-state', function () {
+  <script>
+    suite('active-state', function() {
 
-        var testElement;
+      var testElement;
 
-        setup(function () {
-            testElement = fixture('basic');
-        });
+      setup(function() {
+        testElement = fixture('basic');
+      });
 
     });
-</script>
+  </script>
 </body>
 </html>

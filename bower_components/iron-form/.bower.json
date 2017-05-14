@@ -47,5 +47,6 @@
   },
   "_source": "https://github.com/PolymerElements/iron-form.git",
   "_target": "^1.1.4",
-  "_originalSource": "iron-form"
+  "_originalSource": "iron-form",
+  "_direct": true
 }

@@ -13,7 +13,7 @@ declare module 'estraverse' {
     keys?: {};
   }
   export enum VisitorOption {
-    Skip, Break, Remove
+      Skip, Break, Remove
   }
-  export function traverse(n:Node, callbacks:Callbacks):void;
+  export function traverse(n: Node, callbacks:Callbacks):void;
 }

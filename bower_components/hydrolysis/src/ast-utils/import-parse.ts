@@ -69,7 +69,7 @@ function getLineAndColumn(string:string, charNumber:number) {
     return undefined;
   }
   // TODO(ajo): Caching the line lengths of each document could be much faster.
-  var sliced = string.slice(0, charNumber + 1);
+  var sliced = string.slice(0,charNumber+1);
   var split = sliced.split('\n');
   var line = split.length;
   var column = split[split.length - 1].length;
@@ -97,7 +97,7 @@ export interface ParsedImport {
   /**
    * The entry points to the AST at each outermost dom-module element.
    */
-    'dom-module': LocNode[];
+  'dom-module': LocNode[];
   comment: LocNode[];
   /**
    * The full parse5 ast for the document.
@@ -116,15 +116,15 @@ export interface LocNode extends dom5.Node {
 }
 
 /**
- * Parse html into ASTs.
- *
- * htmlString is a utf8, html5 document containing polymer elements
- * or module definitons.
- *
- * href is the path of the document.
- */
+* Parse html into ASTs.
+*
+* htmlString is a utf8, html5 document containing polymer elements
+* or module definitons.
+*
+* href is the path of the document.
+*/
 export function importParse(htmlString:string, href:string) {
-  var doc:LocNode;
+  var doc: LocNode;
   try {
     doc = <LocNode>dom5.parse(htmlString, {locationInfo: true});
   } catch (err) {
@@ -133,7 +133,7 @@ export function importParse(htmlString:string, href:string) {
   }
 
   // Add line/column information
-  dom5.treeMap(doc, function (node:LocNode) {
+  dom5.treeMap(doc, function(node:LocNode) {
     if (node.__location && node.__location.start >= 0) {
       node.__locationDetail = getLineAndColumn(htmlString, node.__location.start);
       if (href) {
@@ -142,19 +142,18 @@ export function importParse(htmlString:string, href:string) {
     }
   });
 
-  var registry:ParsedImport = {
-    base: [],
-    template: [],
-    script: [],
-    style: [],
-    import: [],
-    'dom-module': [],
-    comment: [],
-    ast: doc
-  };
+  var registry: ParsedImport = {
+      base: [],
+      template: [],
+      script: [],
+      style: [],
+      import: [],
+      'dom-module': [],
+      comment: [],
+      ast: doc};
 
   var queue = [].concat(doc.childNodes);
-  var nextNode:LocNode;
+  var nextNode: LocNode;
   while (queue.length > 0) {
     nextNode = queue.shift();
     if (nextNode) {

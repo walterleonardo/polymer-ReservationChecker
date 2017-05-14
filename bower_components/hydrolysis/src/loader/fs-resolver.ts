@@ -17,7 +17,7 @@ import * as url from 'url';
 import {Resolver, Deferred} from './resolver';
 
 function getFile(filePath:string, deferred:Deferred<string>, secondPath?:string) {
-  fs.readFile(filePath, 'utf-8', function (err, content) {
+  fs.readFile(filePath, 'utf-8', function(err, content) {
     if (err) {
       if (secondPath) {
         getFile(secondPath, deferred);
@@ -76,8 +76,7 @@ export interface Config {
  * Resolves requests via the file system.
  */
 export class FSResolver implements Resolver {
-  config:Config;
-
+  config: Config;
   constructor(config:Config) {
     this.config = config || {};
   }
@@ -89,7 +88,7 @@ export class FSResolver implements Resolver {
     var root = this.config.root && path.normalize(this.config.root);
     var redirect = this.config.redirect;
 
-    var local:string;
+    var local: string;
 
     if (!parsed.hostname || parsed.hostname === host) {
       local = parsed.pathname;
@@ -105,7 +104,7 @@ export class FSResolver implements Resolver {
         local = path.join(root, local);
       }
 
-      var backup:string;
+      var backup: string;
       if (redirect && isSiblingOrAunt(root, local)) {
         backup = redirectSibling(root, local, redirect);
       }
@@ -116,5 +115,4 @@ export class FSResolver implements Resolver {
 
     return false;
   };
-}
-;
+};

@@ -20,20 +20,22 @@ var numFeatures = 0;
 
 export function featureFinder() {
   /** The features we've found. */
-  var features:FeatureDescriptor[] = [];
+  var features: FeatureDescriptor[] = [];
 
-  function _extractDesc(feature:FeatureDescriptor, node:estree.CallExpression,
-                        parent:estree.Node) {
+  function _extractDesc(
+      feature:FeatureDescriptor, node:estree.CallExpression,
+      parent: estree.Node) {
     feature.desc = esutil.getAttachedComment(parent);
   }
 
-  function _extractProperties(feature:FeatureDescriptor, node:estree.CallExpression,
-                              parent:estree.Node) {
+  function _extractProperties(
+      feature:FeatureDescriptor, node:estree.CallExpression,
+      parent: estree.Node) {
     var featureNode = node.arguments[0];
     if (featureNode.type !== 'ObjectExpression') {
       console.warn(
-        'Expected first argument to Polymer.Base._addFeature to be an object.',
-        'Got', featureNode.type, 'instead.');
+          'Expected first argument to Polymer.Base._addFeature to be an object.',
+          'Got', featureNode.type, 'instead.');
       return;
     }
     const objExpr = <estree.ObjectExpression>featureNode;
@@ -42,12 +44,12 @@ export function featureFinder() {
     feature.properties = objExpr.properties.map(esutil.toPropertyDescriptor);
   }
 
-  var visitors:Visitor = {
+  var visitors: Visitor = {
 
     enterCallExpression: function enterCallExpression(node, parent) {
       const isAddFeatureCall = esutil.matchesCallExpression(
-        <estree.MemberExpression>node.callee,
-        ['Polymer', 'Base', '_addFeature']);
+            <estree.MemberExpression>node.callee,
+            ['Polymer', 'Base', '_addFeature']);
       if (!isAddFeatureCall) {
         return;
       }

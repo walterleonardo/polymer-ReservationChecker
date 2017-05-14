@@ -1,7 +1,6 @@
 {
-  "name": "polymer1-element-checkReservations",
-  "description": "Reservation checker",
-  "main": "polymer1-element-checkReservations.html",
+  "name": "polymer1-elem01",
+  "main": "polymer1-elem01.html",
   "dependencies": {
     "polymer": "Polymer/polymer#^1.4.0",
     "paper-input": "^1.1.24",

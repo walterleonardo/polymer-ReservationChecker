@@ -19,7 +19,7 @@ exports.FSResolver = require('./lib/loader/fs-resolver').FSResolver;
 exports.Loader = require('./lib/loader/file-loader').FileLoader;
 exports.NoopResolver = require('./lib/loader/noop-resolver').NoopResolver;
 exports.RedirectResolver =
-  require('./lib/loader/redirect-resolver').RedirectResolver;
+    require('./lib/loader/redirect-resolver').RedirectResolver;
 exports.XHRResolver = require('./lib/loader/xhr-resolver').XHRResolver;
 exports.StringResolver = require('./lib/loader/string-resolver').StringResolver;
 exports._jsParse = require('./lib/ast-utils/js-parse').jsParse;

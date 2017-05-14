@@ -54,131 +54,131 @@ Custom property | Description | Default
 -->
 
 <dom-module id="demo-snippet">
-    <template>
-        <style is="custom-style" include="prism-theme-default"></style>
-        <style>
-            :host {
-                display: block;
-                @apply(--shadow-elevation-2dp);
-                @apply(--demo-snippet);
-            }
+  <template>
+    <style is="custom-style" include="prism-theme-default"></style>
+    <style>
+      :host {
+        display: block;
+        @apply(--shadow-elevation-2dp);
+        @apply(--demo-snippet);
+      }
 
-            .demo {
-                border-bottom: 1px solid var(--google-grey-300);
-                background-color: white;
-                margin: 0;
-                padding: 20px;
-                @apply(--demo-snippet-demo);
-            }
+      .demo {
+        border-bottom: 1px solid var(--google-grey-300);
+        background-color: white;
+        margin: 0;
+        padding: 20px;
+        @apply(--demo-snippet-demo);
+      }
 
-            .code {
-                padding: 20px;
-                margin: 0;
-                background-color: var(--google-grey-100);
-                font-size: 13px;
-                overflow: auto;
-                @apply(--demo-snippet-code);
-            }
+      .code {
+        padding: 20px;
+        margin: 0;
+        background-color: var(--google-grey-100);
+        font-size: 13px;
+        overflow: auto;
+        @apply(--demo-snippet-code);
+      }
 
-            .code > pre {
-                margin: 0;
-                padding: 0 0 10px 0;
-            }
+      .code > pre {
+        margin: 0;
+        padding: 0 0 10px 0;
+      }
 
-            .code-container {
-                position: relative;
-            }
+      .code-container {
+        position: relative;
+      }
 
-            paper-icon-button {
-                position: absolute;
-                top: 0;
-                right: 0px;
-            }
+      paper-icon-button {
+        position: absolute;
+        top: 0;
+        right: 0px;
+      }
 
-        </style>
+    </style>
 
-        <prism-highlighter></prism-highlighter>
+    <prism-highlighter></prism-highlighter>
 
-        <div class="demo">
-            <content id="content"></content>
-        </div>
+    <div class="demo">
+      <content id="content"></content>
+    </div>
 
-        <div class="code-container">
-            <marked-element markdown=[[_markdown]] id="marked">
-                <div class="markdown-html code" id="code"></div>
-            </marked-element>
-            <paper-icon-button
-                    id="copyButton"
-                    icon="content-copy"
-                    title="copy to clipboard"
-                    on-tap="_copyToClipboard">
-            </paper-icon-button>
-        </div>
-    </template>
+    <div class="code-container">
+      <marked-element markdown=[[_markdown]] id="marked">
+        <div class="markdown-html code" id="code"></div>
+      </marked-element>
+      <paper-icon-button
+          id="copyButton"
+          icon="content-copy"
+          title="copy to clipboard"
+          on-tap="_copyToClipboard">
+      </paper-icon-button>
+    </div>
+  </template>
 
-    <script>
-        'use strict';
+  <script>
+    'use strict';
 
-        Polymer({
-            is: 'demo-snippet',
+    Polymer({
+      is: 'demo-snippet',
 
-            properties: {
-                _markdown: {
-                    type: String,
-                    value: ''
-                }
-            },
+      properties: {
+        _markdown: {
+          type: String,
+          value: ''
+        }
+      },
 
-            attached: function () {
-                var template = Polymer.dom(this).queryDistributedElements('template')[0];
+      attached: function() {
+        var template = Polymer.dom(this).queryDistributedElements('template')[0];
 
-                // If there's no template, render empty code.
-                if (!template) {
-                    this._markdown = '```\n```';
-                    return;
-                }
+        // If there's no template, render empty code.
+        if (!template) {
+          this._markdown = '```\n```';
+          return;
+        }
 
-                var snippet = this.$.marked.unindent(template.innerHTML);
+        var snippet = this.$.marked.unindent(template.innerHTML);
 
-                // Boolean properties are displayed as checked="", so remove the ="" bit.
-                snippet = snippet.replace(/=""/g, '');
+        // Boolean properties are displayed as checked="", so remove the ="" bit.
+        snippet = snippet.replace(/=""/g, '');
 
-                this._markdown = '```\n' + snippet + '\n' + '```';
+        this._markdown = '```\n' + snippet + '\n' + '```';
 
-                // Stamp the template.
-                if (!template.hasAttribute('is')) {
-                    Polymer.dom(this).appendChild(document.importNode(template.content, true));
-                }
-            },
+        // Stamp the template.
+        if (!template.hasAttribute('is')) {
+          Polymer.dom(this).appendChild(document.importNode(template.content, true));
+        }
+      },
 
-            _copyToClipboard: function () {
-                // From https://github.com/google/material-design-lite/blob/master/docs/_assets/snippets.js
-                var snipRange = document.createRange();
-                snipRange.selectNodeContents(this.$.code);
-                var selection = window.getSelection();
-                selection.removeAllRanges();
-                selection.addRange(snipRange);
-                var result = false;
-                try {
-                    result = document.execCommand('copy');
-                    this.$.copyButton.icon = 'done';
-                } catch (err) {
-                    // Copy command is not available
-                    Polymer.Base._error(err);
-                    this.$.copyButton.icon = 'error';
-                }
+      _copyToClipboard: function() {
+        // From https://github.com/google/material-design-lite/blob/master/docs/_assets/snippets.js
+        var snipRange = document.createRange();
+        snipRange.selectNodeContents(this.$.code);
+        var selection = window.getSelection();
+        selection.removeAllRanges();
+        selection.addRange(snipRange);
+        var result = false;
+        try {
+          result = document.execCommand('copy');
+          this.$.copyButton.icon = 'done';
+        } catch (err) {
+          // Copy command is not available
+          Polymer.Base._error(err);
+          this.$.copyButton.icon = 'error';
+        }
 
-                // Return to the copy button after a second.
-                setTimeout(this._resetCopyButtonState.bind(this), 1000);
+        // Return to the copy button after a second.
+        setTimeout(this._resetCopyButtonState.bind(this), 1000);
 
-                selection.removeAllRanges();
-                return result;
-            },
+        selection.removeAllRanges();
+        return result;
+      },
 
-            _resetCopyButtonState: function () {
-                this.$.copyButton.icon = 'content-copy';
-            }
-        });
-    </script>
+      _resetCopyButtonState: function() {
+        this.$.copyButton.icon = 'content-copy';
+      }
+    });
+  </script>
 
 </dom-module>

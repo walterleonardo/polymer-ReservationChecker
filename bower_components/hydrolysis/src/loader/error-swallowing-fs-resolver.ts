@@ -21,7 +21,7 @@ export class ErrorSwallowingFSResolver extends FSResolver {
 
   accept(uri:string, deferred:Deferred<string>) {
     var reject = deferred.reject;
-    deferred.reject = function (arg) {
+    deferred.reject = function(arg) {
       deferred.resolve("");
     };
     return FSResolver.prototype.accept.call(this, uri, deferred);

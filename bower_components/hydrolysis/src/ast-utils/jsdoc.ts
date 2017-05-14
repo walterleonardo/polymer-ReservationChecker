@@ -70,7 +70,7 @@ function parseDemo(tag:doctrine.Tag):Tag {
 // @hero [path]
 function parseHero(tag:doctrine.Tag):Tag {
   return {
-    tag: tag.title,
+    tag:  tag.title,
     type: null,
     name: tag.description,
     description: null
@@ -80,7 +80,7 @@ function parseHero(tag:doctrine.Tag):Tag {
 // @polymerBehavior [name]
 function parsePolymerBehavior(tag:doctrine.Tag):Tag {
   return {
-    tag: tag.title,
+    tag:  tag.title,
     type: null,
     name: tag.description,
     description: null
@@ -90,14 +90,14 @@ function parsePolymerBehavior(tag:doctrine.Tag):Tag {
 // @pseudoElement name
 function parsePseudoElement(tag:doctrine.Tag):Tag {
   return {
-    tag: tag.title,
+    tag:  tag.title,
     type: null,
     name: tag.description,
     description: null
   };
 }
 
-var CUSTOM_TAGS:{[name:string]: (tag:doctrine.Tag)=>Tag} = {
+var CUSTOM_TAGS: {[name:string]: (tag:doctrine.Tag)=>Tag} = {
   demo: parseDemo,
   hero: parseHero,
   polymerBehavior: parsePolymerBehavior,
@@ -110,13 +110,13 @@ var CUSTOM_TAGS:{[name:string]: (tag:doctrine.Tag)=>Tag} = {
 function _tagsToHydroTags(tags:doctrine.Tag[]):Tag[] {
   if (!tags)
     return null;
-  return tags.map(function (tag):Tag {
+  return tags.map(function(tag):Tag {
     if (tag.title in CUSTOM_TAGS) {
       return CUSTOM_TAGS[tag.title](tag);
     }
     else {
       return {
-        tag: tag.title,
+        tag:  tag.title,
         type: tag.type ? doctrine.type.stringify(tag.type) : null,
         name: tag.name,
         description: tag.description,
@@ -134,7 +134,7 @@ function _removeLeadingAsterisks(description:string):string {
 
   return description
     .split('\n')
-    .map(function (line) {
+    .map(function(line) {
       // remove leading '\s*' from each line
       var match = line.match(/^[\s]*\*\s?(.*)$/);
       return match ? match[1] : line;
@@ -166,9 +166,7 @@ export function parseJsdoc(docs:string):Annotation {
 
 export function hasTag(jsdoc:Annotation, tagName:string):boolean {
   if (!jsdoc || !jsdoc.tags) return false;
-  return jsdoc.tags.some(function (tag) {
-    return tag.tag === tagName;
-  });
+  return jsdoc.tags.some(function(tag) { return tag.tag === tagName; });
 }
 
 /**
@@ -191,8 +189,8 @@ export function getTag(jsdoc:Annotation, tagName:string, key?:string):any {
 
 export function unindent(text:string):string {
   if (!text) return text;
-  var lines = text.replace(/\t/g, '  ').split('\n');
-  var indent = lines.reduce<number>(function (prev, line) {
+  var lines  = text.replace(/\t/g, '  ').split('\n');
+  var indent = lines.reduce<number>(function(prev, line) {
     if (/^\s*$/.test(line)) return prev;  // Completely ignore blank lines.
 
     var lineIndent = line.match(/^(\s*)/)[0].length;
@@ -200,7 +198,5 @@ export function unindent(text:string):string {
     return lineIndent < prev ? lineIndent : prev;
   }, null);
 
-  return lines.map(function (l) {
-    return l.substr(indent);
-  }).join('\n');
+  return lines.map(function(l) { return l.substr(indent); }).join('\n');
 }

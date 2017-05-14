@@ -11,89 +11,88 @@
 // WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 //     See the License for the specific language governing permissions and
 // limitations under the License.
-(function (shared, scope, testing) {
+(function(shared, scope, testing) {
 
-    var nullTarget = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
+  var nullTarget = document.createElementNS('http://www.w3.org/1999/xhtml', 'div');
 
-    var sequenceNumber = 0;
-    scope.bindAnimationForCustomEffect = function (animation) {
-        var target = animation.effect.target;
-        var effectFunction;
-        var isKeyframeEffect = typeof animation.effect.getFrames() == 'function';
+  var sequenceNumber = 0;
+  scope.bindAnimationForCustomEffect = function(animation) {
+    var target = animation.effect.target;
+    var effectFunction;
+    var isKeyframeEffect = typeof animation.effect.getFrames() == 'function';
+    if (isKeyframeEffect) {
+      effectFunction = animation.effect.getFrames();
+    } else {
+      effectFunction = animation.effect._onsample;
+    }
+    var timing = animation.effect.timing;
+    var last = null;
+    timing = shared.normalizeTimingInput(timing);
+    var callback = function() {
+      var t = callback._animation ? callback._animation.currentTime : null;
+      if (t !== null) {
+        t = shared.calculateIterationProgress(shared.calculateActiveDuration(timing), t, timing);
+        if (isNaN(t))
+          t = null;
+      }
+      // FIXME: There are actually more conditions under which the effectFunction
+      // should be called.
+      if (t !== last) {
         if (isKeyframeEffect) {
-            effectFunction = animation.effect.getFrames();
+          effectFunction(t, target, animation.effect);
         } else {
-            effectFunction = animation.effect._onsample;
+          effectFunction(t, animation.effect, animation.effect._animation);
         }
-        var timing = animation.effect.timing;
-        var last = null;
-        timing = shared.normalizeTimingInput(timing);
-        var callback = function () {
-            var t = callback._animation ? callback._animation.currentTime : null;
-            if (t !== null) {
-                t = shared.calculateIterationProgress(shared.calculateActiveDuration(timing), t, timing);
-                if (isNaN(t))
-                    t = null;
-            }
-            // FIXME: There are actually more conditions under which the effectFunction
-            // should be called.
-            if (t !== last) {
-                if (isKeyframeEffect) {
-                    effectFunction(t, target, animation.effect);
-                } else {
-                    effectFunction(t, animation.effect, animation.effect._animation);
-                }
-            }
-            last = t;
-        };
+      }
+      last = t;
+    };
 
-        callback._animation = animation;
+    callback._animation = animation;
+    callback._registered = false;
+    callback._sequenceNumber = sequenceNumber++;
+    animation._callback = callback;
+    register(callback);
+  };
+
+  var callbacks = [];
+  var ticking = false;
+  function register(callback) {
+    if (callback._registered)
+      return;
+    callback._registered = true;
+    callbacks.push(callback);
+    if (!ticking) {
+      ticking = true;
+      requestAnimationFrame(tick);
+    }
+  }
+
+  function tick(t) {
+    var updating = callbacks;
+    callbacks = [];
+    updating.sort(function(left, right) {
+      return left._sequenceNumber - right._sequenceNumber;
+    });
+    updating = updating.filter(function(callback) {
+      callback();
+      var playState = callback._animation ? callback._animation.playState : 'idle';
+      if (playState != 'running' && playState != 'pending')
         callback._registered = false;
-        callback._sequenceNumber = sequenceNumber++;
-        animation._callback = callback;
-        register(callback);
-    };
+      return callback._registered;
+    });
+    callbacks.push.apply(callbacks, updating);
 
-    var callbacks = [];
-    var ticking = false;
-
-    function register(callback) {
-        if (callback._registered)
-            return;
-        callback._registered = true;
-        callbacks.push(callback);
-        if (!ticking) {
-            ticking = true;
-            requestAnimationFrame(tick);
-        }
+    if (callbacks.length) {
+      ticking = true;
+      requestAnimationFrame(tick);
+    } else {
+      ticking = false;
     }
+  }
 
-    function tick(t) {
-        var updating = callbacks;
-        callbacks = [];
-        updating.sort(function (left, right) {
-            return left._sequenceNumber - right._sequenceNumber;
-        });
-        updating = updating.filter(function (callback) {
-            callback();
-            var playState = callback._animation ? callback._animation.playState : 'idle';
-            if (playState != 'running' && playState != 'pending')
-                callback._registered = false;
-            return callback._registered;
-        });
-        callbacks.push.apply(callbacks, updating);
-
-        if (callbacks.length) {
-            ticking = true;
-            requestAnimationFrame(tick);
-        } else {
-            ticking = false;
-        }
-    }
-
-    scope.Animation.prototype._register = function () {
-        if (this._callback)
-            register(this._callback);
-    };
+  scope.Animation.prototype._register = function() {
+    if (this._callback)
+      register(this._callback);
+  };
 
 })(webAnimationsShared, webAnimationsNext, webAnimationsTesting);

@@ -10,6 +10,6 @@ declare module 'escodegen' {
       }
     }
   }
-  export function generate(ast:Node, opts?:GenerateOpts):string;
+  export function generate(ast:Node, opts?: GenerateOpts):string;
 
 }

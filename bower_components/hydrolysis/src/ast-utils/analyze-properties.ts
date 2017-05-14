@@ -17,7 +17,7 @@ import {PropertyDescriptor} from './descriptors';
 
 export function analyzeProperties(node:estree.Node) {
 
-  var analyzedProps:PropertyDescriptor[] = [];
+  var analyzedProps: PropertyDescriptor[] = [];
 
   if (node.type != 'ObjectExpression') {
     return analyzedProps;
@@ -46,9 +46,8 @@ export function analyzeProperties(node:estree.Node) {
         var propertyArg = propDescExpr.properties[j];
         var propertyKey = esutil.objectKeyToString(propertyArg.key);
 
-        switch (propertyKey) {
-          case 'type':
-          {
+        switch(propertyKey) {
+          case 'type': {
             prop.type = esutil.objectKeyToString(propertyArg.value);
             if (prop.type === undefined) {
               throw {
@@ -57,45 +56,40 @@ export function analyzeProperties(node:estree.Node) {
               };
             }
           }
-            break;
-          case 'notify':
-          {
+          break;
+          case 'notify': {
             prop.notify = astValue.expressionToValue(propertyArg.value);
             if (prop.notify === undefined)
               prop.notify = astValue.CANT_CONVERT;
           }
-            break;
-          case 'observer':
-          {
+          break;
+          case 'observer': {
             prop.observer = astValue.expressionToValue(propertyArg.value);
             prop.observerNode = propertyArg.value;
             if (prop.observer === undefined)
               prop.observer = astValue.CANT_CONVERT;
           }
-            break;
-          case 'readOnly':
-          {
+          break;
+          case 'readOnly': {
             prop.readOnly = astValue.expressionToValue(propertyArg.value);
             if (prop.readOnly === undefined)
               prop.readOnly = astValue.CANT_CONVERT;
           }
-            break;
-          case 'reflectToAttribute':
-          {
+          break;
+          case 'reflectToAttribute': {
             prop.reflectToAttribute = astValue.expressionToValue(propertyArg);
             if (prop.reflectToAttribute === undefined)
               prop.reflectToAttribute = astValue.CANT_CONVERT;
           }
-            break;
-          case 'value':
-          {
+          break;
+          case 'value': {
             prop.default = astValue.expressionToValue(propertyArg.value);
             if (prop.default === undefined)
               prop.default = astValue.CANT_CONVERT;
           }
-            break;
+          break;
           default:
-            break;
+          break;
         }
       }
     }

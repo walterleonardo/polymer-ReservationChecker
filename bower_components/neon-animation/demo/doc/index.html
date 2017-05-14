@@ -24,45 +24,45 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </head>
 <style>
     my-animatable {
-        margin-top: 50px;
+      margin-top: 50px;
     }
 </style>
 <body>
 
 <template is="dom-bind">
 
-    <button on-click="_onCircleButtonClick">toggle circle</button>
-    <button on-click="_onDialogButtonClick">toggle dialog</button>
+  <button on-click="_onCircleButtonClick">toggle circle</button>
+  <button on-click="_onDialogButtonClick">toggle dialog</button>
 
-    <div style="text-align: center">
+  <div style="text-align: center">
         <my-dialog>Hello World!</my-dialog>
-    </div>
+  </div>
 
-    <my-animatable></my-animatable>
+  <my-animatable></my-animatable>
 
 </template>
 
 <script>
 
-    var scope = document.querySelector('template[is="dom-bind"]');
+  var scope = document.querySelector('template[is="dom-bind"]');
 
-    scope._onCircleButtonClick = function (event) {
+  scope._onCircleButtonClick = function (event) {
         var node = document.querySelector('my-animatable');
         if (node) {
-            node.animate();
+          node.animate();
         }
-    };
+  };
 
-    scope._onDialogButtonClick = function (event) {
+  scope._onDialogButtonClick = function (event) {
         var node = document.querySelector('my-dialog');
         if (node) {
-            if (node.opened) {
-                node.hide();
-            } else {
-                node.show();
-            }
+          if (node.opened) {
+            node.hide();
+          } else {
+            node.show();
+          }
         }
-    };
+  };
 
 </script>
 

@@ -17,4 +17,4 @@ var webAnimations1 = {};
 var webAnimationsNext = {};
 
 if (!WEB_ANIMATIONS_TESTING)
-    var webAnimationsTesting = null;
+  var webAnimationsTesting = null;

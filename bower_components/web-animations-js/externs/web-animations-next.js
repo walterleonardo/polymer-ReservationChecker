@@ -26,8 +26,7 @@
 /**
  * @interface
  */
-var AnimationEffectReadOnly = function () {
-};
+var AnimationEffectReadOnly = function() {};
 
 /** @type {!AnimationEffectTiming} */
 AnimationEffectReadOnly.prototype.timing;
@@ -40,14 +39,12 @@ AnimationEffectReadOnly.prototype.timing;
  * @constructor
  * @implements {AnimationEffectReadOnly}
  */
-var KeyframeEffect = function (target, frames, opt_options) {
-};
+var KeyframeEffect = function(target, frames, opt_options) {};
 
 /**
  * @return {!Array<!Object>}
  */
-KeyframeEffect.prototype.getFrames = function () {
-};
+KeyframeEffect.prototype.getFrames = function() {};
 
 /** @type {!AnimationEffectTiming} */
 KeyframeEffect.prototype.timing;
@@ -65,8 +62,7 @@ KeyframeEffect.prototype.onsample;
  * @constructor
  * @implements {AnimationEffectReadOnly}
  */
-var SequenceEffect = function (children, opt_timing) {
-};
+var SequenceEffect = function(children, opt_timing) {};
 
 /** @type {!AnimationEffectTiming} */
 SequenceEffect.prototype.timing;
@@ -81,8 +77,7 @@ SequenceEffect.prototype.children;
  * @constructor
  * @implements {AnimationEffectReadOnly}
  */
-var GroupEffect = function (children, opt_timing) {
-};
+var GroupEffect = function(children, opt_timing) {};
 
 /** @type {!AnimationEffectTiming} */
 GroupEffect.prototype.timing;
@@ -94,8 +89,7 @@ GroupEffect.prototype.children;
 /**
  * @interface
  */
-var AnimationTimeline = function () {
-};
+var AnimationTimeline = function() {};
 
 /** @type {?number} */
 AnimationTimeline.prototype.currentTime;
@@ -104,15 +98,13 @@ AnimationTimeline.prototype.currentTime;
  * @param {!AnimationEffectReadOnly} effect
  * @return {!Animation}
  */
-AnimationTimeline.prototype.play = function (effect) {
-};
+AnimationTimeline.prototype.play = function(effect) {};
 
 /**
  * @interface
  * @extends {AnimationTimeline}
  */
-var DocumentTimeline = function () {
-};
+var DocumentTimeline = function() {};
 
 /** @type {AnimationEffectReadOnly|undefined} */
 Animation.prototype.effect;

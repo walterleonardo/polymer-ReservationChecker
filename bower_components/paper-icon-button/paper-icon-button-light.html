@@ -23,76 +23,76 @@ Custom property | Description | Default
 @demo demo/paper-icon-button-light.html
 -->
 <dom-module id="paper-icon-button-light">
-    <template strip-whitespace>
-        <style>
-            :host {
-                vertical-align: middle;
-                color: inherit;
-                outline: none;
-                width: 24px;
-                height: 24px;
-                background: none;
-                margin: 0;
-                border: none;
-                padding: 0;
+  <template strip-whitespace>
+    <style>
+      :host {
+        vertical-align: middle;
+        color: inherit;
+        outline: none;
+        width: 24px;
+        height: 24px;
+        background: none;
+        margin: 0;
+        border: none;
+        padding: 0;
 
-                position: relative;
-                cursor: pointer;
+        position: relative;
+        cursor: pointer;
 
-                /* NOTE: Both values are needed, since some phones require the value to be `transparent`. */
-                -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-                -webkit-tap-highlight-color: transparent;
-            }
+        /* NOTE: Both values are needed, since some phones require the value to be `transparent`. */
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        -webkit-tap-highlight-color: transparent;
+      }
 
-            :host([disabled]) {
-                color: #9b9b9b;
-                pointer-events: none;
-                cursor: auto;
-            }
+      :host([disabled]) {
+        color: #9b9b9b;
+        pointer-events: none;
+        cursor: auto;
+      }
 
-            paper-ripple {
-                opacity: 0.6;
-                color: currentColor;
-                @apply(--paper-icon-button-light-ripple);
-            }
-        </style>
-        <content></content>
-    </template>
-    <script>
-        Polymer({
-            is: 'paper-icon-button-light',
-            extends: 'button',
+      paper-ripple {
+        opacity: 0.6;
+        color: currentColor;
+        @apply(--paper-icon-button-light-ripple);
+      }
+    </style>
+    <content></content>
+  </template>
+  <script>
+    Polymer({
+      is: 'paper-icon-button-light',
+      extends: 'button',
 
-            behaviors: [
-                Polymer.PaperRippleBehavior
-            ],
+      behaviors: [
+        Polymer.PaperRippleBehavior
+      ],
 
-            listeners: {
-                'down': '_rippleDown',
-                'up': '_rippleUp',
-                'focus': '_rippleDown',
-                'blur': '_rippleUp',
-            },
+      listeners: {
+        'down': '_rippleDown',
+        'up': '_rippleUp',
+        'focus': '_rippleDown',
+        'blur': '_rippleUp',
+      },
 
-            _rippleDown: function () {
-                this.getRipple().uiDownAction();
-            },
+      _rippleDown: function() {
+        this.getRipple().uiDownAction();
+      },
 
-            _rippleUp: function () {
-                this.getRipple().uiUpAction();
-            },
+      _rippleUp: function() {
+        this.getRipple().uiUpAction();
+      },
 
-            /**
-             * @param {...*} var_args
-             */
-            ensureRipple: function (var_args) {
-                var lastRipple = this._ripple;
-                Polymer.PaperRippleBehavior.ensureRipple.apply(this, arguments);
-                if (this._ripple && this._ripple !== lastRipple) {
-                    this._ripple.center = true;
-                    this._ripple.classList.add('circle');
-                }
-            }
-        });
-    </script>
+      /**
+       * @param {...*} var_args
+       */
+      ensureRipple: function(var_args) {
+        var lastRipple = this._ripple;
+        Polymer.PaperRippleBehavior.ensureRipple.apply(this, arguments);
+        if (this._ripple && this._ripple !== lastRipple) {
+          this._ripple.center = true;
+          this._ripple.classList.add('circle');
+        }
+      }
+    });
+  </script>
 </dom-module>

@@ -9,7 +9,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
-<head>
+  <head>
     <title>neon-animated-pages demo: grid</title>
 
     <meta charset="utf-8">
@@ -24,41 +24,40 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="fullsize-page-with-card.html">
 
     <style is="custom-style">
-        body {
-            overflow: hidden;
-            @apply(--layout-fullbleed);
-        }
-
-        reprojected-pages {
-            height: 100%;
-        }
+      body {
+        overflow: hidden;
+        @apply(--layout-fullbleed);
+      }
+      reprojected-pages {
+        height: 100%;
+      }
     </style>
-</head>
-<body>
-<template is="dom-bind">
+  </head>
+  <body>
+    <template is="dom-bind">
 
-    <reprojected-pages id="pages" selected="0">
+      <reprojected-pages id="pages" selected="0">
         <animated-grid on-tile-click="_onTileClick"></animated-grid>
         <fullsize-page-with-card id="fullsize-card" hero-id="hero" on-click="_onFullsizeClick">
         </fullsize-page-with-card>
-    </reprojected-pages>
+      </reprojected-pages>
 
-</template>
+    </template>
 
-<script>
+    <script>
 
-    var scope = document.querySelector('template[is="dom-bind"]');
+      var scope = document.querySelector('template[is="dom-bind"]');
 
-    scope._onTileClick = function (event) {
+      scope._onTileClick = function(event) {
         this.$['fullsize-card'].color = event.detail.data.color;
         this.$.pages.selected = 1;
-    };
+      };
 
-    scope._onFullsizeClick = function (event) {
+      scope._onFullsizeClick = function(event) {
         this.$.pages.selected = 0;
-    };
+      };
 
-</script>
+    </script>
 
-</body>
+  </body>
 </html>

@@ -32,7 +32,6 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
             height: 100%;
             min-width: 0;
         }
-
         .sizer {
             width: 4000px;
             height: 5000px;
@@ -59,15 +58,15 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
         overlay.open();
     }
 
-    suite('overlay with backdrop', function () {
+    suite('overlay with backdrop', function() {
         var overlay;
 
-        setup(function () {
+        setup(function() {
             overlay = fixture('backdrop');
         });
 
-        test('backdrop size matches parent size', function (done) {
-            runAfterOpen(overlay, function () {
+        test('backdrop size matches parent size', function(done) {
+            runAfterOpen(overlay, function() {
                 // Flush so we are sure backdrop is added in the DOM.
                 Polymer.dom.flush();
                 var backdrop = overlay.backdropElement;

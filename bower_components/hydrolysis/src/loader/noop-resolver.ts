@@ -16,8 +16,7 @@ import {Resolver, Deferred} from './resolver';
  * A resolver that resolves to empty string any uri that matches config.
  */
 export class NoopResolver implements Resolver {
-  config:string|{test: (path:string)=>boolean};
-
+  config: string|{test: (path:string)=>boolean};
   constructor(config:string|{test: (path:string)=>boolean}) {
     this.config = config;
   }
@@ -28,7 +27,7 @@ export class NoopResolver implements Resolver {
    *     this resolver will handle the URI.
    * @return {boolean} Whether the URI is handled by this resolver.
    */
-  accept(uri:string, deferred:Deferred<string>) {
+  accept(uri: string, deferred: Deferred<string>) {
     const config = this.config;
     if (typeof config === 'string') {
       if (uri.search(config) == -1) {

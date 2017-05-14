@@ -10,6 +10,7 @@
 'use strict';
 
 
+
 import * as jsdoc from './jsdoc'
 import * as dom5 from 'dom5'
 import {
@@ -56,14 +57,14 @@ const HANDLED_TAGS = [
  * @param {Object} descriptor The descriptor node to process.
  * @return {Object} The descriptor that was given.
  */
-export function annotate(descriptor:Descriptor):Descriptor {
+export function annotate(descriptor: Descriptor): Descriptor{
   if (!descriptor || descriptor.jsdoc) return descriptor;
 
   if (typeof descriptor.desc === 'string') {
     descriptor.jsdoc = jsdoc.parseJsdoc(descriptor.desc);
     // We want to present the normalized form of a descriptor.
     descriptor.jsdoc.orig = descriptor.desc;
-    descriptor.desc = descriptor.jsdoc.description;
+    descriptor.desc       = descriptor.jsdoc.description;
   }
 
   return descriptor;
@@ -72,19 +73,19 @@ export function annotate(descriptor:Descriptor):Descriptor {
 /**
  * Annotates @event, @hero, & @demo tags
  */
-export function annotateElementHeader(descriptor:ElementDescriptor) {
+export function annotateElementHeader(descriptor: ElementDescriptor) {
   if (descriptor.events) {
-    descriptor.events.forEach(function (event) {
+    descriptor.events.forEach(function(event) {
       _annotateEvent(event);
     });
-    descriptor.events.sort(function (a, b) {
+    descriptor.events.sort( function(a,b) {
       return a.name.localeCompare(b.name);
     });
   }
   descriptor.demos = [];
   if (descriptor.jsdoc && descriptor.jsdoc.tags) {
-    descriptor.jsdoc.tags.forEach(function (tag) {
-      switch (tag.tag) {
+    descriptor.jsdoc.tags.forEach( function(tag) {
+      switch(tag.tag) {
         case 'hero':
           descriptor.hero = tag.name || 'hero.png';
           break;
@@ -99,10 +100,11 @@ export function annotateElementHeader(descriptor:ElementDescriptor) {
   }
 }
 
-function copyProperties(from:ElementDescriptor, to:ElementDescriptor,
-                        behaviorsByName:BehaviorsByName) {
+function copyProperties(
+    from:ElementDescriptor, to:ElementDescriptor,
+    behaviorsByName:BehaviorsByName) {
   if (from.properties) {
-    from.properties.forEach(function (fromProp) {
+    from.properties.forEach(function(fromProp){
       for (var toProp:PropertyDescriptor, i = 0;
            i < to.properties.length; i++) {
         toProp = to.properties[i];
@@ -114,12 +116,12 @@ function copyProperties(from:ElementDescriptor, to:ElementDescriptor,
       if (fromProp.__fromBehavior) {
         return;
       }
-      Object.keys(fromProp).forEach(function (propertyField) {
+      Object.keys(fromProp).forEach(function(propertyField){
         newProp[propertyField] = fromProp[propertyField];
       });
       to.properties.push(<any>newProp);
     });
-    from.events.forEach(function (fromEvent) {
+    from.events.forEach(function(fromEvent){
       for (var toEvent:EventDescriptor, i = 0; i < to.events.length; i++) {
         toEvent = to.events[i];
         if (fromEvent.name === toEvent.name) {
@@ -130,7 +132,7 @@ function copyProperties(from:ElementDescriptor, to:ElementDescriptor,
         return;
       }
       var newEvent = {__fromBehavior: from.is};
-      Object.keys(fromEvent).forEach(function (eventField) {
+      Object.keys(fromEvent).forEach(function(eventField){
         newEvent[eventField] = fromEvent[eventField];
       });
       to.events.push(newEvent);
@@ -142,19 +144,20 @@ function copyProperties(from:ElementDescriptor, to:ElementDescriptor,
   for (let i = from.behaviors.length - 1; i >= 0; i--) {
     // TODO: what's up with behaviors sometimes being a literal, and sometimes
     // being a descriptor object?
-    const localBehavior:any = from.behaviors[i];
+    const localBehavior: any = from.behaviors[i];
     var definedBehavior =
-      behaviorsByName[localBehavior] || behaviorsByName[localBehavior.symbol];
+        behaviorsByName[localBehavior] || behaviorsByName[localBehavior.symbol];
     if (!definedBehavior) {
-      console.warn("Behavior " + localBehavior + " not found when mixing " +
-        "properties into " + to.is + "!");
-      return;
+        console.warn("Behavior " + localBehavior + " not found when mixing " +
+          "properties into " + to.is + "!");
+        return;
     }
     copyProperties(definedBehavior, to, behaviorsByName);
   }
 }
 
-function mixinBehaviors(descriptor:ElementDescriptor, behaviorsByName:BehaviorsByName) {
+function mixinBehaviors(
+    descriptor:ElementDescriptor, behaviorsByName: BehaviorsByName) {
   if (descriptor.behaviors) {
     for (let i = descriptor.behaviors.length - 1; i >= 0; i--) {
       const behavior = <string>descriptor.behaviors[i];
@@ -179,12 +182,13 @@ function mixinBehaviors(descriptor:ElementDescriptor, behaviorsByName:BehaviorsB
  * @param {Object} descriptor The element descriptor.
  * @return {Object} The descriptor that was given.
  */
-export function annotateElement(descriptor:ElementDescriptor,
-                                behaviorsByName:BehaviorsByName):ElementDescriptor {
+export function annotateElement(
+    descriptor: ElementDescriptor,
+    behaviorsByName: BehaviorsByName): ElementDescriptor {
   if (!descriptor.desc && descriptor.type === 'element') {
     descriptor.desc = _findElementDocs(descriptor.is,
-      descriptor.domModule,
-      descriptor.scriptElement);
+                                       descriptor.domModule,
+                                       descriptor.scriptElement);
   }
   annotate(descriptor);
 
@@ -197,7 +201,7 @@ export function annotateElement(descriptor:ElementDescriptor,
   mixinBehaviors(descriptor, behaviorsByName);
 
   // Descriptors that should have their `desc` properties parsed as JSDoc.
-  descriptor.properties.forEach(function (property) {
+  descriptor.properties.forEach(function(property) {
     // Feature properties are special, configuration is really just a matter of
     // inheritance...
     annotateProperty(property, descriptor.abstract);
@@ -206,13 +210,13 @@ export function annotateElement(descriptor:ElementDescriptor,
   // It may seem like overkill to always sort, but we have an assumption that
   // these properties are typically being consumed by user-visible tooling.
   // As such, it's good to have consistent output/ordering to aid the user.
-  descriptor.properties.sort(function (a, b) {
+  descriptor.properties.sort(function(a, b) {
     // Private properties are always last.
     if (a.private && !b.private) {
       return 1;
     } else if (!a.private && b.private) {
       return -1;
-      // Otherwise, we're just sorting alphabetically.
+    // Otherwise, we're just sorting alphabetically.
     } else {
       return a.name.localeCompare(b.name);
     }
@@ -228,7 +232,8 @@ export function annotateElement(descriptor:ElementDescriptor,
  * @param {Object} descriptor behavior descriptor
  * @return {Object} descriptor passed in as param
  */
-export function annotateBehavior(descriptor:BehaviorDescriptor):BehaviorDescriptor {
+export function annotateBehavior(
+    descriptor:BehaviorDescriptor): BehaviorDescriptor {
   annotate(descriptor);
   annotateElementHeader(descriptor);
 
@@ -238,7 +243,7 @@ export function annotateBehavior(descriptor:BehaviorDescriptor):BehaviorDescript
 /**
  * Annotates event documentation
  */
-function _annotateEvent(descriptor:EventDescriptor):EventDescriptor {
+function _annotateEvent(descriptor:EventDescriptor): EventDescriptor {
   annotate(descriptor);
   // process @event
   var eventTag = jsdoc.getTag(descriptor.jsdoc, 'event');
@@ -246,10 +251,10 @@ function _annotateEvent(descriptor:EventDescriptor):EventDescriptor {
 
   // process @params
   descriptor.params = (descriptor.jsdoc.tags || [])
-    .filter(function (tag) {
+    .filter(function(tag) {
       return tag.tag === 'param';
     })
-    .map(function (tag) {
+    .map(function(tag) {
       return {
         type: tag.type || "N/A",
         desc: tag.description,
@@ -267,22 +272,23 @@ function _annotateEvent(descriptor:EventDescriptor):EventDescriptor {
  * @param {boolean} ignoreConfiguration If true, `configuration` is not set.
  * @return {Object} The descriptior that was given.
  */
-function annotateProperty(descriptor:PropertyDescriptor,
-                          ignoreConfiguration:boolean):PropertyDescriptor {
+function annotateProperty(
+    descriptor:PropertyDescriptor,
+    ignoreConfiguration:boolean): PropertyDescriptor {
   annotate(descriptor);
   if (descriptor.name[0] === '_' || jsdoc.hasTag(descriptor.jsdoc, 'private')) {
     descriptor.private = true;
   }
 
   if (!ignoreConfiguration &&
-    ELEMENT_CONFIGURATION.indexOf(descriptor.name) !== -1) {
-    descriptor.private = true;
+      ELEMENT_CONFIGURATION.indexOf(descriptor.name) !== -1) {
+    descriptor.private       = true;
     descriptor.configuration = true;
   }
 
   // @type JSDoc wins
   descriptor.type =
-    jsdoc.getTag(descriptor.jsdoc, 'type', 'type') || descriptor.type;
+      jsdoc.getTag(descriptor.jsdoc, 'type', 'type') || descriptor.type;
 
   if (descriptor.type.match(/^function/i)) {
     _annotateFunctionProperty(<FunctionDescriptor>descriptor);
@@ -312,10 +318,10 @@ function _annotateFunctionProperty(descriptor:FunctionDescriptor) {
   }
 
   var paramsByName = {};
-  (descriptor.params || []).forEach(function (param) {
+  (descriptor.params || []).forEach(function(param) {
     paramsByName[param.name] = param;
   });
-  (descriptor.jsdoc && descriptor.jsdoc.tags || []).forEach(function (tag) {
+  (descriptor.jsdoc && descriptor.jsdoc.tags || []).forEach(function(tag) {
     if (tag.tag !== 'param') return;
     var param = paramsByName[tag.name];
     if (!param) {
@@ -336,23 +342,24 @@ function _annotateFunctionProperty(descriptor:FunctionDescriptor) {
  * @param {Array<FeatureDescriptor>} features
  * @return {ElementDescriptor}
  */
-export function featureElement(features:FeatureDescriptor[]):ElementDescriptor {
+export function featureElement(
+    features:FeatureDescriptor[]): ElementDescriptor {
   var properties = features.reduce<PropertyDescriptor[]>((result, feature) => {
     return result.concat(feature.properties);
   }, []);
 
   return {
-    type: 'element',
-    is: 'Polymer.Base',
-    abstract: true,
+    type:       'element',
+    is:         'Polymer.Base',
+    abstract:   true,
     properties: properties,
     desc: '`Polymer.Base` acts as a base prototype for all Polymer ' +
-    'elements. It is composed via various calls to ' +
-    '`Polymer.Base._addFeature()`.\n' +
-    '\n' +
-    'The properties reflected here are the combined view of all ' +
-    'features found in this library. There may be more properties ' +
-    'added via other libraries, as well.',
+          'elements. It is composed via various calls to ' +
+          '`Polymer.Base._addFeature()`.\n' +
+          '\n' +
+          'The properties reflected here are the combined view of all ' +
+          'features found in this library. There may be more properties ' +
+          'added via other libraries, as well.',
   };
 }
 
@@ -369,7 +376,7 @@ export function clean(descriptor:Descriptor) {
   delete descriptor.jsdoc.orig;
 
   var cleanTags:jsdoc.Tag[] = [];
-  (descriptor.jsdoc.tags || []).forEach(function (tag) {
+  (descriptor.jsdoc.tags || []).forEach(function(tag) {
     // Drop any tags we've consumed.
     if (HANDLED_TAGS.indexOf(tag.tag) !== -1) return;
     cleanTags.push(tag);
@@ -409,13 +416,13 @@ function cleanProperty(property:PropertyDescriptor) {
  * @param  {comments} Array<string> A list of comments to parse.
  * @return {ElementDescriptor}      A list of pseudo-elements.
  */
-export function parsePseudoElements(comments:string[]):ElementDescriptor[] {
-  var elements:ElementDescriptor[] = [];
-  comments.forEach(function (comment) {
+export function parsePseudoElements(comments: string[]):ElementDescriptor[] {
+  var elements: ElementDescriptor[] = [];
+  comments.forEach(function(comment) {
     var parsedJsdoc = jsdoc.parseJsdoc(comment);
     var pseudoTag = jsdoc.getTag(parsedJsdoc, 'pseudoElement', 'name');
     if (pseudoTag) {
-      let element:ElementDescriptor = {
+      let element: ElementDescriptor = {
         is: pseudoTag,
         type: 'element',
         jsdoc: {description: parsedJsdoc.description, tags: parsedJsdoc.tags},
@@ -435,7 +442,8 @@ export function parsePseudoElements(comments:string[]):ElementDescriptor[] {
  * @param {DocumentAST} scriptElement The script that the element was
  *     defined in.
  */
-function _findElementDocs(elementId:string, domModule:dom5.Node, scriptElement:dom5.Node) {
+function _findElementDocs(
+    elementId:string, domModule:dom5.Node, scriptElement:dom5.Node) {
   // Note that we concatenate docs from all sources if we find them.
   // element can be defined in:
   // html comment right before dom-module
@@ -456,7 +464,7 @@ function _findElementDocs(elementId:string, domModule:dom5.Node, scriptElement:d
   }
   if (found.length === 0) return null;
   return found
-    .filter(function (comment) {
+    .filter(function(comment) {
       // skip @license comments
       if (comment && comment.indexOf('@license') === -1) {
         return true;

@@ -28,46 +28,39 @@
  * @param {(number|AnimationEffectTimingProperties)=} opt_options
  * @return {!Animation}
  */
-Element.prototype.animate = function (frames, opt_options) {
-};
+Element.prototype.animate = function(frames, opt_options) {};
 
 
 /**
  * @interface
  * @extends {EventTarget}
  */
-var Animation = function () {
-};
+var Animation = function() {};
 
 /**
  * @return {undefined}
  */
-Animation.prototype.cancel = function () {
-};
+Animation.prototype.cancel = function() {};
 
 /**
  * @return {undefined}
  */
-Animation.prototype.finish = function () {
-};
+Animation.prototype.finish = function() {};
 
 /**
  * @return {undefined}
  */
-Animation.prototype.reverse = function () {
-};
+Animation.prototype.reverse = function() {};
 
 /**
  * @return {undefined}
  */
-Animation.prototype.pause = function () {
-};
+Animation.prototype.pause = function() {};
 
 /**
  * @return {undefined}
  */
-Animation.prototype.play = function () {
-};
+Animation.prototype.play = function() {};
 
 /** @type {number} */
 Animation.prototype.startTime;
@@ -106,8 +99,7 @@ var AnimationEffectTimingProperties;
 /**
  * @interface
  */
-var AnimationEffectTiming = function () {
-};
+var AnimationEffectTiming = function() {};
 
 /** @type {number} */
 AnimationEffectTiming.prototype.delay;

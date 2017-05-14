@@ -15,7 +15,7 @@ import {PropertyDescriptor, ElementDescriptor} from './descriptors';
 import {analyzeProperties} from './analyze-properties';
 import * as estree from 'estree';
 
-export type PropertyHandlers = {[key:string]: (node:estree.Node)=>void};
+export type PropertyHandlers = {[key:string]: (node: estree.Node)=>void};
 /**
  * Returns an object containing functions that will annotate `declaration` with
  * the polymer-specificmeaning of the value nodes for the named properties.
@@ -24,21 +24,21 @@ export type PropertyHandlers = {[key:string]: (node:estree.Node)=>void};
  * @return {object.<string,function>}      An object containing property
  *                                         handlers.
  */
-export function declarationPropertyHandlers(declaration:ElementDescriptor):PropertyHandlers {
+export function declarationPropertyHandlers(declaration:ElementDescriptor): PropertyHandlers {
   return {
-    is: function (node:estree.Node) {
+    is: function(node: estree.Node) {
       if (node.type == 'Literal') {
         declaration.is = (<estree.Literal>node).value.toString();
       }
     },
-    properties: function (node:estree.Node) {
+    properties: function(node: estree.Node) {
       var props = analyzeProperties(node);
 
-      for (var i = 0; i < props.length; i++) {
+      for (var i=0; i<props.length; i++) {
         declaration.properties.push(props[i]);
       }
     },
-    behaviors: function (node:estree.Node) {
+    behaviors: function(node: estree.Node) {
       if (node.type != 'ArrayExpression') {
         return;
       }
@@ -51,7 +51,7 @@ export function declarationPropertyHandlers(declaration:ElementDescriptor):Prope
         declaration.behaviors.push(v);
       }
     },
-    observers: function (node:estree.Node) {
+    observers: function(node: estree.Node) {
       if (node.type != 'ArrayExpression') {
         return;
       }

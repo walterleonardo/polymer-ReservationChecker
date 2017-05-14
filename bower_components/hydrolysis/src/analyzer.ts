@@ -25,15 +25,15 @@ import {XHRResolver} from './loader/xhr-resolver';
 import {ErrorSwallowingFSResolver} from './loader/error-swallowing-fs-resolver';
 import {Descriptor, ElementDescriptor, FeatureDescriptor, BehaviorDescriptor} from './ast-utils/descriptors';
 
-function reduceMetadata(m1:DocumentDescriptor, m2:DocumentDescriptor):DocumentDescriptor {
+function reduceMetadata(m1:DocumentDescriptor, m2:DocumentDescriptor): DocumentDescriptor {
   return {
-    elements: m1.elements.concat(m2.elements),
-    features: m1.features.concat(m2.features),
+    elements:  m1.elements.concat(m2.elements),
+    features:  m1.features.concat(m2.features),
     behaviors: m1.behaviors.concat(m2.behaviors),
   };
 }
 
-var EMPTY_METADATA:DocumentDescriptor = {elements: [], features: [], behaviors: []};
+var EMPTY_METADATA: DocumentDescriptor = {elements: [], features: [], behaviors: []};
 
 /**
  * Package of a parsed JS script
@@ -135,7 +135,7 @@ interface LoadOptions {
 /**
  * An Error extended with location metadata.
  */
-interface LocError extends Error {
+interface LocError extends Error{
   location: {line: number; column: number};
   ownerDocument: string;
 }
@@ -144,40 +144,40 @@ interface LocError extends Error {
  * A database of Polymer metadata defined in HTML
  */
 export class Analyzer {
-  loader:FileLoader;
+  loader: FileLoader;
   /**
    * A list of all elements the `Analyzer` has metadata for.
    */
-  elements:ElementDescriptor[] = [];
+  elements: ElementDescriptor[] = [];
   /**
    * A view into `elements`, keyed by tag name.
    */
-  elementsByTagName:{[tagName: string]: ElementDescriptor} = {};
+  elementsByTagName: {[tagName: string]: ElementDescriptor} = {};
 
   /**
    * A list of API features added to `Polymer.Base` encountered by the
    * analyzer.
    */
-  features:FeatureDescriptor[] = [];
+  features: FeatureDescriptor[] = [];
 
   /**
    * The behaviors collected by the analysis pass.
    */
-  behaviors:BehaviorDescriptor[] = [];
+  behaviors: BehaviorDescriptor[] = [];
   /**
    * The behaviors collected by the analysis pass by name.
    */
-  behaviorsByName:{[name:string]: BehaviorDescriptor} = {};
+  behaviorsByName: {[name:string]: BehaviorDescriptor} = {};
 
   /**
    * A map, keyed by absolute path, of Document metadata.
    */
-  html:{[path: string]: AnalyzedDocument} = {};
+  html: {[path: string]: AnalyzedDocument} = {};
 
   /**
    * A map, keyed by path, of HTML document ASTs.
    */
-  parsedDocuments:{[path:string]: dom5.Node} = {};
+  parsedDocuments: {[path:string]: dom5.Node} = {};
 
   /**
    * A map, keyed by path, of JS script ASTs.
@@ -185,13 +185,13 @@ export class Analyzer {
    * If the path is an HTML file with multiple scripts,
    * the entry will be an array of scripts.
    */
-  parsedScripts:{[path:string]: ParsedJS[]} = {};
+  parsedScripts: {[path:string]: ParsedJS[]} = {};
 
 
   /**
    * A map, keyed by path, of document content.
    */
-  _content:{[path:string]: string} = {};
+  _content: {[path:string]: string} = {};
 
   /**
    * @param  {boolean} attachAST  If true, attach a parse5 compliant AST
@@ -227,7 +227,7 @@ export class Analyzer {
         resolver = 'xhr';
       }
     }
-    let primaryResolver:Resolver;
+    let primaryResolver: Resolver;
     if (resolver === 'fs') {
       primaryResolver = new FSResolver(options);
     } else if (resolver === 'xhr') {
@@ -256,14 +256,14 @@ export class Analyzer {
     });
   };
 
-  load(href:string):Promise<AnalyzedDocument> {
+  load(href: string):Promise<AnalyzedDocument> {
     return this.loader.request(href).then((content) => {
       return new Promise<AnalyzedDocument>((resolve, reject) => {
         setTimeout(() => {
           this._content[href] = content;
           resolve(this._parseHTML(content, href));
         }, 0);
-      }).catch(function (err) {
+      }).catch(function(err){
         console.error("Error processing document at " + href);
         throw err;
       });
@@ -277,14 +277,14 @@ export class Analyzer {
    * @param  {string} href       The document's URL.
    * @return {AnalyzedDocument}       An  `AnalyzedDocument`
    */
-  _parseHTML(htmlImport:string, href:string):AnalyzedDocument {
+  _parseHTML(htmlImport: string, href: string):AnalyzedDocument {
     if (href in this.html) {
       return this.html[href];
     }
-    var depsLoaded:Promise<Object>[] = [];
-    var depHrefs:string[] = [];
+    var depsLoaded: Promise<Object>[] = [];
+    var depHrefs: string[] = [];
     var metadataLoaded = Promise.resolve(EMPTY_METADATA);
-    var parsed:ParsedImport;
+    var parsed: ParsedImport;
     try {
       parsed = importParse(htmlImport, href);
     } catch (err) {
@@ -295,7 +295,7 @@ export class Analyzer {
     if (parsed.script) {
       metadataLoaded = this._processScripts(parsed.script, href);
     }
-    var commentText = parsed.comment.map(function (comment) {
+    var commentText = parsed.comment.map(function(comment){
       return dom5.getTextContent(comment);
     });
     var pseudoElements = docs.parsePseudoElements(commentText);
@@ -304,8 +304,8 @@ export class Analyzer {
       this.elements.push(element);
       this.elementsByTagName[element.is] = element;
     }
-    metadataLoaded = metadataLoaded.then(function (metadata) {
-      var metadataEntry:DocumentDescriptor = {
+    metadataLoaded = metadataLoaded.then(function(metadata){
+      var metadataEntry: DocumentDescriptor = {
         elements: pseudoElements,
         features: [],
         behaviors: []
@@ -349,38 +349,34 @@ export class Analyzer {
       }
     }
     const depsStrLoaded = Promise.all(depsLoaded)
-      .then(function () {
-        return depHrefs;
-      })
-      .catch(function (err) {
-        throw err;
-      });
+          .then(function() {return depHrefs;})
+          .catch(function(err) {throw err;});
     this.parsedDocuments[href] = parsed.ast;
     this.html[href] = {
-      href: href,
-      htmlLoaded: htmlLoaded,
-      metadataLoaded: metadataLoaded,
-      depHrefs: depHrefs,
-      depsLoaded: depsStrLoaded
+        href: href,
+        htmlLoaded: htmlLoaded,
+        metadataLoaded: metadataLoaded,
+        depHrefs: depHrefs,
+        depsLoaded: depsStrLoaded
     };
     return this.html[href];
   };
 
-  _processScripts(scripts:LocNode[], href:string) {
-    var scriptPromises:Promise<DocumentDescriptor>[] = [];
+  _processScripts(scripts: LocNode[], href: string) {
+    var scriptPromises: Promise<DocumentDescriptor>[] = [];
     scripts.forEach((script) => {
       scriptPromises.push(this._processScript(script, href));
     });
-    return Promise.all(scriptPromises).then(function (metadataList) {
+    return Promise.all(scriptPromises).then(function(metadataList) {
       // TODO(ajo) remove this cast.
-      var list:DocumentDescriptor[] = <any>metadataList;
+      var list: DocumentDescriptor[] = <any>metadataList;
       return list.reduce(reduceMetadata, EMPTY_METADATA);
     });
   };
 
-  _processScript(script:LocNode, href:string):Promise<DocumentDescriptor> {
+  _processScript(script: LocNode, href: string):Promise<DocumentDescriptor> {
     const src = dom5.getAttribute(script, 'src');
-    var parsedJs:DocumentDescriptor;
+    var parsedJs: DocumentDescriptor;
     if (!src) {
       try {
         parsedJs = jsParse((script.childNodes.length) ? script.childNodes[0].value : '');
@@ -414,7 +410,7 @@ export class Analyzer {
         });
       }
       if (parsedJs.features) {
-        parsedJs.features.forEach(function (feature) {
+        parsedJs.features.forEach(function(feature){
           feature.contentHref = href;
           feature.scriptElement = script;
         });
@@ -431,7 +427,7 @@ export class Analyzer {
       if (!Object.hasOwnProperty.call(this.parsedScripts, href)) {
         this.parsedScripts[href] = [];
       }
-      var scriptElement:LocNode;
+      var scriptElement : LocNode;
       if (script.__ownerDocument && script.__ownerDocument == href) {
         scriptElement = script;
       }
@@ -450,21 +446,19 @@ export class Analyzer {
         dom5.removeAttribute(script, 'src');
         script.__hydrolysisInlined = src;
         return this._processScript(script, resolvedSrc);
-      }).catch(function (err) {
-        throw err;
-      });
+      }).catch(function(err) {throw err;});
     } else {
       return Promise.resolve(EMPTY_METADATA);
     }
   };
 
-  _dependenciesLoadedFor(href:string, root:string) {
-    var found:{[href: string]: boolean} = {};
+  _dependenciesLoadedFor(href: string, root: string) {
+    var found: {[href: string]: boolean} = {};
     if (root !== undefined) {
       found[root] = true;
     }
     return this._getDependencies(href, found).then((deps) => {
-      var depPromises = deps.map((depHref) => {
+      var depPromises = deps.map((depHref) =>{
         return this.load(depHref).then((htmlMonomer) => {
           return htmlMonomer.metadataLoaded;
         });
@@ -490,9 +484,9 @@ export class Analyzer {
     if (transitive === undefined) {
       transitive = true;
     }
-    var deps:string[] = [];
+    var deps: string[] = [];
     return this.load(href).then((htmlMonomer) => {
-      var transitiveDeps:Promise<string[]>[] = [];
+      var transitiveDeps: Promise<string[]>[] = [];
       htmlMonomer.depHrefs.forEach((depHref) => {
         if (found[depHref]) {
           return;
@@ -504,8 +498,8 @@ export class Analyzer {
         }
       });
       return Promise.all(transitiveDeps);
-    }).then(function (transitiveDeps) {
-      var alldeps = transitiveDeps.reduce(function (a, b) {
+    }).then(function(transitiveDeps) {
+      var alldeps = transitiveDeps.reduce(function(a, b) {
         return a.concat(b);
       }, []).concat(deps);
       return alldeps;
@@ -516,8 +510,8 @@ export class Analyzer {
    * Returns the elements defined in the folder containing `href`.
    * @param {string} href path to search.
    */
-  elementsForFolder(href:string):ElementDescriptor[] {
-    return this.elements.filter(function (element) {
+  elementsForFolder(href: string): ElementDescriptor[] {
+    return this.elements.filter(function(element){
       return matchesDocumentFolder(element, href);
     });
   };
@@ -528,7 +522,7 @@ export class Analyzer {
    * @return {Array.<BehaviorDescriptor>}
    */
   behaviorsForFolder(href:string):BehaviorDescriptor[] {
-    return this.behaviors.filter(function (behavior) {
+    return this.behaviors.filter(function(behavior){
       return matchesDocumentFolder(behavior, href);
     });
   };
@@ -540,14 +534,14 @@ export class Analyzer {
    * @return {Promise}
    */
   metadataTree(href:string) {
-    return this.load(href).then((monomer) => {
-      var loadedHrefs:{[href: string]: boolean} = {};
+    return this.load(href).then((monomer) =>{
+      var loadedHrefs: {[href: string]: boolean} = {};
       loadedHrefs[href] = true;
       return this._metadataTree(monomer, loadedHrefs);
     });
   };
 
-  async _metadataTree(htmlMonomer:AnalyzedDocument, loadedHrefs:{[href: string]: boolean}) {
+  async _metadataTree(htmlMonomer:AnalyzedDocument, loadedHrefs: {[href: string]: boolean}) {
     if (loadedHrefs === undefined) {
       loadedHrefs = {};
     }
@@ -559,9 +553,9 @@ export class Analyzer {
       href: htmlMonomer.href
     };
     const hrefs = await htmlMonomer.depsLoaded
-    var depMetadata:Promise<DocumentDescriptor>[] = [];
+    var depMetadata: Promise<DocumentDescriptor>[] = [];
     for (const href of hrefs) {
-      let metadataPromise:Promise<DocumentDescriptor>;
+      let metadataPromise: Promise<DocumentDescriptor>;
       if (!loadedHrefs[href]) {
         loadedHrefs[href] = true;
         metadataPromise = this._metadataTree(this.html[href], loadedHrefs);
@@ -571,13 +565,13 @@ export class Analyzer {
       }
       depMetadata.push(metadataPromise);
     }
-    return Promise.all(depMetadata).then(function (importMetadata) {
+    return Promise.all(depMetadata).then(function(importMetadata) {
       // TODO(ajo): remove this when tsc stops having issues.
       metadata.imports = <any>importMetadata;
-      return htmlMonomer.htmlLoaded.then(function (parsedHtml) {
+      return htmlMonomer.htmlLoaded.then(function(parsedHtml) {
         metadata.html = parsedHtml;
         if (metadata.elements) {
-          metadata.elements.forEach(function (element) {
+          metadata.elements.forEach(function(element) {
             attachDomModule(parsedHtml, element);
           });
         }
@@ -587,7 +581,7 @@ export class Analyzer {
   };
 
 
-  _inlineStyles(ast:dom5.Node, href:string) {
+  _inlineStyles(ast:dom5.Node, href: string) {
     var cssLinks = dom5.queryAll(ast, polymerExternalStyle);
     cssLinks.forEach((link) => {
       var linkHref = dom5.getAttribute(link, 'href');
@@ -600,7 +594,7 @@ export class Analyzer {
     return cssLinks.length > 0;
   };
 
-  _inlineScripts(ast:dom5.Node, href:string) {
+  _inlineScripts(ast: dom5.Node, href: string) {
     var scripts = dom5.queryAll(ast, externalScript);
     scripts.forEach((script) => {
       var scriptHref = dom5.getAttribute(script, 'src');
@@ -660,7 +654,7 @@ export class Analyzer {
    * Calls `dom5.nodeWalkAll` on each document that `Anayzler` has laoded.
    */
   nodeWalkDocuments(predicate:dom5.Predicate) {
-    var results:dom5.Node[] = [];
+    var results: dom5.Node[] = [];
     for (var href in this.parsedDocuments) {
       var newNodes = dom5.nodeWalkAll(this.parsedDocuments[href], predicate);
       results = results.concat(newNodes);
@@ -674,7 +668,7 @@ export class Analyzer {
    * TODO: make nodeWalkAll & nodeWalkAllDocuments distict, or delete one.
    */
   nodeWalkAllDocuments(predicate:dom5.Predicate) {
-    var results:dom5.Node[] = [];
+    var results: dom5.Node[] = [];
     for (var href in this.parsedDocuments) {
       var newNodes = dom5.nodeWalkAll(this.parsedDocuments[href], predicate);
       results = results.concat(newNodes);
@@ -691,12 +685,12 @@ export class Analyzer {
       this.elementsByTagName[featureEl.is] = featureEl;
     }
     var behaviorsByName = this.behaviorsByName;
-    var elementHelper = (descriptor:ElementDescriptor) => {
+    var elementHelper = (descriptor: ElementDescriptor) => {
       docs.annotateElement(descriptor, behaviorsByName);
     };
     this.elements.forEach(elementHelper);
     this.behaviors.forEach(elementHelper); // Same shape.
-    this.behaviors.forEach((behavior) => {
+    this.behaviors.forEach((behavior) =>{
       if (behavior.is !== behavior.symbol && behavior.symbol) {
         this.behaviorsByName[behavior.symbol] = undefined;
       }
@@ -707,8 +701,8 @@ export class Analyzer {
   clean() {
     this.elements.forEach(docs.cleanElement);
   };
-}
-;
+};
+
 
 
 /**
@@ -719,12 +713,12 @@ export class Analyzer {
 function _defaultFilter(href:string) {
   // Everything up to the last `/` or `\`.
   var base = href.match(/^(.*?)[^\/\\]*$/)[1];
-  return function (uri:string) {
+  return function(uri:string) {
     return uri.indexOf(base) !== 0;
   };
 }
 
-function matchesDocumentFolder(descriptor:ElementDescriptor, href:string) {
+function matchesDocumentFolder(descriptor: ElementDescriptor, href: string) {
   if (!descriptor.contentHref) {
     return false;
   }
@@ -764,7 +758,7 @@ var isHtmlImportNode = dom5.predicates.AND(
   )
 );
 
-function attachDomModule(parsedImport:ParsedImport, element:ElementDescriptor) {
+function attachDomModule(parsedImport: ParsedImport, element: ElementDescriptor) {
   var domModules = parsedImport['dom-module'];
   for (const domModule of domModules) {
     if (dom5.getAttribute(domModule, 'id') === element.is) {

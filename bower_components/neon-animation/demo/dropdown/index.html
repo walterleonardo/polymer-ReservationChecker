@@ -9,7 +9,7 @@ Code distributed by Google as part of the polymer project is also
 subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
 -->
 <html>
-<head>
+  <head>
     <title>neon-animated-pages demo: dropdown</title>
 
     <meta charset="utf-8">
@@ -22,33 +22,33 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
     <link rel="import" href="../../neon-animations.html">
     <link rel="import" href="animated-dropdown.html">
 
-</head>
-<body>
+  </head>
+  <body>
 
-<template is="dom-bind">
+    <template is="dom-bind">
 
-    <button dropdown-id="dropdown" on-click="_onButtonClick">dropdown</button>
-    <br>
-    <animated-dropdown id="dropdown" on-click="_onDropdownClick">Hello world!</animated-dropdown>
+      <button dropdown-id="dropdown" on-click="_onButtonClick">dropdown</button>
+      <br>
+      <animated-dropdown id="dropdown" on-click="_onDropdownClick">Hello world!</animated-dropdown>
 
-</template>
+    </template>
 
-<script>
+    <script>
 
-    var scope = document.querySelector('template[is="dom-bind"]');
+      var scope = document.querySelector('template[is="dom-bind"]');
 
-    scope._onButtonClick = function (event) {
+      scope._onButtonClick = function(event) {
         var dropdown = document.querySelector('#' + event.target.getAttribute('dropdown-id'));
         if (dropdown) {
-            dropdown.show();
+          dropdown.show();
         }
-    };
+      };
 
-    scope._onDropdownClick = function (event) {
+      scope._onDropdownClick = function(event) {
         event.target.hide();
-    };
+      };
 
-</script>
+    </script>
 
-</body>
+  </body>
 </html>

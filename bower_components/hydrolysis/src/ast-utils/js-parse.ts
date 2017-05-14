@@ -31,7 +31,6 @@ function traverse(visitorRegistries:Visitor[]):estraverse.Callbacks {
       }
     }
   }
-
   return {
     enter: function (node, parent) {
       return applyVisitors('enter' + node.type, node, parent);

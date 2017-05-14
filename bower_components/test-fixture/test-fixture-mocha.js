@@ -9,32 +9,32 @@
  */
 
 (function (Mocha) {
-    function extendInterfaceWithFixture(interfaceName) {
-        var originalInterface = Mocha.interfaces[interfaceName];
-        var teardownProperty = interfaceName === 'bdd' ? 'afterEach' : 'teardown';
+  function extendInterfaceWithFixture (interfaceName) {
+    var originalInterface = Mocha.interfaces[interfaceName];
+    var teardownProperty = interfaceName === 'bdd' ? 'afterEach' : 'teardown';
 
-        Mocha.interfaces[interfaceName] = function (suite) {
-            originalInterface.apply(this, arguments);
+    Mocha.interfaces[interfaceName] = function (suite) {
+      originalInterface.apply(this, arguments);
 
-            suite.on('pre-require', function (context, file, mocha) {
-                if (!(context[teardownProperty])) {
-                    return;
-                }
+      suite.on('pre-require', function (context, file, mocha) {
+        if (!(context[teardownProperty])) {
+          return;
+        }
 
-                context.fixture = function (fixtureId, model) {
-                    context[teardownProperty](function () {
-                        document
-                            .getElementById(fixtureId)
-                            .restore();
-                    });
+        context.fixture = function (fixtureId, model) {
+          context[teardownProperty](function () {
+            document
+              .getElementById(fixtureId)
+              .restore();
+          });
 
-                    return document
-                        .getElementById(fixtureId)
-                        .create(model);
-                };
-            });
+          return document
+            .getElementById(fixtureId)
+            .create(model);
         };
-    }
+      });
+    };
+  }
 
-    Object.keys(Mocha.interfaces).forEach(extendInterfaceWithFixture);
+  Object.keys(Mocha.interfaces).forEach(extendInterfaceWithFixture);
 })(this.Mocha);

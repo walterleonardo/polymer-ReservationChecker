@@ -38,20 +38,19 @@ class ProtocolRedirect {
   /**
    * The protocol this redirect matches.
    */
-  protocol:string;
+  protocol: string;
   /**
    * The host name this redirect matches.
    */
-  hostname:string;
+  hostname: string;
   /**
    * The part of the path to match and replace with 'redirectPath'
    */
-  path:string;
+  path: string;
   /**
    * The local filesystem path that should replace "protocol://hosname/path/"
    */
-  redirectPath:string;
-
+  redirectPath: string;
   constructor(config:RedirectConfig) {
     this.protocol = config.protocol;
     this.hostname = config.hostname;
@@ -59,7 +58,7 @@ class ProtocolRedirect {
     this.redirectPath = config.redirectPath;
   }
 
-  redirect(uri:string) {
+  redirect(uri: string) {
     var parsed = url.parse(uri);
     if (this.protocol !== parsed.protocol) {
       return null;
@@ -71,8 +70,7 @@ class ProtocolRedirect {
     return path.join(this.redirectPath,
       parsed.pathname.slice(this.path.length));
   }
-}
-;
+};
 
 interface RedirectConfig extends FSConfig {
   redirects: ProtocolRedirect[];
@@ -89,14 +87,12 @@ interface RedirectConfig extends FSConfig {
  *     for the resolver. They are checked for matching first-to-last.
  */
 export class RedirectResolver extends FSResolver {
-  redirects:ProtocolRedirect[];
-
+  redirects: ProtocolRedirect[];
   constructor(config:RedirectConfig) {
     super(config);
     this.redirects = config.redirects || [];
   }
-
-  accept(uri:string, deferred:Deferred<string>) {
+  accept(uri: string, deferred: Deferred<string>) {
     for (var i = 0; i < this.redirects.length; i++) {
       var redirected = this.redirects[i].redirect(uri);
       if (redirected) {

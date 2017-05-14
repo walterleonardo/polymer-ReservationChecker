@@ -21,10 +21,10 @@ import {declarationPropertyHandlers, PropertyHandlers} from './declaration-prope
 import {BehaviorDescriptor, LiteralValue} from './descriptors';
 
 interface KeyFunc<T> {
-  (value:T): any;
+  (value: T): any;
 }
 
-function dedupe<T>(array:T[], keyFunc:KeyFunc<T>):T[] {
+function dedupe<T>(array: T[], keyFunc: KeyFunc<T>): T[] {
   var bucket = {};
   array.forEach((el) => {
     var key = keyFunc(el);
@@ -43,22 +43,22 @@ function dedupe<T>(array:T[], keyFunc:KeyFunc<T>):T[] {
 // TODO(rictic): turn this into a class.
 export function behaviorFinder() {
   /** The behaviors we've found. */
-  var behaviors:BehaviorDescriptor[] = [];
+  var behaviors: BehaviorDescriptor[] = [];
 
-  var currentBehavior:BehaviorDescriptor = null;
-  var propertyHandlers:PropertyHandlers = null;
+  var currentBehavior: BehaviorDescriptor = null;
+  var propertyHandlers: PropertyHandlers = null;
 
   /**
    * merges behavior with preexisting behavior with the same name.
    * here to support multiple @polymerBehavior tags referring
    * to same behavior. See iron-multi-selectable for example.
    */
-  function mergeBehavior(newBehavior:BehaviorDescriptor):BehaviorDescriptor {
+  function mergeBehavior(newBehavior: BehaviorDescriptor): BehaviorDescriptor {
     var isBehaviorImpl = (b:string) => {
       // filter out BehaviorImpl
       return b.indexOf(newBehavior.is) === -1;
     };
-    for (var i = 0; i < behaviors.length; i++) {
+    for (var i=0; i<behaviors.length; i++) {
       if (newBehavior.is !== behaviors[i].is)
         continue;
       // merge desc, longest desc wins
@@ -75,9 +75,7 @@ export function behaviorFinder() {
       behaviors[i].demos = (behaviors[i].demos || []).concat(newBehavior.demos || []);
       // merge events,
       behaviors[i].events = (behaviors[i].events || []).concat(newBehavior.events || []);
-      behaviors[i].events = dedupe(behaviors[i].events, (e) => {
-        return e.name
-      });
+      behaviors[i].events = dedupe(behaviors[i].events, (e) => {return e.name});
       // merge properties
       behaviors[i].properties = (behaviors[i].properties || []).concat(newBehavior.properties || []);
       // merge observers
@@ -85,7 +83,7 @@ export function behaviorFinder() {
       // merge behaviors
       behaviors[i].behaviors =
         (behaviors[i].behaviors || []).concat(newBehavior.behaviors || [])
-          .filter(isBehaviorImpl);
+        .filter(isBehaviorImpl);
       return behaviors[i];
     }
     return newBehavior;
@@ -94,8 +92,8 @@ export function behaviorFinder() {
   /**
    * gets the expression representing a behavior from a node.
    */
-  function behaviorExpression(node:estree.Node):estree.Node {
-    switch (node.type) {
+  function behaviorExpression(node:estree.Node): estree.Node {
+    switch(node.type) {
       case 'ExpressionStatement':
         // need to cast to `any` here because ExpressionStatement is super
         // super general. this code is suspicious.
@@ -110,12 +108,12 @@ export function behaviorFinder() {
    * checks whether an expression is a simple array containing only member
    * expressions or identifiers.
    */
-  function isSimpleBehaviorArray(expression:estree.Node):boolean {
+  function isSimpleBehaviorArray(expression: estree.Node): boolean {
     if (!expression || expression.type !== 'ArrayExpression') return false;
     const arrayExpr = <estree.ArrayExpression>expression;
-    for (var i = 0; i < arrayExpr.elements.length; i++) {
+    for (var i=0; i < arrayExpr.elements.length; i++) {
       if (arrayExpr.elements[i].type !== 'MemberExpression' &&
-        arrayExpr.elements[i].type !== 'Identifier') {
+          arrayExpr.elements[i].type !== 'Identifier') {
         return false;
       }
     }
@@ -124,7 +122,7 @@ export function behaviorFinder() {
 
   var templatizer = "Polymer.Templatizer";
 
-  function _parseChainedBehaviors(node:estree.Node) {
+  function _parseChainedBehaviors(node: estree.Node) {
     // if current behavior is part of an array, it gets extended by other behaviors
     // inside the array. Ex:
     // Polymer.IronMultiSelectableBehavior = [ {....}, Polymer.IronSelectableBehavior]
@@ -133,9 +131,9 @@ export function behaviorFinder() {
     var chained:LiteralValue[] = [];
     if (expression && expression.type === 'ArrayExpression') {
       const arrExpr = <estree.ArrayExpression>expression;
-      for (var i = 0; i < arrExpr.elements.length; i++) {
+      for (var i=0; i < arrExpr.elements.length; i++) {
         if (arrExpr.elements[i].type === 'MemberExpression' ||
-          arrExpr.elements[i].type === 'Identifier') {
+            arrExpr.elements[i].type === 'Identifier') {
           chained.push(astValue.expressionToValue(arrExpr.elements[i]));
         }
       }
@@ -144,7 +142,7 @@ export function behaviorFinder() {
     }
   }
 
-  function _initBehavior(node:estree.Node, getName:()=>string) {
+  function _initBehavior(node: estree.Node, getName: ()=>string) {
     var comment = esutil.getAttachedComment(node);
     var symbol = getName();
     // Quickly filter down to potential candidates.
@@ -158,8 +156,8 @@ export function behaviorFinder() {
     currentBehavior = {
       type: 'behavior',
       desc: comment,
-      events: esutil.getEventComments(node).map(function (event) {
-        return {desc: event};
+      events: esutil.getEventComments(node).map( function(event) {
+        return { desc: event};
       })
     };
     propertyHandlers = declarationPropertyHandlers(currentBehavior);
@@ -167,7 +165,7 @@ export function behaviorFinder() {
     docs.annotateBehavior(currentBehavior);
     // Make sure that we actually parsed a behavior tag!
     if (!jsdoc.hasTag(currentBehavior.jsdoc, 'polymerBehavior') &&
-      symbol !== templatizer) {
+        symbol !== templatizer) {
       currentBehavior = null;
       propertyHandlers = null;
       return;
@@ -201,12 +199,12 @@ export function behaviorFinder() {
     }
   }
 
-  var visitors:Visitor = {
+  var visitors: Visitor = {
 
     /**
      * Look for object declarations with @behavior in the docs.
      */
-    enterVariableDeclaration: function (node, parent) {
+    enterVariableDeclaration: function(node, parent) {
       if (node.declarations.length !== 1) return;  // Ambiguous.
       _initBehavior(node, function () {
         return esutil.objectKeyToString(node.declarations[0].id);
@@ -216,7 +214,7 @@ export function behaviorFinder() {
     /**
      * Look for object assignments with @polymerBehavior in the docs.
      */
-    enterAssignmentExpression: function (node, parent) {
+    enterAssignmentExpression: function(node, parent) {
       _initBehavior(parent, function () {
         return esutil.objectKeyToString(node.left);
       });
@@ -226,7 +224,7 @@ export function behaviorFinder() {
      * We assume that the object expression after such an assignment is the
      * behavior's declaration. Seems to be a decent assumption for now.
      */
-    enterObjectExpression: function (node, parent) {
+    enterObjectExpression: function(node, parent) {
       if (!currentBehavior || currentBehavior.properties) return;
 
       currentBehavior.properties = currentBehavior.properties || [];

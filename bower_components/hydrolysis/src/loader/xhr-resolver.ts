@@ -15,7 +15,7 @@ import {Resolver, Deferred} from './resolver';
 function getFile(url:string, deferred:Deferred<string>, config:Config) {
   /* global XMLHttpRequest:false */
   var x = new XMLHttpRequest();
-  x.onload = function () {
+  x.onload = function() {
     var status = x.status || 0;
     if (status >= 200 && status < 300) {
       deferred.resolve(x.response);
@@ -23,7 +23,7 @@ function getFile(url:string, deferred:Deferred<string>, config:Config) {
       deferred.reject('xhr status: ' + status);
     }
   };
-  x.onerror = function (e) {
+  x.onerror = function(e) {
     deferred.reject(e);
   };
   x.open('GET', url, true);
@@ -46,15 +46,13 @@ interface Config {
  * Construct a resolver that requests resources over XHR.
  */
 export class XHRResolver implements Resolver {
-  config:Config;
-
+  config: Config;
   constructor(config?:Config) {
     this.config = config;
   }
 
-  accept(uri:string, deferred:Deferred<string>) {
+  accept(uri: string, deferred: Deferred<string>) {
     getFile(uri, deferred, this.config);
     return true;
   }
-}
-;
+};

@@ -12,109 +12,109 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="../shared-styles.html">
 
 <dom-module id="fullsize-page-with-card">
-    <template>
-        <style include="shared-styles"></style>
-        <style>
+  <template>
+    <style include="shared-styles"></style>
+    <style>
 
-            :host {
-                display: block;
-            }
+      :host {
+        display: block;
+      }
 
-            .fixed {
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 100vh;
-                width: 100vw;
-            }
+      .fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+      }
 
-            .card {
-                position: relative;
-                margin: 200px 100px 0;
-                height: 700px;
-            }
+      .card {
+        position: relative;
+        margin: 200px 100px 0;
+        height: 700px;
+      }
 
-        </style>
+    </style>
 
-        <div id="fixed" class$="[[_computeFixedBackgroundClass(color)]]"></div>
-        <div id="card" class$="[[_computeCardClass(color)]]"></div>
+    <div id="fixed" class$="[[_computeFixedBackgroundClass(color)]]"></div>
+    <div id="card" class$="[[_computeCardClass(color)]]"></div>
 
-    </template>
+  </template>
 </dom-module>
 
 <script>
 
-    Polymer({
+  Polymer({
 
-        is: 'fullsize-page-with-card',
+    is: 'fullsize-page-with-card',
 
-        behaviors: [
-            Polymer.NeonSharedElementAnimatableBehavior
-        ],
+    behaviors: [
+      Polymer.NeonSharedElementAnimatableBehavior
+    ],
 
-        properties: {
+    properties: {
 
-            color: {
-                type: String
-            },
+      color: {
+        type: String
+      },
 
-            sharedElements: {
-                type: Object,
-                value: function () {
-                    return {
-                        'hero': this.$.card,
-                        'ripple': this.$.fixed
-                    }
-                }
-            },
-
-            animationConfig: {
-                type: Object,
-                value: function () {
-                    return {
-                        'entry': [{
-                            name: 'ripple-animation',
-                            id: 'ripple',
-                            toPage: this,
-                        }, {
-                            name: 'hero-animation',
-                            id: 'hero',
-                            toPage: this,
-                            timing: {
-                                delay: 150
-                            }
-                        }],
-                        'exit': [{
-                            name: 'fade-out-animation',
-                            node: this.$.fixed
-                        }, {
-                            name: 'transform-animation',
-                            transformFrom: 'none',
-                            transformTo: 'translate(0px,-200vh) scale(0.9,1)',
-                            node: this.$.card
-                        }]
-                    }
-                }
-            }
-
-        },
-
-        _computeCardClass: function (color) {
-            var cls = 'card';
-            if (color) {
-                cls += ' ' + color + '-300';
-            }
-            return cls;
-        },
-
-        _computeFixedBackgroundClass: function (color) {
-            var cls = 'fixed';
-            if (color) {
-                cls += ' ' + color + '-100';
-            }
-            return cls;
+      sharedElements: {
+        type: Object,
+        value: function () {
+          return {
+            'hero': this.$.card,
+            'ripple': this.$.fixed
+          }
         }
+      },
 
-    });
+      animationConfig: {
+        type: Object,
+        value: function () {
+          return {
+            'entry': [{
+              name: 'ripple-animation',
+              id: 'ripple',
+              toPage: this,
+            }, {
+              name: 'hero-animation',
+              id: 'hero',
+              toPage: this,
+              timing: {
+                delay: 150
+              }
+            }],
+            'exit': [{
+              name: 'fade-out-animation',
+              node: this.$.fixed
+            }, {
+              name: 'transform-animation',
+              transformFrom: 'none',
+              transformTo: 'translate(0px,-200vh) scale(0.9,1)',
+              node: this.$.card
+            }]
+          }
+        }
+      }
+
+    },
+
+    _computeCardClass: function (color) {
+      var cls = 'card';
+      if (color) {
+        cls += ' ' + color + '-300';
+      }
+      return cls;
+    },
+
+    _computeFixedBackgroundClass: function (color) {
+      var cls = 'fixed';
+      if (color) {
+        cls += ' ' + color + '-100';
+      }
+      return cls;
+    }
+
+  });
 
 </script>

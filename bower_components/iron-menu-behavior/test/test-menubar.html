@@ -13,34 +13,34 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
 <dom-module id="test-menubar">
 
-    <template>
+  <template>
 
-        <content></content>
+    <content></content>
 
-        <div id="extraContent" tabindex="-1">focusable extra content</div>
+    <div id="extraContent" tabindex="-1">focusable extra content</div>
 
-    </template>
+  </template>
 
 </dom-module>
 
 <script>
 
-    (function () {
+(function() {
 
-        Polymer({
+  Polymer({
 
-            is: 'test-menubar',
+    is: 'test-menubar',
 
-            behaviors: [
-                Polymer.IronMenubarBehavior
-            ],
+    behaviors: [
+      Polymer.IronMenubarBehavior
+    ],
 
-            get extraContent() {
-                return this.$.extraContent;
-            }
+    get extraContent() {
+      return this.$.extraContent;
+    }
 
-        });
+  });
 
-    })();
+})();
 
 </script>

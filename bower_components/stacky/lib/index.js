@@ -10,17 +10,17 @@
  */
 'use strict';
 
-var formatting = require('./formatting');
+var formatting    = require('./formatting');
 var normalization = require('./normalization');
-var parsing = require('./parsing');
+var parsing       = require('./parsing');
 
 module.exports = {
-    // Shorthands for your convenience.
-    normalize: normalization.normalize,
-    parse: parsing.parse,
-    pretty: formatting.pretty,
-    // Or the full modules.
-    formatting: formatting,
-    normalization: normalization,
-    parsing: parsing,
+  // Shorthands for your convenience.
+  normalize: normalization.normalize,
+  parse:     parsing.parse,
+  pretty:    formatting.pretty,
+  // Or the full modules.
+  formatting:    formatting,
+  normalization: normalization,
+  parsing:       parsing,
 };

@@ -13,87 +13,87 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 <link rel="import" href="ssn-validator.html">
 
 <dom-module id="ssn-input">
-    <template>
+  <template>
 
-        <style>
-            :host {
-                display: inline-block;
-            }
+    <style>
+      :host {
+        display: inline-block;
+      }
 
-            :host([hidden]) {
-                display: none !important;
-            }
+      :host([hidden]) {
+        display: none !important;
+      }
 
-            input[is="iron-input"] {
-                font: inherit;
-                outline: none;
-                box-shadow: none;
-                border: none;
-                width: auto;
-                text-align: center;
-            }
+      input[is="iron-input"] {
+        font: inherit;
+        outline: none;
+        box-shadow: none;
+        border: none;
+        width: auto;
+        text-align: center;
+      }
 
-            .container {
-                @apply(--layout-horizontal);
-            }
-        </style>
+      .container {
+        @apply(--layout-horizontal);
+      }
+    </style>
 
-        <ssn-validator></ssn-validator>
+    <ssn-validator></ssn-validator>
 
-        <div class="container">
+    <div class="container">
 
-            <input is="iron-input" maxlength="3" bind-value="{{_ssn1}}" size="3"
-                   aria-label="First 3 digits of social security number">
-            -
-            <input is="iron-input" maxlength="2" bind-value="{{_ssn2}}" size="2"
-                   aria-label="Middle 2 digits of social security number">
-            -
-            <input is="iron-input" maxlength="4" bind-value="{{_ssn3}}" size="4"
-                   aria-label="Last 4 digits of social security number">
+      <input is="iron-input" maxlength="3" bind-value="{{_ssn1}}" size="3"
+             aria-label="First 3 digits of social security number">
+      -
+      <input is="iron-input" maxlength="2" bind-value="{{_ssn2}}" size="2"
+             aria-label="Middle 2 digits of social security number">
+      -
+      <input is="iron-input" maxlength="4" bind-value="{{_ssn3}}" size="4"
+             aria-label="Last 4 digits of social security number">
 
-        </div>
+    </div>
 
-    </template>
+  </template>
 </dom-module>
 
 <script>
-    Polymer({
-        is: 'ssn-input',
+  Polymer({
+    is: 'ssn-input',
 
-        behaviors: [
-            Polymer.IronValidatableBehavior
-        ],
+    behaviors: [
+      Polymer.IronValidatableBehavior
+    ],
 
-        properties: {
-            value: {
-                notify: true,
-                type: String
-            },
+    properties: {
+      value: {
+        notify: true,
+        type: String
+      },
 
-            _ssn1: {
-                type: String
-            },
+      _ssn1: {
+        type: String
+      },
 
-            _ssn2: {
-                type: String
-            },
+      _ssn2: {
+        type: String
+      },
 
-            _ssn3: {
-                type: String
-            },
+      _ssn3: {
+        type: String
+      },
 
-            validator: {
-                type: String,
-                value: 'ssn-validator'
-            }
-        },
+      validator: {
+        type: String,
+        value: 'ssn-validator'
+      }
+    },
 
-        observers: [
-            '_computeValue(_ssn1,_ssn2,_ssn3)'
-        ],
+    observers: [
+      '_computeValue(_ssn1,_ssn2,_ssn3)'
+    ],
 
-        _computeValue: function (ssn1, ssn2, ssn3) {
-            this.value = ssn1.trim() + '-' + ssn2.trim() + '-' + ssn3.trim();
-        }
-    });
+    _computeValue: function (ssn1, ssn2, ssn3) {
+      this.value = ssn1.trim() + '-' + ssn2.trim() + '-' + ssn3.trim();
+    }
+  });
 </script>
