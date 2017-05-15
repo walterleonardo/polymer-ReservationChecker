@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb48b8ba-d8a1-44fc-af12-a96b38f7b9ac" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-    </list>
+    <list default="true" id="fb48b8ba-d8a1-44fc-af12-a96b38f7b9ac" name="Default" comment="" />
     <ignored path="polymer1-element-checkReservations.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -811,7 +809,7 @@
       <updated>1494753777774</updated>
       <workItem from="1494753779017" duration="690000" />
       <workItem from="1494754540399" duration="471000" />
-      <workItem from="1494755106234" duration="557000" />
+      <workItem from="1494755106234" duration="662000" />
     </task>
     <task id="LOCAL-00001" summary="Commit new version">
       <created>1494755429761</created>
@@ -829,7 +827,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1718000" />
+    <option name="totallyTimeSpent" value="1823000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="85" y="38" width="1680" height="963" extended-state="0" />
