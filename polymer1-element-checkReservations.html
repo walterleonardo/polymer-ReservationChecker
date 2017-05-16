@@ -92,7 +92,7 @@
 
                 <div id="respuesta" class="respuesta">
                     <h2 style="color: red; font-style: oblique">{{errorMessage}} </h2>
-                    <div hidden="{{show}}">
+                    <div hidden="{{!show}}">
                         <span style="color:#71a83b">Pickup Date </span>
                         <br><span style="color:black ;font-weight: bold;">{{answer.pickupDate}}</span>
                         <br>
@@ -101,9 +101,10 @@
                         <br><span style="color:black ;font-weight: bold;">{{answer.pickupTime}}</span>
                         <br>
                         <hr>
+                        <br>
+                        <hr>
                     </div>
-                    <br>
-                    <hr>
+
                     <template is="dom-repeat" items="[[_toArray(answer)]]">
                         <template is="dom-if" if="[[!_compare(item.key,'pickupDate','pickupTime')]]">
                             <span style="color:#71a83b">{{item.key}}</span>
@@ -194,6 +195,7 @@
                         this.answer = datalogin.response.service;
                         this.$$('#respuesta').style.display = 'block';
                         this.errorMessage = [];
+                        this.show = true;
                     } else {
                         this.answer = [];
                         this.errorMessage = datalogin.response.message;

@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="fb48b8ba-d8a1-44fc-af12-a96b38f7b9ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polymer1-element-checkReservations.html" afterPath="$PROJECT_DIR$/polymer1-element-checkReservations.html" />
     </list>
     <ignored path="polymer1-element-checkReservations.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,8 +39,8 @@
       <file leaf-file-name="polymer1-element-checkReservations.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/polymer1-element-checkReservations.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.14563107">
-              <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+            <state vertical-scroll-proportion="0.61165047">
+              <caret line="72" column="49" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="49" />
               <folding>
                 <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
@@ -929,7 +930,7 @@
       <workItem from="1494754540399" duration="471000" />
       <workItem from="1494755106234" duration="662000" />
       <workItem from="1494874981406" duration="1035000" />
-      <workItem from="1494916513870" duration="2632000" />
+      <workItem from="1494916513870" duration="2728000" />
     </task>
     <task id="LOCAL-00001" summary="Commit new version">
       <created>1494755429761</created>
@@ -961,11 +962,17 @@
       <option name="project" value="LOCAL" />
       <updated>1494919383649</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Resaltado la hora y fecha de la recogida he includo texto">
+      <created>1494919455434</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1494919455434</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5490000" />
+    <option name="totallyTimeSpent" value="5586000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="77" y="38" width="1680" height="963" extended-state="0" />
@@ -1223,8 +1230,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/polymer1-element-checkReservations.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.14563107">
-          <caret line="71" column="59" selection-start-line="71" selection-start-column="59" selection-end-line="71" selection-end-column="59" />
+        <state vertical-scroll-proportion="0.61165047">
+          <caret line="72" column="49" selection-start-line="72" selection-start-column="38" selection-end-line="72" selection-end-column="49" />
           <folding>
             <element signature="n#style#0;n#h2#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#span#0;n#div#0;n#div#1;n#div#0;n#div#0;n#template#0;n#dom-module#0;n#!!top" expanded="true" />
