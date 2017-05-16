@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="fb48b8ba-d8a1-44fc-af12-a96b38f7b9ac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/polymer1-element-checkReservations.html" afterPath="$PROJECT_DIR$/polymer1-element-checkReservations.html" />
     </list>
     <ignored path="polymer1-element-checkReservations.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -930,7 +929,7 @@
       <workItem from="1494754540399" duration="471000" />
       <workItem from="1494755106234" duration="662000" />
       <workItem from="1494874981406" duration="1035000" />
-      <workItem from="1494916513870" duration="2728000" />
+      <workItem from="1494916513870" duration="2747000" />
     </task>
     <task id="LOCAL-00001" summary="Commit new version">
       <created>1494755429761</created>
@@ -968,11 +967,17 @@
       <option name="project" value="LOCAL" />
       <updated>1494919455434</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Auto remove fields">
+      <created>1494919560922</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1494919560922</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5586000" />
+    <option name="totallyTimeSpent" value="5605000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="77" y="38" width="1680" height="963" extended-state="0" />
@@ -1013,7 +1018,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="Commit new version" />
     <MESSAGE value="Resaltado la hora y fecha de la recogida he includo texto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Resaltado la hora y fecha de la recogida he includo texto" />
+    <MESSAGE value="Auto remove fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Auto remove fields" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
