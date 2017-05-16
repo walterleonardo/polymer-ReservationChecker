@@ -65,16 +65,17 @@
                                  label="Reservation Code" maxlength="25" required></paper-input>
 
                     <br><br>
-                    <h3>If your accommodation doesn't have a general pick-up point you will have to wait outside the reception, never inside, at a visible point for the driver.
+                    <h3>If your accommodation doesn't have a general pick-up point you will have to wait outside the
+                        reception, never inside, at a visible point for the driver.
 
-                       <br> Please be ready 5/10 minutes before the informed pick-up time at the advised place.</h3>
+                        <br> Please be ready 5/10 minutes before the informed pick-up time at the advised place.</h3>
                     <div hidden="[[!debug]]">
-                    <h2>Test information TO DELETE</h2>
-                    <p>Usuario OK TIH0000742T .</p>
-                    <p>Usuario no existe aun 1493730866128 .</p>
-                    <p>Usuario no lo encuentra estanolaencuentra .</p>
-                    <br><br>
-                        </div>
+                        <h2>Test information TO DELETE</h2>
+                        <p>Usuario OK TIH0000742T .</p>
+                        <p>Usuario no existe aun 1493730866128 .</p>
+                        <p>Usuario no lo encuentra estanolaencuentra .</p>
+                        <br><br>
+                    </div>
                     <paper-button raised onclick="_submit(event)"> Search</paper-button>
                     <paper-spinner id="spinner" hidden></paper-spinner>
 
@@ -92,22 +93,24 @@
 
                 <div id="respuesta" class="respuesta">
                     <h2 style="color: red; font-style: oblique">{{errorMessage}} </h2>
+                    <div hidden="{{show}}">
                         <span style="color:#71a83b">Pickup Date </span>
-                    <br><span style="color:black ;font-weight: bold;">{{answer.pickupDate}}</span>
-                    <br>
+                        <br><span style="color:black ;font-weight: bold;">{{answer.pickupDate}}</span>
+                        <br>
                         <hr>
-                    <span style="color:#71a83b">Pickup Time </span>
-                    <br><span style="color:black ;font-weight: bold;">{{answer.pickupTime}}</span>
-                    <br>
-                    <hr>
+                        <span style="color:#71a83b">Pickup Time </span>
+                        <br><span style="color:black ;font-weight: bold;">{{answer.pickupTime}}</span>
+                        <br>
+                        <hr>
+                    </div>
                     <br>
                     <hr>
                     <template is="dom-repeat" items="[[_toArray(answer)]]">
                         <template is="dom-if" if="[[!_compare(item.key,'pickupDate','pickupTime')]]">
-                        <span style="color:#71a83b">{{item.key}}</span>
-                        <br><span style="color:black; ">{{item.value}}</span>
-                        <br>
-                        <hr>
+                            <span style="color:#71a83b">{{item.key}}</span>
+                            <br><span style="color:black; ">{{item.value}}</span>
+                            <br>
+                            <hr>
                         </template>
                     </template>
                     <br> <br> <br>
@@ -149,6 +152,10 @@
                     type: String,
                     notify: true,
                 },
+                show: {
+                    type: Boolean,
+                    value: false
+                },
             },
             listeners: {
                 'iron-form-response': 'formResponse',
@@ -165,8 +172,8 @@
                 });
             },
 
-            _compare: function(a,b,c) {
-                if (a === b || a === c ) return true;
+            _compare: function (a, b, c) {
+                if (a === b || a === c) return true;
             },
             formSubmit: function (event) {
                 this.$$('#spinner').active = 'true';
