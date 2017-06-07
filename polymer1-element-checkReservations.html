@@ -50,13 +50,13 @@
                 box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
             }
         </style>
-
+        <title>Reservation checker</title>
 
         <div class="container flex-center-justified">
             <div class="card">
                     <select id='lang' name='lang' class='language-select' value="{{hostValue::change}}">
-                        <option value='en'>English</option>
-                        <option value='es'>Spanish</option>
+                        <option value='en' selected="{{languageEN}}">English</option>
+                        <option value='es' selected="{{languageEN}}">Spanish</option>
                     </select>
                 <h1>{{localize('tittle')}}</h1>
 
@@ -179,6 +179,11 @@
                     value: 'en',
                     notify: true
                 },
+                languageEN: {
+                    type: Boolean,
+                    value: true,
+                    notify: true
+                },
                 hostValue: {
                     type: String,
                     observer: '_observer'
@@ -214,15 +219,16 @@
             },
             ready: function () {
                 var userLang = navigator.language || navigator.userLanguage;
-                if (userLang != "en-GB") {
+                if (userLang == "en-GB" || userLang == "en-US") {
+                    this.language = 'en';
+                    this.languageEN = false;
+                } else {
                     this.language = 'es';
-                    this.$.select.lang.prototype.selected;
+                    this.languageEN = true;
                 }
-                //console.log(this.localName + '#' + this.id + ' has local DOM initialized');
             },
             _toArray: function (obj) {
                 return Object.keys(obj).map(function (key) {
-
                     return {
                         key: key,
                         value: obj[key]
@@ -275,12 +281,7 @@
         function _submit(event) {
             Polymer.dom(event).localTarget.parentElement.submit();
         }
-        var userLang = navigator.language || navigator.userLanguage;
-        if (userLang != "en-GB") {
-            alert("The language is: " + userLang);
-        } else {
-            this.language = 'es';
-        }
+
     </script>
 </dom-module>
 
