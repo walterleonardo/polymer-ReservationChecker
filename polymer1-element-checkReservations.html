@@ -9,6 +9,7 @@
 <link rel="import" href="bower_components/iron-icon/iron-icon.html">
 <link rel="import" href="bower_components/paper-toast/paper-toast.html">
 <link rel="import" href="bower_components/paper-spinner/paper-spinner.html">
+<link rel="import" href="bower_components/app-localize-behavior/app-localize-behavior.html">
 <link rel="import" href="shared-styles.html">
 
 <!--
@@ -53,21 +54,23 @@
 
         <div class="container flex-center-justified">
             <div class="card">
-                <h1>Booking search</h1>
+                    <select id='lang' name='lang' class='language-select' value="{{hostValue::change}}">
+                        <option value='en'>English</option>
+                        <option value='es'>Spanish</option>
+                    </select>
+                <h1>{{localize('tittle')}}</h1>
 
-                <h3>Indicates the reservation code</h3>
+                <h3>{{localize('subtittle')}}</h3>
 
 
                 <form is="iron-form" method="get" action="http://viajesibiza.mateu.io/resources/pickupconfirmation/q?"
                       id="formLogin">
                     <paper-input char-counter error-message="{{error}}" name="p" value="{{inputData}}"
-                                 label="Reservation Code" maxlength="25" required></paper-input>
+                                 label="{{localize('input')}}" maxlength="25" required></paper-input>
 
                     <br><br>
-                    <h3>If your accommodation doesn't have a general pick-up point you will have to wait outside the
-                        reception, never inside, at a visible point for the driver.
+                    <h3>{{localize('text')}}</h3>
 
-                        <br> Please be ready 5/10 minutes before the informed pick-up time at the advised place.</h3>
                     <div hidden="[[!debug]]">
                         <h2>Test information TO DELETE</h2>
                         <p>Usuario OK TIH0000742T .</p>
@@ -75,7 +78,7 @@
                         <p>Usuario no lo encuentra estanolaencuentra .</p>
                         <br><br>
                     </div>
-                    <paper-button raised onclick="_submit(event)"> Search</paper-button>
+                    <paper-button raised onclick="_submit(event)"> {{localize('button')}}</paper-button>
                     <paper-spinner id="spinner" hidden></paper-spinner>
 
 
@@ -120,12 +123,24 @@
         </div>
 
     </template>
-
+    <!--<script type='text/javascript'>-->
+    <!--$(document).ready(function() {-->
+    <!--$('select.language-select').on('change', function(evt) {-->
+    <!--var selectedLanguage = $(this).find('option:selected').val(),-->
+    <!--articleHtml = $('script[type="text/html-template"][lang=' + selectedLanguage + ']').html(),-->
+    <!--article = $('div.article');-->
+    <!--article.html(articleHtml);-->
+    <!--});-->
+    <!--});-->
+    <!--</script>-->
     <script>
         Polymer({
 
             is: 'polymer1-element-checkReservations',
 
+            behaviors: [
+                Polymer.AppLocalizeBehavior
+            ],
             properties: {
                 debug: {
                     tyoe: Boolean,
@@ -156,11 +171,54 @@
                     type: Boolean,
                     value: false
                 },
+                countryValue: {
+                    type: String,
+                    observer: '_observer'
+                },
+                language: {
+                    value: 'en',
+                    notify: true
+                },
+                hostValue: {
+                    type: String,
+                    observer: '_observer'
+                },
+                resources: {
+                    value: function () {
+                        return {
+                            'en': {
+                                'tittle': 'Booking search',
+                                'subtittle': 'Indicates the reservation code',
+                                'input': 'Reservation Code',
+                                'text': 'If your accommodation doesn\'t have a general pick-up point you will have to wait outside the reception, never inside, at a visible point for the driver. Please be ready 5/10 minutes before the informed pick-up time at the advised place.',
+                                'button': 'Search'
+                            },
+                            'es': {
+                                'tittle': 'Buscar Reserva',
+                                'subtittle': 'Indicar codigo de reserva',
+                                'input': 'Codigo de reserva',
+                                'text': 'Si su alojamiento no tiene un punto de recogida general tendrá que esperar fuera de la recepción, nunca dentro, en un punto visible para el conductor. Por favor, esté listo 5/10 minutos antes de la recogida informada en el lugar indicado.',
+                                'button': 'Buscar'
+                            }
+                        }
+                    }
+                }
             },
             listeners: {
                 'iron-form-response': 'formResponse',
                 'iron-form-submit': 'formSubmit',
                 'iron-form-error': 'formError'
+            },
+            _observer: function (v) {
+                this.language = v;
+            },
+            ready: function () {
+                var userLang = navigator.language || navigator.userLanguage;
+                if (userLang != "en-GB") {
+                    this.language = 'es';
+                    this.$.select.lang.prototype.selected;
+                }
+                //console.log(this.localName + '#' + this.id + ' has local DOM initialized');
             },
             _toArray: function (obj) {
                 return Object.keys(obj).map(function (key) {
@@ -210,12 +268,18 @@
             },
             formError: function (event) {
                 this.$$('.outputServer').innerHTML = event.detail.error;
-            },
+            }
 
         });
 
         function _submit(event) {
             Polymer.dom(event).localTarget.parentElement.submit();
+        }
+        var userLang = navigator.language || navigator.userLanguage;
+        if (userLang != "en-GB") {
+            alert("The language is: " + userLang);
+        } else {
+            this.language = 'es';
         }
     </script>
 </dom-module>
