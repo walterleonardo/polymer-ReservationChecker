@@ -55,8 +55,8 @@
         <div class="container flex-center-justified">
             <div class="card">
                     <select id='lang' name='lang' class='language-select' value="{{hostValue::change}}">
-                        <option value='en' selected="{{languageEN}}">English</option>
-                        <option value='es' selected="{{languageEN}}">Spanish</option>
+                        <option id='en' value='en' selected="{{!languageEN}}">English</option>
+                        <option id='es' value='es' selected="{{!languageEN}}">Spanish</option>
                     </select>
                 <h1>{{localize('tittle')}}</h1>
 
@@ -65,7 +65,7 @@
 
                 <form is="iron-form" method="get" action="http://viajesibiza.mateu.io/resources/pickupconfirmation/q?"
                       id="formLogin">
-                    <paper-input char-counter error-message="{{error}}" name="p" value="{{inputData}}"
+                    <paper-input char-counter error-message="{{localize('error')}}" name="p" value="{{inputData}}"
                                  label="{{localize('input')}}" maxlength="25" required></paper-input>
 
                     <br><br>
@@ -123,16 +123,6 @@
         </div>
 
     </template>
-    <!--<script type='text/javascript'>-->
-    <!--$(document).ready(function() {-->
-    <!--$('select.language-select').on('change', function(evt) {-->
-    <!--var selectedLanguage = $(this).find('option:selected').val(),-->
-    <!--articleHtml = $('script[type="text/html-template"][lang=' + selectedLanguage + ']').html(),-->
-    <!--article = $('div.article');-->
-    <!--article.html(articleHtml);-->
-    <!--});-->
-    <!--});-->
-    <!--</script>-->
     <script>
         Polymer({
 
@@ -153,10 +143,6 @@
                 user: {
                     type: String,
                     value: "{{inputData}}"
-                },
-                error: {
-                    type: String,
-                    value: "Reservation code is needed!"
                 },
                 answer: {
                     type: Array,
@@ -196,14 +182,16 @@
                                 'subtittle': 'Indicates the reservation code',
                                 'input': 'Reservation Code',
                                 'text': 'If your accommodation doesn\'t have a general pick-up point you will have to wait outside the reception, never inside, at a visible point for the driver. Please be ready 5/10 minutes before the informed pick-up time at the advised place.',
-                                'button': 'Search'
+                                'button': 'Search',
+                                'error': 'Reservation code is needed!'
                             },
                             'es': {
                                 'tittle': 'Buscar Reserva',
-                                'subtittle': 'Indicar codigo de reserva',
-                                'input': 'Codigo de reserva',
+                                'subtittle': 'Indicar código de reserva',
+                                'input': 'Código de reserva',
                                 'text': 'Si su alojamiento no tiene un punto de recogida general tendrá que esperar fuera de la recepción, nunca dentro, en un punto visible para el conductor. Por favor, esté listo 5/10 minutos antes de la recogida informada en el lugar indicado.',
-                                'button': 'Buscar'
+                                'button': 'Buscar',
+                                'error': 'Se necesita el código de reserva!'
                             }
                         }
                     }
@@ -221,10 +209,10 @@
                 var userLang = navigator.language || navigator.userLanguage;
                 if (userLang == "en-GB" || userLang == "en-US") {
                     this.language = 'en';
-                    this.languageEN = false;
+                    this.languageEN = true;
                 } else {
                     this.language = 'es';
-                    this.languageEN = true;
+                    this.languageEN = false;
                 }
             },
             _toArray: function (obj) {
@@ -262,8 +250,8 @@
                         this.show = true;
                     } else {
                         this.answer = [];
-                        this.errorMessage = datalogin.response.message;
-                        this.$$('#respuesta').style.display = 'block';
+                            this.errorMessage = datalogin.response.message ;
+                            this.$$('#respuesta').style.display = 'block';
                         this.$$('.outputServer').innerHTML = datalogin.response.message;
                     }
                 } else {
