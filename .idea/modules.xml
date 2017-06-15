@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/polymer1-element-checkReservations.iml" filepath="$PROJECT_DIR$/polymer1-element-checkReservations.iml" />
+      <module fileurl="file://$PROJECT_DIR$/viajesIbizaReservationsCheckers.iml" filepath="$PROJECT_DIR$/viajesIbizaReservationsCheckers.iml" />
     </modules>
   </component>
 </project>
