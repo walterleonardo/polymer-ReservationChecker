@@ -54,10 +54,10 @@
 
         <div class="container flex-center-justified">
             <div class="card">
-                    <select id='lang' name='lang' class='language-select' value="{{hostValue::change}}">
-                        <option id='en' value='en' selected="{{!languageEN}}">English</option>
-                        <option id='es' value='es' selected="{{!languageEN}}">Spanish</option>
-                    </select>
+                <select id='lang' name='lang' class='language-select' value="{{hostValue::change}}">
+                    <option id='en' value='en' selected="{{!languageEN}}">English</option>
+                    <option id='es' value='es' selected="{{!languageEN}}">Spanish</option>
+                </select>
                 <h1>{{localize('tittle')}}</h1>
 
                 <h3>{{localize('subtittle')}}</h3>
@@ -250,8 +250,8 @@
                         this.show = true;
                     } else {
                         this.answer = [];
-                            this.errorMessage = datalogin.response.message ;
-                            this.$$('#respuesta').style.display = 'block';
+                        this.errorMessage = datalogin.response.message;
+                        this.$$('#respuesta').style.display = 'block';
                         this.$$('.outputServer').innerHTML = datalogin.response.message;
                     }
                 } else {
