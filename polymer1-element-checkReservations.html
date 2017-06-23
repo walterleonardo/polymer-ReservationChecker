@@ -126,16 +126,22 @@
                         <hr>
                         <span style="color:#71a83b">{{localize('pickuptime')}}</span>
                         <br><span style="color:black ;font-weight: bold;">{{answer.pickupTime}}</span>
+                        <br>
+                        <template is="dom-if" if="[[answer.pickupPointInfo]]">
+                            <hr>
+                            <span style="color:#71a83b">{{localize('pickuppoint')}}</span>
+                            <br><span style="color:black ;font-weight: bold;">{{answer.pickupPointInfo}}</span>
+                        </template>
                     </div>
 
                     <!--<template is="dom-repeat" items="[[_toArray(answer)]]">-->
                     <!--<template is="dom-if" if="[[!_compare(item.key,'pickupDate','pickupTime')]]">-->
-                        <!--<span style="color:#71a83b">{{item.key}}</span>-->
-                        <!--<br><span style="color:black; ">{{item.value}}</span>-->
-                        <!--<br>-->
-                        <!--<hr>-->
+                    <!--<span style="color:#71a83b">{{item.key}}</span>-->
+                    <!--<br><span style="color:black; ">{{item.value}}</span>-->
+                    <!--<br>-->
+                    <!--<hr>-->
                     <!--</template>-->
-                <!--</template>-->
+                    <!--</template>-->
                     <br> <br> <br>
                 </div>
             </div>
@@ -204,15 +210,15 @@
                                 'text': 'If your accommodation doesn\'t have a general pick-up point you will have to wait outside the reception, never inside, at a visible point for the driver. Please be ready 5/10 minutes before the informed pick-up time at the advised place.',
                                 'button': 'Search',
                                 'error': 'Reservation code is needed!',
-                                'nameofpassenger':'Full Name',
-                                'quatityofpassengers':'Number of Pax',
-                                'hotelname':'Hotel Name',
-                                'flightdate':'Flight Date',
-                                'flighttime':'Flight Time',
-                                'flightnumber':'Flight number',
-                                'pickupdate':'Pick up Date',
-                                'pickuptime':'Pick up Time',
-                                'pickuppoint':'Pick up Point',
+                                'nameofpassenger': 'Full Name',
+                                'quatityofpassengers': 'Number of Pax',
+                                'hotelname': 'Hotel Name',
+                                'flightdate': 'Flight Date',
+                                'flighttime': 'Flight Time',
+                                'flightnumber': 'Flight number',
+                                'pickupdate': 'Pick up Date',
+                                'pickuptime': 'Pick up Time',
+                                'pickuppoint': 'Pick up Point',
 
                             },
                             'es': {
@@ -222,15 +228,15 @@
                                 'text': 'Si su alojamiento no tiene un punto de recogida general tendrá que esperar fuera de la recepción, nunca dentro, en un punto visible para el conductor. Por favor, esté listo 5/10 minutos antes de la recogida informada en el lugar indicado.',
                                 'button': 'Buscar',
                                 'error': 'Se necesita el código de reserva!',
-                                'nameofpassenger':'Nombre completo',
-                                'quatityofpassengers':'Numero de pasajeros',
-                                'hotelname':'Nombre del Hotel',
-                                'flightdate':'Fecha de vuelo',
-                                'flighttime':'Hora de vuelo',
-                                'flightnumber':'Numero de vuelo',
-                                'pickupdate':'Fecha de recogida',
-                                'pickuptime':'Hora de recogida',
-                                'pickuppoint':'Punto de recogida',
+                                'nameofpassenger': 'Nombre completo',
+                                'quatityofpassengers': 'Numero de pasajeros',
+                                'hotelname': 'Nombre del Hotel',
+                                'flightdate': 'Fecha de vuelo',
+                                'flighttime': 'Hora de vuelo',
+                                'flightnumber': 'Numero de vuelo',
+                                'pickupdate': 'Fecha de recogida',
+                                'pickuptime': 'Hora de recogida',
+                                'pickuppoint': 'Punto de recogida',
                             }
                         }
                     }
